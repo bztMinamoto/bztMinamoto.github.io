@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="OI,">
+  <meta name="keywords" content="杂谈,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="矩阵快速幂。">
-<meta name="keywords" content="OI">
+<meta name="description" content="《千恋＊万花》丛雨线有感">
+<meta name="keywords" content="杂谈">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【洛谷5107】能量采集">
-<meta property="og:url" content="http://foreverlasting1202.github.io/2018/12/17/洛谷能量采集/index.html">
+<meta property="og:title" content="《千恋＊万花》丛雨线有感">
+<meta property="og:url" content="http://foreverlasting1202.github.io/2019/04/16/千恋万花/index.html">
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
-<meta property="og:description" content="矩阵快速幂。">
+<meta property="og:description" content="《千恋＊万花》丛雨线有感">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-12-19T07:35:19.740Z">
+<meta property="og:updated_time" content="2019-04-16T14:01:04.237Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【洛谷5107】能量采集">
-<meta name="twitter:description" content="矩阵快速幂。">
+<meta name="twitter:title" content="《千恋＊万花》丛雨线有感">
+<meta name="twitter:description" content="《千恋＊万花》丛雨线有感">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://foreverlasting1202.github.io/2018/12/17/洛谷能量采集/">
+  <link rel="canonical" href="http://foreverlasting1202.github.io/2019/04/16/千恋万花/">
 
 
 
 
 
-  <title>【洛谷5107】能量采集 | foreverlasting's blog</title>
+  <title>《千恋＊万花》丛雨线有感 | foreverlasting's blog</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://foreverlasting1202.github.io/2018/12/17/洛谷能量采集/">
+    <link itemprop="mainEntityOfPage" href="http://foreverlasting1202.github.io/2019/04/16/千恋万花/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="foreverlasting">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【洛谷5107】能量采集</h1>
+          <h1 class="post-title" itemprop="name headline">《千恋＊万花》丛雨线有感</h1>
         
 
         <div class="post-meta">
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-17T14:50:00+08:00">
-                2018-12-17
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-16T22:01:00+08:00">
+                2019-04-16
               </time>
             
 
@@ -335,28 +335,6 @@
           </span>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/矩阵快速幂/" itemprop="url" rel="index">
-                    <span itemprop="name">矩阵快速幂</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -365,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2018/12/17/洛谷能量采集/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2018/12/17/洛谷能量采集/" itemprop="commentCount"></span>
+                <a href="/2019/04/16/千恋万花/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/16/千恋万花/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -399,12 +377,19 @@
       
 
       
-        <p>矩阵快速幂。<br><a id="more"></a></p>
-<p>真的可惜啊，比赛的时候必须要去晚自修，导致一堆分都没拿，难受得一批。</p>
-<p>说说这道题，出题人的原意是$k$进制矩乘是吧。然后我就正常倍增矩乘过了此题，让我很是震惊。</p>
-<p>我既没有循环展开，也没有什么矩乘的时候乘了一定次数再膜来减少膜的次数，就是最老实的矩乘，可能我代码天生自带小常数。不过一些小技巧还是要注意一下的，比如说能减法就做减法，不要取模，然后尽量减少矩乘时的循环次数，比如记录一个矩阵大小，其他好像就没有什么了。</p>
-<p>正式题解在<a href="https://blog.csdn.net/stone41123/article/details/85039483" target="_blank" rel="noopener">此</a>，有正式题解那我不用讲了，直接上代码。</p>
-<p>code:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2018.12.17 by ljz</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> res register int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-15</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    res s=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">bool</span> w=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">'0'</span>||ch&gt;<span class="string">'9'</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">'-'</span>)w=<span class="number">1</span>;ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)s=s*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar();</span><br><span class="line">    <span class="keyword">return</span> w?-s:s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">void</span> _swap(res &amp;x,res &amp;y)&#123;</span><br><span class="line">    x^=y^=x^=y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _abs(<span class="keyword">const</span> res &amp;x)&#123;</span><br><span class="line">    <span class="keyword">return</span> x&gt;<span class="number">0</span>?x:-x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _max(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y)&#123;</span><br><span class="line">    <span class="keyword">return</span> x&gt;y?x:y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _min(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y)&#123;</span><br><span class="line">    <span class="keyword">return</span> x&lt;y?x:y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">50</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> kcz=<span class="number">998244353</span>;</span><br><span class="line"><span class="keyword">namespace</span> MAIN&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Matrix</span>&#123;</span></span><br><span class="line">        <span class="keyword">int</span> t[N][N],n,m;</span><br><span class="line">        Matrix() &#123;<span class="built_in">memset</span>(t,<span class="number">0</span>,<span class="keyword">sizeof</span>(t));&#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">INIT</span><span class="params">()</span></span>&#123;</span><br><span class="line">            <span class="keyword">for</span>(res i=<span class="number">0</span>;i&lt;n;i++)t[i][i]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">int</span> n,m,q;</span><br><span class="line">    <span class="keyword">int</span> a[N];</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(res &amp;x,<span class="keyword">const</span> res &amp;y)</span></span>&#123;</span><br><span class="line">        x+=y,x&gt;=kcz?x-=kcz:<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">inline</span> Matrix <span class="keyword">operator</span> * (<span class="keyword">const</span> Matrix &amp;x,<span class="keyword">const</span> Matrix &amp;y)&#123;</span><br><span class="line">        Matrix cnt;</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">0</span>;i&lt;x.n;i++)</span><br><span class="line">            <span class="keyword">for</span>(res j=<span class="number">0</span>;j&lt;y.m;j++)</span><br><span class="line">                <span class="keyword">for</span>(res k=<span class="number">0</span>;k&lt;x.m;k++)add(cnt.t[i][j],<span class="number">1L</span>L*x.t[i][k]*y.t[k][j]%kcz);</span><br><span class="line">        cnt.n=x.n,cnt.m=y.m;</span><br><span class="line">        <span class="keyword">return</span> cnt;</span><br><span class="line">    &#125;</span><br><span class="line">    Matrix ret,ans[<span class="number">32</span>];</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">qpow</span><span class="params">(res x,res y)</span></span>&#123;</span><br><span class="line">        res ret=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(y)&#123;</span><br><span class="line">            <span class="keyword">if</span>(y&amp;<span class="number">1</span>)ret=<span class="number">1L</span>L*ret*x%kcz;</span><br><span class="line">            x=<span class="number">1L</span>L*x*x%kcz,y&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">MAIN</span><span class="params">()</span></span>&#123;</span><br><span class="line">        n=read(),m=read(),q=read();</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">0</span>;i&lt;n;i++)ret.t[i][<span class="number">0</span>]=read();</span><br><span class="line">        ret.n=ret.m=<span class="number">1</span>;</span><br><span class="line">        ans[<span class="number">0</span>].n=ans[<span class="number">0</span>].m=n;</span><br><span class="line">        ans[<span class="number">0</span>].INIT();</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">1</span>;i&lt;=m;i++)&#123;</span><br><span class="line">            res u=read(),v=read();</span><br><span class="line">            ans[<span class="number">0</span>].t[v<span class="number">-1</span>][u<span class="number">-1</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            res pos=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(res j=<span class="number">0</span>;j&lt;n;j++)add(pos,ans[<span class="number">0</span>].t[j][i]);</span><br><span class="line">            pos=qpow(pos,kcz<span class="number">-2</span>);</span><br><span class="line">            <span class="keyword">for</span>(res j=<span class="number">0</span>;j&lt;n;j++)ans[<span class="number">0</span>].t[j][i]=<span class="number">1L</span>L*ans[<span class="number">0</span>].t[j][i]*pos%kcz;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">1</span>;i&lt;=<span class="number">31</span>;i++)ans[i]=ans[i<span class="number">-1</span>]*ans[i<span class="number">-1</span>];</span><br><span class="line">        <span class="keyword">while</span>(q--)&#123;</span><br><span class="line">            res t=read();</span><br><span class="line">            Matrix tmp=ret;</span><br><span class="line">            <span class="keyword">for</span>(res i=<span class="number">0</span>;i&lt;=<span class="number">31</span>;i++)<span class="keyword">if</span>((<span class="number">1</span>&lt;&lt;i)&amp;t)tmp=ans[i]*tmp;</span><br><span class="line">            LL qaq=<span class="number">0</span>;</span><br><span class="line">            <span class="keyword">for</span>(res i=<span class="number">0</span>;i&lt;n;i++)qaq^=tmp.t[i][<span class="number">0</span>];</span><br><span class="line">            <span class="built_in">printf</span>(<span class="string">"%lld\n"</span>,qaq%kcz);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    MAIN::MAIN();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>《千恋＊万花》丛雨线有感<br><a id="more"></a></p>
+<p>第一次博客里更新这种东西啊，有点紧张的说。。。</p>
+<p>终于打完《千恋＊万花》的三条我喜欢的线了（即芳乃、茉子、丛雨），对于前两条毫无感觉，但在丛雨线却突然内心触动了。</p>
+<p>主要还是在于丛雨这个人物的分析。</p>
+<p>虽然在后面丛雨说她是一个自私的人，说是为了逃避不知何时死亡的现实而变成人柱的，说她其实对不起她的父母。真的是这样的吗？在我看来真的不是。</p>
+<p>丛雨有提到过去的她经常为小镇上同年龄的小孩理发这一件事，再加上找凭代的时候其实也大部分是丛雨一人出去的，所以她的人物形象就显示了出来：善良、乐观。说实在的，一个善良、乐观的人在身患绝症的时候真的是不会去逃避，而是继续开心地过完接下来每一天。在我看来，之所以丛雨会觉得她是在逃避，是因为时间的流逝啊。</p>
+<p>五百年的时光意味着什么呢？一切的一切的都变化了，就像她自己所说的，心也变得冰冷了。再有趣再新鲜的事情在她眼里也可能只是时间长河里微不足道的一点点了。</p>
+<p>我就一直认为不朽不是什么好事情，尤其是像丛雨这样子，只有她一人不朽，她身边的所有人所有事情都只会在她的眼前渐渐消失，消失得无影无踪。她在这漫长的岁月里，永远只能和天上的月亮对话，倾诉痛苦给月亮，永远只能在满月之日站在月亮之下，哭泣着。这究竟是多么让人心痛啊！</p>
+<p>于是在她说出“我不想你也成为牺牲品”的时候，我心如刀割。牺牲品，长达五百年的牺牲，数不尽的痛苦和泪痕，哪怕即使在自己最爱的人面前也不敢倾诉，压抑在了自己心中。</p>
+<p>我有点无法想象，如果有地没有选择丛雨，那丛雨究竟还要坚守多久呢？纯爱作其实也就是这一点非常不好，它永远不会透露一条线对另一条线的影响。从我观察来看，在选择出线路之前，丛雨她的内心就已经开始显现了，她那冰封成冻土的内心被灼热的阳光融出了一点点痕迹。如果有地没有选择她，她的内心就会继续封印，封印到永远，直到世界毁灭。</p>
+<p>其实呢，现代的大部分人类和丛雨又有什么两样呢？我所知的，大部分的人，都是在封闭自己的内心吧，从来不向一个人真正地倾诉自己的内心，永远的痛苦与悲伤都由自己承担，直到永远。多少人都是在别人面前乐观坚强，在月光面前却低声抽泣呢？这就是世界的悲哀吧！带着面具，从不在他人面前摘下，这已经成为了人类的习惯。之所以如此，是因为啊，不这样做的人，都已经被这个社会淘汰了啊！</p>
+<p>淘汰到最后，究竟剩下了什么呢？我不知道，我也不想知道了。因为，我不用坚守五百年，对吗？</p>
+<p>–记于 2019.4.16 21:59<br>  by ljz</p>
 
       
     </div>
@@ -422,7 +407,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OI/" rel="tag"># OI</a>
+            <a href="/tags/杂谈/" rel="tag"># 杂谈</a>
           
         </div>
       
@@ -435,8 +420,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/15/要补的坑/" rel="next" title="要补的坑">
-                <i class="fa fa-chevron-left"></i> 要补的坑
+              <a href="/2019/04/12/ICPC World Finals 2018/" rel="next" title="【ICPC World Finals 2018】题解">
+                <i class="fa fa-chevron-left"></i> 【ICPC World Finals 2018】题解
               </a>
             
           </div>
@@ -444,10 +429,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/24/最值反演/" rel="prev" title="最值反演(min_max容斥）总结">
-                最值反演(min_max容斥）总结 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -818,9 +799,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://foreverlasting1202.github.io/2018/12/17/洛谷能量采集/';
-          this.page.identifier = '2018/12/17/洛谷能量采集/';
-          this.page.title = '【洛谷5107】能量采集';
+          this.page.url = 'http://foreverlasting1202.github.io/2019/04/16/千恋万花/';
+          this.page.identifier = '2019/04/16/千恋万花/';
+          this.page.title = '《千恋＊万花》丛雨线有感';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://foreverlasting.disqus.com/embed.js';
