@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="瞎搞法。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-23T13:22:48.409Z">
+<meta property="og:updated_time" content="2019-04-23T13:34:53.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【HackerRank】Fibonacci LCM">
 <meta name="twitter:description" content="瞎搞法。">
@@ -413,7 +413,7 @@
         <p>瞎搞法。<br><a id="more"></a></p>
 <p>题面和提交地址可以去这里：<a href="https://vjudge.net/problem/HackerRank-fibonacci-lcm" target="_blank" rel="noopener">https://vjudge.net/problem/HackerRank-fibonacci-lcm</a></p>
 <p>这道题比较难。</p>
-<p>开始做这道题的时候，我想用这个性质：$gcd(F_i,F_j)=F_gcd(i,j)$。后来发现根本没什么用，因为$lcm$里的数太多了。</p>
+<p>开始做这道题的时候，我想用这个性质：$gcd(F_i,F_j)=F_{gcd(i,j)}$。后来发现根本没什么用，因为$lcm$里的数太多了。</p>
 <p>看了题解才知道，不是这个性质没有用，是我推式子能力太弱。</p>
 <p>令$A(g,i)$表示$gcd(F_g,lcm(F_{a_1},F_{a_2},…,F_{a_i}))$，那么答案就是$A(0,n)$。于是想办法递推这个$A$。</p>
 <p>其实只要想到$A$，接下来还是很好推的。经过一番简单的变换，你会化出$A(g,i)=\frac {F_{gcd(g,a_i)}\ast A(g,i-1)}{A(gcd(g,a_i),i-1)}$。（自己推推看）然后矩乘预处理一下，$O(1)$求斐波那契数列，就可以暴力推出$A(0,n)$了。</p>
@@ -540,7 +540,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">60</span>
+                  <span class="site-state-item-count">61</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
