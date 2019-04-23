@@ -449,8 +449,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/08/清华集训2016汽水/" rel="next" title="【清华集训2016】汽水">
-                <i class="fa fa-chevron-left"></i> 【清华集训2016】汽水
+              <a href="/2019/01/09/2019WC安师大集训游记/" rel="next" title="2019安师大附中集训游记">
+                <i class="fa fa-chevron-left"></i> 2019安师大附中集训游记
               </a>
             
           </div>
@@ -459,8 +459,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/01/09/2019WC安师大集训游记/" rel="prev" title="2019安师大附中集训游记">
-                2019安师大附中集训游记 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/01/12/ZJOI2017多项式/" rel="prev" title="【ZJOI2017】多项式">
+                【ZJOI2017】多项式 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -874,10 +874,8 @@
 
 
 
-
-  
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="/js/src/Valine.min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
@@ -886,13 +884,19 @@
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
-        av: AV, 
         el: '#comments' ,
+        verify: false,
+        notify: true,
         appId: 'vBIv3E8Y4e1znLKVs85Y0uSh-gzGzoHsz',
         appKey: 'Dpqs6OR87Ev6XoG6XcSPjToh',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
     });
   </script>
+
+
  
 
   

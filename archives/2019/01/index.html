@@ -350,9 +350,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/01/24/THUWC2017题解/" itemprop="url">
+            <a class="post-title-link" href="/2019/01/24/THUSCH2017题解/" itemprop="url">
               
-                <span itemprop="name">【THUWC2017】题解</span>
+                <span itemprop="name">【THUSCH2017】题解</span>
               
             </a>
         
@@ -385,9 +385,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/01/24/THUSCH2017题解/" itemprop="url">
+            <a class="post-title-link" href="/2019/01/24/THUWC2017题解/" itemprop="url">
               
-                <span itemprop="name">【THUSCH2017】题解</span>
+                <span itemprop="name">【THUWC2017】题解</span>
               
             </a>
         
@@ -560,9 +560,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/01/09/2019WC安师大集训游记/" itemprop="url">
+            <a class="post-title-link" href="/2019/01/09/UER8雪灾与外卖/" itemprop="url">
               
-                <span itemprop="name">2019安师大附中集训游记</span>
+                <span itemprop="name">【UER#8】雪灾与外卖</span>
               
             </a>
         
@@ -595,9 +595,9 @@
 
       <h2 class="post-title">
         
-            <a class="post-title-link" href="/2019/01/09/UER8雪灾与外卖/" itemprop="url">
+            <a class="post-title-link" href="/2019/01/09/2019WC安师大集训游记/" itemprop="url">
               
-                <span itemprop="name">【UER#8】雪灾与外卖</span>
+                <span itemprop="name">2019安师大附中集训游记</span>
               
             </a>
         
@@ -1025,10 +1025,8 @@
 
 
 
-
-  
   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-  <script src="/js/src/Valine.min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
   
   <script type="text/javascript">
     var GUEST = ['nick','mail','link'];
@@ -1037,13 +1035,19 @@
       return GUEST.indexOf(item)>-1;
     });
     new Valine({
-        av: AV, 
         el: '#comments' ,
+        verify: false,
+        notify: true,
         appId: 'vBIv3E8Y4e1znLKVs85Y0uSh-gzGzoHsz',
         appKey: 'Dpqs6OR87Ev6XoG6XcSPjToh',
-        placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!',
+        placeholder: 'Just go go',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
     });
   </script>
+
+
  
 
   
