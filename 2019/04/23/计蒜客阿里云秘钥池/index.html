@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="一道思路比较顺的动态规划题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-23T13:33:51.090Z">
+<meta property="og:updated_time" content="2019-04-23T14:15:16.440Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【计蒜之道】阿里云秘钥池">
 <meta name="twitter:description" content="一道思路比较顺的动态规划题。">
@@ -411,7 +411,7 @@
 
       
         <p>一道思路比较顺的动态规划题。<br><a id="more"></a></p>
-<p>显然$L$和$R$是独立的，依旧分成两半来求。考虑简单的数位DP$，$dp[i][j]$表示$p$进制表示长度为$i$且最高位是$j$的秘钥的数量。</p>
+<p>显然$L$和$R$是独立的，依旧分成两半来求。考虑简单的数位$DP$，$dp[i][j]$表示$p$进制表示长度为$i$且最高位是$j$的秘钥的数量。</p>
 <p>转移也不麻烦，$dp[i][j]=\sum_{k=1}^{p-1} dp[i-1][k]\ast [gcd(j,k)==1]$。</p>
 <p>直接转移显然是在找死，于是简单的化简一下式子，$dp[i][j]=\sum_{k=1}^{p-1} dp[i-1][k]\ast [gcd(j,k)==1]=\sum_{d|j} \mu(d)\ast \sum_{k=1,d|k}^{p-1} dp[i-1][k]$。</p>
 <p>这样子复杂度就降下来，于是就做完了。</p>
