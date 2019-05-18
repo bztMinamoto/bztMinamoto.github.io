@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="最近可能会做几道PE的题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-22T10:40:56.392Z">
+<meta property="og:updated_time" content="2019-05-13T06:51:52.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【project euler】思维记录">
 <meta name="twitter:description" content="最近可能会做几道PE的题。">
@@ -411,8 +411,8 @@
 
       
         <p>最近可能会做几道PE的题。<br><a id="more"></a></p>
-<p>364：枚举0x0格式的和0xx0格式的数量，顺带特判一下角落剩余的格子，然后组合数求一下就可以了。</p>
-<p>模数居然是1e8+7。</p>
+<h3 id="364："><a href="#364：" class="headerlink" title="364："></a>364：</h3><pre><code>枚举0x0格式的和0xx0格式的数量，顺带特判一下角落剩余的格子，然后组合数求一下就可以了。
+</code></pre><p>模数居然是1e8+7。</p>
 <p>code:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2019.2.22 by ljz</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> res register int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-10</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    res s=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">bool</span> w=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">'0'</span>||ch&gt;<span class="string">'9'</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span>(ch==<span class="string">'-'</span>)w=<span class="number">1</span>;</span><br><span class="line">        ch=getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)s=s*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar();</span><br><span class="line">    <span class="keyword">return</span> w?-s:s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">void</span> _swap(res &amp;x,res &amp;y) &#123;</span><br><span class="line">    x^=y^=x^=y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _abs(<span class="keyword">const</span> res &amp;x) &#123;</span><br><span class="line">    <span class="keyword">return</span> x&gt;<span class="number">0</span>?x:-x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _max(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y) &#123;</span><br><span class="line">    <span class="keyword">return</span> x&gt;y?x:y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _min(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y) &#123;</span><br><span class="line">    <span class="keyword">return</span> x&lt;y?x:y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> kcz=<span class="number">100000007</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e6</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">namespace</span> MAIN &#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> fac[N],inv[N];</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">pre</span><span class="params">()</span></span>&#123;</span><br><span class="line">        fac[<span class="number">0</span>]=fac[<span class="number">1</span>]=inv[<span class="number">0</span>]=inv[<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">2</span>;i&lt;=n;i++)fac[i]=<span class="number">1L</span>L*fac[i<span class="number">-1</span>]*i%kcz,inv[i]=<span class="number">1L</span>L*inv[kcz%i]*(kcz-kcz/i)%kcz;</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">2</span>;i&lt;=n;i++)inv[i]=<span class="number">1L</span>L*inv[i]*inv[i<span class="number">-1</span>]%kcz;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">C</span><span class="params">(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;y)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1L</span>L*fac[x]*inv[y]%kcz*inv[x-y]%kcz;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> ans;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(res &amp;x,<span class="keyword">const</span> res &amp;y)</span></span>&#123;</span><br><span class="line">        x+=y,x&gt;=kcz?x-=kcz:<span class="number">1</span>,x&lt;<span class="number">0</span>?x+=kcz:<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">mul</span><span class="params">(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1L</span>L*x*y%kcz;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">qpow</span><span class="params">(res x,res y)</span></span>&#123;</span><br><span class="line">        res ret=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(y)&#123;</span><br><span class="line">            <span class="keyword">if</span>(y&amp;<span class="number">1</span>)ret=<span class="number">1L</span>L*x*ret%kcz;</span><br><span class="line">            y&gt;&gt;=<span class="number">1</span>,x=<span class="number">1L</span>L*x*x%kcz;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">MAIN</span><span class="params">()</span></span>&#123;</span><br><span class="line">        n=N<span class="number">-10</span>,pre();</span><br><span class="line">        <span class="keyword">for</span>(res a=<span class="number">0</span>;a&lt;=<span class="number">1</span>;a++)</span><br><span class="line">            <span class="keyword">for</span>(res b=<span class="number">0</span>;b&lt;=<span class="number">1</span>;b++)&#123;</span><br><span class="line">                <span class="keyword">for</span>(res m=<span class="number">0</span>;n<span class="number">-1</span>-a-b<span class="number">-2</span>*m&gt;=<span class="number">0</span>;m++)&#123;</span><br><span class="line">                    res k=<span class="number">0</span>;</span><br><span class="line">                    <span class="keyword">if</span>((n<span class="number">-1</span>-a-b<span class="number">-2</span>*m)%<span class="number">3</span>==<span class="number">0</span>)k=(n<span class="number">-1</span>-a-b<span class="number">-2</span>*m)/<span class="number">3</span>;</span><br><span class="line">                    <span class="keyword">else</span> <span class="keyword">continue</span>;</span><br><span class="line">                    add(ans,mul(mul(fac[m+k+<span class="number">1</span>],mul(C(m+k,k),mul(qpow(<span class="number">2</span>,k),fac[k+a+b]))),fac[m+k]));</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,ans);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"><span class="comment">//    freopen("number.in","r",stdin);</span></span><br><span class="line"><span class="comment">//    freopen("number.out","w",stdout);</span></span><br><span class="line">    MAIN::MAIN();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 
       
@@ -517,8 +517,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -535,7 +544,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">62</span>
+                  <span class="site-state-item-count">63</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -546,7 +555,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">31</span>
+                  <span class="site-state-item-count">32</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -634,6 +643,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#364："><span class="nav-number">1.</span> <span class="nav-text">364：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
