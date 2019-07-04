@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="开个新坑。（其实原来的坑还没补完。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-04T13:10:48.823Z">
+<meta property="og:updated_time" content="2019-07-04T13:20:03.162Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP2019前的做题记录">
 <meta name="twitter:description" content="开个新坑。（其实原来的坑还没补完。">
@@ -423,7 +423,7 @@
 <p>首先特判掉$d=0$的情况，接着将其他情况都规约到$d=0$和$d=1$的情况，这个可以通过除以$d$的方法再证明一下充要条件做到。为了维护这两种情况，发现$\frac {\max_{i=l}^{r} a_i -\min_{i=l}^{r} a_i} {d}+L&lt;=R+k$即可。然后这东西显然枚举个左端点，然后线段树上二分出右端点，单调栈维护一下左端点就可以了。复杂度是$O(nlogn)$。</p>
 <h3 id="CF679E-Bear-and-Bad-Powers-of-42"><a href="#CF679E-Bear-and-Bad-Powers-of-42" class="headerlink" title="[CF679E]Bear and Bad Powers of 42"></a>[CF679E]Bear and Bad Powers of 42</h3><p>题解在<a href="https://foreverlasting1202.github.io/2019/07/03/CF679E/">博客</a>里了。</p>
 <h3 id="ZJOI2018-历史"><a href="#ZJOI2018-历史" class="headerlink" title="[ZJOI2018]历史"></a>[ZJOI2018]历史</h3><p>LCT。</p>
-<p>考虑每次如何算答案。思考一下贡献，推一波式子，发现当$2<em>\max_{i=0}^m a_i&gt;=(\sum_{i=0}^m a_i) +1$时，答案是$2</em>(\sum_{i=0}^m a_i-\max_{i=0}^m a_i)$否则是$(\sum_{i=0}^m a_i)-1$。证明可以考虑归纳。然后发现换根的操作其实就是判断上述两种情况分类讨论一下，在$access$的时候，前者就切换，后者不切换，贡献重新算一下就好了。时间复杂度$O(mlogn)$。</p>
+<p>考虑每次如何算答案。思考一下贡献，推一波式子，发现当$2\ast \max_{i=0}^m a_i&gt;=(\sum_{i=0}^m a_i) +1$时，答案是$2\ast (\sum_{i=0}^m a_i-\max_{i=0}^m a_i)$否则是$(\sum_{i=0}^m a_i)-1$。证明可以考虑归纳。然后发现换根的操作其实就是判断上述两种情况分类讨论一下，在$access$的时候，前者就切换，后者不切换，贡献重新算一下就好了。时间复杂度$O(mlogn)$。</p>
 <h3 id="ZJOI2018-保镖"><a href="#ZJOI2018-保镖" class="headerlink" title="[ZJOI2018]保镖"></a>[ZJOI2018]保镖</h3><p>计算几何。</p>
 <p>首先可以发现$n=3$的时候答案一定是$3$，于是骗到了$10$分。接下来考虑正解。直接求这个期望其实是相当不好处理的，因为凸包这个东西只能是有了整体轮廓才能求。于是考虑一种特殊的三角剖分：$Delaunay$三角剖分。这种剖分有个非常有用的空圆性质，即剖分后的任意一个三角形的外接圆不包含其它点。同时由于是三角剖分，所以凸包上的所有边都会出现在三角剖分中，这个可以反证一下。然后再根据欧拉定理，我们可以得出这样一个重要的性质：一个大小为$n$的点集的任何一个三角剖分的三角形个数与凸包点数和为$2n-2$。这个利用欧拉定理和这张平面图本身的性质可以证明。这样的话，我们就将凸包点数的期望转换为三角形个数的期望。而这个期望我们可以分别计算每一个三角形的贡献来得到。接下来我们来考虑反演带来的变化。对于剖分后的一个三角形，若反演中心不在这个三角形的外接圆里，由于$Delaunay$三角剖分的空圆性质，我们可以知道这个三角形反演后还是$Delaunay$三角形。如果在里面，这个圆反演后则一定会包括所有点。为了方便说明，我们令如果点集中存在三个点，它们的外接圆(含边界)包含其余所有的点，则称这个圆为支配圆。$Delaunay$三角形对应的外接圆，暂且记作$Delaunay$圆。当然，有些圆可能既是支配圆，又是$Delaunay$圆。然后可以用平面几何的知识或者画图等方法证明下面性质：对于一个$Delaunay$圆，如果反演中心在圆外，则它的反形是$Delaunay$圆，否则是支配圆。反之亦然。而通过上上面那个性质，可以知道凸包点数和$Delaunay$圆的个数有关。因此，我们需要对于原点集求出$Delaunay$圆的个数和支配圆的个数。$Delaunay$圆可以通过$Delaunay$三角剖分的$O(nlogn)$或者$O(n^2)$算法求出，支配圆则可以考虑把圆的坐标方程看成三维坐标，把这么些点投射到抛物面上，求出其三维凸包，发现每一个面对应到一个 $Delaunay$圆或支配圆。同时也会发现下凸包对应$Delaunay$圆，上凸包对应支配圆。证明我也不会，这里略过。同时通过这次投射加上欧拉定理，我们还会知道只要不四点共圆，则$Delaunay$圆与支配圆的个数之和为$2n-4$。终于，我们只用求出每个圆是支配圆的概率了。还是考虑三维凸包，枚举每一个面，判断是否是$Delaunay$圆还是支配圆，然后求个矩形和圆的面积交就可以把概率算出来，成功地将这题的思路讲完了。至于具体实现，实在是太麻烦了，基本上还是剽别人的比较方便了。</p>
 <h3 id="Loj6674-赛道修建"><a href="#Loj6674-赛道修建" class="headerlink" title="[Loj6674]赛道修建"></a>[Loj6674]赛道修建</h3><p>动态规划+bitset。</p>
