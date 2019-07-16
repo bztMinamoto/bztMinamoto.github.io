@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="OI,">
+  <meta name="keywords" content="杂谈,">
 
 
 
@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="瞎搞法。">
-<meta name="keywords" content="OI">
+<meta name="description" content="这里记载一下近期更新的博客。">
+<meta name="keywords" content="杂谈">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【HackerRank】Fibonacci LCM">
-<meta property="og:url" content="http://foreverlasting1202.github.io/2019/04/23/HackerRank-fibonacci-lcm/index.html">
+<meta property="og:title" content="近期更新的博客">
+<meta property="og:url" content="http://foreverlasting1202.github.io/2019/07/16/近期更新的博客/index.html">
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
-<meta property="og:description" content="瞎搞法。">
+<meta property="og:description" content="这里记载一下近期更新的博客。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-23T13:34:53.018Z">
+<meta property="og:updated_time" content="2019-07-16T12:55:23.788Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【HackerRank】Fibonacci LCM">
-<meta name="twitter:description" content="瞎搞法。">
+<meta name="twitter:title" content="近期更新的博客">
+<meta name="twitter:description" content="这里记载一下近期更新的博客。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://foreverlasting1202.github.io/2019/04/23/HackerRank-fibonacci-lcm/">
+  <link rel="canonical" href="http://foreverlasting1202.github.io/2019/07/16/近期更新的博客/">
 
 
 
 
 
-  <title>【HackerRank】Fibonacci LCM | foreverlasting's blog</title>
+  <title>近期更新的博客 | foreverlasting's blog</title>
   
 
 
@@ -295,7 +295,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://foreverlasting1202.github.io/2019/04/23/HackerRank-fibonacci-lcm/">
+    <link itemprop="mainEntityOfPage" href="http://foreverlasting1202.github.io/2019/07/16/近期更新的博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="foreverlasting">
@@ -312,7 +312,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【HackerRank】Fibonacci LCM</h1>
+          <h1 class="post-title" itemprop="name headline">近期更新的博客</h1>
         
 
         <div class="post-meta">
@@ -324,8 +324,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-23T21:06:00+08:00">
-                2019-04-23
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-16T21:50:00+08:00">
+                2019-07-16
               </time>
             
 
@@ -335,28 +335,6 @@
           </span>
 
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/瞎搞法/" itemprop="url" rel="index">
-                    <span itemprop="name">瞎搞法</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
 
           
             
@@ -365,8 +343,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/04/23/HackerRank-fibonacci-lcm/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/04/23/HackerRank-fibonacci-lcm/" itemprop="commentCount"></span>
+                <a href="/2019/07/16/近期更新的博客/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/07/16/近期更新的博客/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -374,7 +352,7 @@
 
           
           
-             <span id="/2019/04/23/HackerRank-fibonacci-lcm/" class="leancloud_visitors" data-flag-title="【HackerRank】Fibonacci LCM">
+             <span id="/2019/07/16/近期更新的博客/" class="leancloud_visitors" data-flag-title="近期更新的博客">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,15 +388,25 @@
       
 
       
-        <p>瞎搞法。<br><a id="more"></a></p>
-<p>题面和提交地址可以去这里：<a href="https://vjudge.net/problem/HackerRank-fibonacci-lcm" target="_blank" rel="noopener">https://vjudge.net/problem/HackerRank-fibonacci-lcm</a></p>
-<p>这道题比较难。</p>
-<p>开始做这道题的时候，我想用这个性质：$gcd(F_i,F_j)=F_{gcd(i,j)}$。后来发现根本没什么用，因为$lcm$里的数太多了。</p>
-<p>看了题解才知道，不是这个性质没有用，是我推式子能力太弱。</p>
-<p>令$A(g,i)$表示$gcd(F_g,lcm(F_{a_1},F_{a_2},…,F_{a_i}))$，那么答案就是$A(0,n)$。于是想办法递推这个$A$。</p>
-<p>其实只要想到$A$，接下来还是很好推的。经过一番简单的变换，你会化出$A(g,i)=\frac {F_{gcd(g,a_i)}\ast A(g,i-1)}{A(gcd(g,a_i),i-1)}$。（自己推推看）然后矩乘预处理一下，$O(1)$求斐波那契数列，就可以暴力推出$A(0,n)$了。</p>
-<p>感觉这种无中生有的推式子题才是最恶心的。</p>
-<p>code:<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//2019.3.15 by ljz</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> res register int</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LL long long</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> inf 0x3f3f3f3f</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> eps 1e-15</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> RG register</span></span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">()</span></span>&#123;</span><br><span class="line">    res s=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">bool</span> w=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">char</span> ch=getchar();</span><br><span class="line">    <span class="keyword">while</span>(ch&lt;<span class="string">'0'</span>||ch&gt;<span class="string">'9'</span>)&#123;<span class="keyword">if</span>(ch==<span class="string">'-'</span>)w=<span class="number">1</span>;ch=getchar();&#125;</span><br><span class="line">    <span class="keyword">while</span>(ch&gt;=<span class="string">'0'</span>&amp;&amp;ch&lt;=<span class="string">'9'</span>)s=s*<span class="number">10</span>+ch-<span class="string">'0'</span>,ch=getchar();</span><br><span class="line">    <span class="keyword">return</span> w?-s:s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">void</span> _swap(res &amp;x,res &amp;y) &#123;</span><br><span class="line">    x^=y^=x^=y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _abs(<span class="keyword">const</span> res &amp;x) &#123;</span><br><span class="line">    <span class="keyword">return</span> x&gt;<span class="number">0</span>?x:-x;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _max(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y) &#123;</span><br><span class="line">    <span class="keyword">return</span> x&gt;y?x:y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">inline</span> <span class="keyword">int</span> _min(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y) &#123;</span><br><span class="line">    <span class="keyword">return</span> x&lt;y?x:y;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> kcz=<span class="number">1e9</span>+<span class="number">7</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> N=<span class="number">1e2</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> M=<span class="number">32000</span>+<span class="number">10</span>;</span><br><span class="line"><span class="keyword">namespace</span> MAIN&#123;</span><br><span class="line">    <span class="keyword">int</span> n;</span><br><span class="line">    <span class="keyword">int</span> a[N];</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">mul</span><span class="params">(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">int</span>(<span class="number">1L</span>L*x*y%kcz);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(res &amp;x,<span class="keyword">const</span> res &amp;y)</span></span>&#123;</span><br><span class="line">        x+=y,x&gt;=kcz?x-=kcz:(x&lt;<span class="number">0</span>?x+=kcz:<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">Add</span><span class="params">(<span class="keyword">const</span> res &amp;x,<span class="keyword">const</span> res &amp;y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x+y&gt;=kcz?x+y-kcz:(x+y&lt;<span class="number">0</span>?x+y+kcz:x+y);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">gcd</span><span class="params">(res x,res y)</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(y)&#123;</span><br><span class="line">            res t=x;</span><br><span class="line">            x=y,y=t%x;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">int</span> <span class="title">qpow</span><span class="params">(res x,res y)</span></span>&#123;</span><br><span class="line">        res ret=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(y)&#123;</span><br><span class="line">            <span class="keyword">if</span>(y&amp;<span class="number">1</span>)ret=mul(ret,x);</span><br><span class="line">            x=mul(x,x),y&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">Matrix</span>&#123;</span></span><br><span class="line">        <span class="keyword">int</span> t[<span class="number">2</span>][<span class="number">2</span>];</span><br><span class="line">        Matrix() &#123;<span class="keyword">for</span>(res i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)<span class="keyword">for</span>(res j=<span class="number">0</span>;j&lt;<span class="number">2</span>;j++)t[i][j]=<span class="number">0</span>;&#125;</span><br><span class="line">        <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">init</span><span class="params">()</span></span>&#123;</span><br><span class="line">            t[<span class="number">0</span>][<span class="number">0</span>]=t[<span class="number">1</span>][<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    <span class="keyword">inline</span> Matrix <span class="keyword">operator</span> * (<span class="keyword">const</span> Matrix &amp;x,<span class="keyword">const</span> Matrix &amp;y)&#123;</span><br><span class="line">        Matrix ret;</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">0</span>;i&lt;<span class="number">2</span>;i++)</span><br><span class="line">            <span class="keyword">for</span>(res j=<span class="number">0</span>;j&lt;<span class="number">2</span>;j++)&#123;</span><br><span class="line">                RG LL Ret=<span class="number">0</span>;</span><br><span class="line">                <span class="keyword">for</span>(res k=<span class="number">0</span>;k&lt;<span class="number">2</span>;k++)</span><br><span class="line">                    Ret+=<span class="number">1L</span>L*x.t[i][k]*y.t[k][j];</span><br><span class="line">                ret.t[i][j]=<span class="keyword">int</span>(Ret%kcz);</span><br><span class="line">            &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> Matrix <span class="title">qpow</span><span class="params">(Matrix x,res y)</span></span>&#123;</span><br><span class="line">        Matrix ret;</span><br><span class="line">        ret.init();</span><br><span class="line">        <span class="keyword">while</span>(y)&#123;</span><br><span class="line">            <span class="keyword">if</span>(y&amp;<span class="number">1</span>)ret=ret*x;</span><br><span class="line">            x=x*x,y&gt;&gt;=<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> ret;</span><br><span class="line">    &#125;</span><br><span class="line">    Matrix dw,pw[M],pw2[M];</span><br><span class="line">    <span class="keyword">int</span> lim=<span class="number">32000</span>;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> Matrix <span class="title">qpow</span><span class="params">(<span class="keyword">const</span> res &amp;x)</span></span>&#123;</span><br><span class="line">        <span class="keyword">return</span> x&lt;=lim?pw[x]:pw[x%lim]*pw2[x/lim];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">int</span> A[<span class="number">2</span>];</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">F</span><span class="params">(<span class="keyword">const</span> res &amp;g,<span class="keyword">const</span> res &amp;i,<span class="keyword">const</span> res &amp;id)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(i==n&amp;&amp;g)&#123;A[id]=mul(A[id],qpow(g).t[<span class="number">0</span>][<span class="number">1</span>]);<span class="keyword">return</span>;&#125;</span><br><span class="line">        res GCD=gcd(g,a[i+<span class="number">1</span>]);</span><br><span class="line">        <span class="keyword">if</span>(g==GCD)<span class="keyword">return</span>;</span><br><span class="line">        F(g,i+<span class="number">1</span>,id),F(GCD,i+<span class="number">1</span>,id^<span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">MAIN</span><span class="params">()</span></span>&#123;</span><br><span class="line">        n=read();</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">1</span>;i&lt;=n;i++)a[i]=read();</span><br><span class="line">        sort(a+<span class="number">1</span>,a+n+<span class="number">1</span>);</span><br><span class="line">        n=<span class="keyword">int</span>(unique(a+<span class="number">1</span>,a+n+<span class="number">1</span>)-a<span class="number">-1</span>);</span><br><span class="line">        dw.t[<span class="number">0</span>][<span class="number">0</span>]=dw.t[<span class="number">0</span>][<span class="number">1</span>]=dw.t[<span class="number">1</span>][<span class="number">0</span>]=<span class="number">1</span>,pw[<span class="number">0</span>].init(),pw2[<span class="number">0</span>].init();</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">1</span>;i&lt;=lim;i++)pw[i]=pw[i<span class="number">-1</span>]*dw;</span><br><span class="line">        <span class="keyword">for</span>(res i=<span class="number">1</span>;i&lt;=lim;i++)pw2[i]=pw2[i<span class="number">-1</span>]*pw[lim];</span><br><span class="line">        A[<span class="number">0</span>]=A[<span class="number">1</span>]=<span class="number">1</span>,F(<span class="number">0</span>,<span class="number">0</span>,<span class="number">1</span>),A[<span class="number">0</span>]=mul(A[<span class="number">0</span>],qpow(A[<span class="number">1</span>],kcz<span class="number">-2</span>));</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,A[<span class="number">0</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    MAIN::MAIN();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+        <p>这里记载一下近期更新的博客。<br><a id="more"></a></p>
+<p>$2019.7.1$ <a href="https://foreverlasting1202.github.io/2019/07/01/%E9%AB%98%E4%B8%80%E7%BB%93%E6%9D%9F%E8%AE%B0/">高一结束记</a>（这篇密码想知道可以QQ询问哦，虽然不是什么好记录，有点消极的）</p>
+<p>$2019.7.2$ <a href="https://foreverlasting1202.github.io/2019/07/02/2018-2019%20ACM-ICPC,%20Asia%20Xuzhou%20Regional%20Contest/">ACM-ICPC 2018</a></p>
+<p><a href="https://foreverlasting1202.github.io/2019/07/02/NOIP2019%E5%89%8D%E7%9A%84%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">NOIP2019前的做题记录</a></p>
+<p><a href="https://foreverlasting1202.github.io/2019/07/02/CF786E/">CF768E</a></p>
+<p>$2019.7.3$ <a href="https://foreverlasting1202.github.io/2019/07/02/NOIP2019%E5%89%8D%E7%9A%84%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">NOIP2019前的做题记录</a></p>
+<p><a href="https://foreverlasting1202.github.io/2019/07/03/CF679E/">CF679E</a></p>
+<p>$2019.7.4$ <a href="https://foreverlasting1202.github.io/2019/07/02/NOIP2019%E5%89%8D%E7%9A%84%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">NOIP2019前的做题记录</a></p>
+<p>$2019.7.4$ <a href="https://foreverlasting1202.github.io/2019/07/05/2019%E6%B5%99%E5%A4%A7%E9%9B%86%E8%AE%AD%E4%B9%8B%E6%97%85/">2019浙大集训之旅</a></p>
+<p>$2019.7.5$ <a href="https://foreverlasting1202.github.io/2019/07/05/2019%E6%B5%99%E5%A4%A7%E9%9B%86%E8%AE%AD%E4%B9%8B%E6%97%85/">2019浙大集训之旅</a></p>
+<p><a href="https://foreverlasting1202.github.io/2019/07/02/NOIP2019%E5%89%8D%E7%9A%84%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">NOIP2019前的做题记录</a></p>
+<p>$2019.7.6$ <a href="https://foreverlasting1202.github.io/2019/07/05/2019%E6%B5%99%E5%A4%A7%E9%9B%86%E8%AE%AD%E4%B9%8B%E6%97%85/">2019浙大集训之旅</a></p>
+<p>$2019.7.8$ <a href="https://foreverlasting1202.github.io/2019/07/05/2019%E6%B5%99%E5%A4%A7%E9%9B%86%E8%AE%AD%E4%B9%8B%E6%97%85/">2019浙大集训之旅</a></p>
+<p>$2019.7.9$ <a href="https://foreverlasting1202.github.io/2019/07/05/2019%E6%B5%99%E5%A4%A7%E9%9B%86%E8%AE%AD%E4%B9%8B%E6%97%85/">2019浙大集训之旅</a></p>
+<p>$2019.7.10$ <a href="https://foreverlasting1202.github.io/2019/07/05/2019%E6%B5%99%E5%A4%A7%E9%9B%86%E8%AE%AD%E4%B9%8B%E6%97%85/">2019浙大集训之旅</a></p>
+<p>$2019.7.11$ <a href="https://foreverlasting1202.github.io/2019/07/05/2019%E6%B5%99%E5%A4%A7%E9%9B%86%E8%AE%AD%E4%B9%8B%E6%97%85/">2019浙大集训之旅</a></p>
+<p><a href="https://foreverlasting1202.github.io/2019/07/02/NOIP2019%E5%89%8D%E7%9A%84%E5%81%9A%E9%A2%98%E8%AE%B0%E5%BD%95/">NOIP2019前的做题记录</a></p>
+<p>$2019.7.15$ <a href="https://foreverlasting1202.github.io/2019/07/05/2019%E6%B5%99%E5%A4%A7%E9%9B%86%E8%AE%AD%E4%B9%8B%E6%97%85/">2019浙大集训之旅</a></p>
+<p>$2019.7.16$ <a href="https://foreverlasting1202.github.io/2019/07/05/2019%E6%B5%99%E5%A4%A7%E9%9B%86%E8%AE%AD%E4%B9%8B%E6%97%85/">2019浙大集训之旅</a></p>
 
       
     </div>
@@ -436,7 +424,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/OI/" rel="tag"># OI</a>
+            <a href="/tags/杂谈/" rel="tag"># 杂谈</a>
           
         </div>
       
@@ -449,8 +437,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/23/SP2002/" rel="next" title="【SP2002/HDU6309】RNG-Random Number Generator/Absolute">
-                <i class="fa fa-chevron-left"></i> 【SP2002/HDU6309】RNG-Random Number Generator/Absolute
+              <a href="/2019/07/16/随感7.16/" rel="next" title="感 记2019.7.16">
+                <i class="fa fa-chevron-left"></i> 感 记2019.7.16
               </a>
             
           </div>
@@ -458,10 +446,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/04/23/计蒜客阿里云秘钥池/" rel="prev" title="【计蒜之道】阿里云秘钥池">
-                【计蒜之道】阿里云秘钥池 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -843,9 +827,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://foreverlasting1202.github.io/2019/04/23/HackerRank-fibonacci-lcm/';
-          this.page.identifier = '2019/04/23/HackerRank-fibonacci-lcm/';
-          this.page.title = '【HackerRank】Fibonacci LCM';
+          this.page.url = 'http://foreverlasting1202.github.io/2019/07/16/近期更新的博客/';
+          this.page.identifier = '2019/07/16/近期更新的博客/';
+          this.page.title = '近期更新的博客';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://foreverlasting.disqus.com/embed.js';
