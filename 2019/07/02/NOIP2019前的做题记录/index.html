@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="开个新坑。（其实原来的坑还没补完。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-07-11T14:19:12.828Z">
+<meta property="og:updated_time" content="2019-07-18T09:23:00.379Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP2019前的做题记录">
 <meta name="twitter:description" content="开个新坑。（其实原来的坑还没补完。">
@@ -271,7 +271,6 @@
 </nav>
 
 
-
  </div>
     </header>
 
@@ -436,6 +435,14 @@
 <p>考虑枚举$S$里每一个串的循环串，然后直接用哈希算出还差哪些，暴力枚举一下就没了。</p>
 <h3 id="SP6826-HACKING-Hacking"><a href="#SP6826-HACKING-Hacking" class="headerlink" title="[SP6826]HACKING-Hacking"></a>[SP6826]HACKING-Hacking</h3><p>后缀自动机。</p>
 <p>对原串建出后缀自动机在上面随便$dfs$一下就好了，没有路径就过，有路径就走了。</p>
+<h3 id="CF846D-Monitor"><a href="#CF846D-Monitor" class="headerlink" title="[CF846D]Monitor"></a>[CF846D]Monitor</h3><p>二分+二维前缀和。</p>
+<p>如上述。</p>
+<h3 id="CF1190B-Tokitsukaze-CSL-and-Stone-Game"><a href="#CF1190B-Tokitsukaze-CSL-and-Stone-Game" class="headerlink" title="[CF1190B]Tokitsukaze, CSL and Stone Game"></a>[CF1190B]Tokitsukaze, CSL and Stone Game</h3><p>博弈论。</p>
+<p>这道题细节好多啊。就首先三个一样的或者两个一样一个差一或者等差数列这类情况都要判掉，然后把总数减去$\frac {n\ast (n-1)}{2}$（因为每次都是等差数列的拿，不然就会出现两个一样），小于$0$和奇偶判一判就对了。</p>
+<h3 id="CF1190C-Tokitsukaze-and-Duel"><a href="#CF1190C-Tokitsukaze-and-Duel" class="headerlink" title="[CF1190C]Tokitsukaze and Duel"></a>[CF1190C]Tokitsukaze and Duel</h3><p>博弈论。</p>
+<p>可以证明的结论是两轮搞不定这辈子就搞不定，因为可以反复走。于是暴力判一下一次和两次就可以做了。</p>
+<h3 id="CF1190D-Tokitsukaze-and-Strange-Rectangle"><a href="#CF1190D-Tokitsukaze-and-Strange-Rectangle" class="headerlink" title="[CF1190D]Tokitsukaze and Strange Rectangle"></a>[CF1190D]Tokitsukaze and Strange Rectangle</h3><p>扫描线+BIT。</p>
+<p>考虑按$y$递减来扫描，对于相邻的几块$x$就是一个乘法原理，这个用$BIT$就可以维护了。</p>
 
       
     </div>
@@ -675,7 +682,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Uoj370-滑稽树上滑稽果"><span class="nav-number">1.</span> <span class="nav-text">[Uoj370]滑稽树上滑稽果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOI2014-Rail"><span class="nav-number">2.</span> <span class="nav-text">[IOI2014]Rail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACM-ICPC2018-Rikka-with-Sorting-Networks"><span class="nav-number">3.</span> <span class="nav-text">[ACM-ICPC2018]Rikka with Sorting Networks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF786E-ALT"><span class="nav-number">4.</span> <span class="nav-text">[CF786E]ALT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HNOI-AHOI2018-寻宝游戏"><span class="nav-number">5.</span> <span class="nav-text">[HNOI/AHOI2018]寻宝游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF407E-k-d-sequence"><span class="nav-number">6.</span> <span class="nav-text">[CF407E]k-d-sequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF679E-Bear-and-Bad-Powers-of-42"><span class="nav-number">7.</span> <span class="nav-text">[CF679E]Bear and Bad Powers of 42</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZJOI2018-历史"><span class="nav-number">8.</span> <span class="nav-text">[ZJOI2018]历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZJOI2018-保镖"><span class="nav-number">9.</span> <span class="nav-text">[ZJOI2018]保镖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Loj6674-赛道修建"><span class="nav-number">10.</span> <span class="nav-text">[Loj6674]赛道修建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF437E-The-Child-and-Polygon"><span class="nav-number">11.</span> <span class="nav-text">[CF437E]The Child and Polygon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF605C-Freelancer’s-Dreams"><span class="nav-number">12.</span> <span class="nav-text">{CF605C]Freelancer’s Dreams</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SDOI2015-双旋转字符串"><span class="nav-number">13.</span> <span class="nav-text">[SDOI2015]双旋转字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SP6826-HACKING-Hacking"><span class="nav-number">14.</span> <span class="nav-text">[SP6826]HACKING-Hacking</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Uoj370-滑稽树上滑稽果"><span class="nav-number">1.</span> <span class="nav-text">[Uoj370]滑稽树上滑稽果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#IOI2014-Rail"><span class="nav-number">2.</span> <span class="nav-text">[IOI2014]Rail</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ACM-ICPC2018-Rikka-with-Sorting-Networks"><span class="nav-number">3.</span> <span class="nav-text">[ACM-ICPC2018]Rikka with Sorting Networks</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF786E-ALT"><span class="nav-number">4.</span> <span class="nav-text">[CF786E]ALT</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HNOI-AHOI2018-寻宝游戏"><span class="nav-number">5.</span> <span class="nav-text">[HNOI/AHOI2018]寻宝游戏</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF407E-k-d-sequence"><span class="nav-number">6.</span> <span class="nav-text">[CF407E]k-d-sequence</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF679E-Bear-and-Bad-Powers-of-42"><span class="nav-number">7.</span> <span class="nav-text">[CF679E]Bear and Bad Powers of 42</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZJOI2018-历史"><span class="nav-number">8.</span> <span class="nav-text">[ZJOI2018]历史</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZJOI2018-保镖"><span class="nav-number">9.</span> <span class="nav-text">[ZJOI2018]保镖</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Loj6674-赛道修建"><span class="nav-number">10.</span> <span class="nav-text">[Loj6674]赛道修建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF437E-The-Child-and-Polygon"><span class="nav-number">11.</span> <span class="nav-text">[CF437E]The Child and Polygon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF605C-Freelancer’s-Dreams"><span class="nav-number">12.</span> <span class="nav-text">{CF605C]Freelancer’s Dreams</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SDOI2015-双旋转字符串"><span class="nav-number">13.</span> <span class="nav-text">[SDOI2015]双旋转字符串</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SP6826-HACKING-Hacking"><span class="nav-number">14.</span> <span class="nav-text">[SP6826]HACKING-Hacking</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF846D-Monitor"><span class="nav-number">15.</span> <span class="nav-text">[CF846D]Monitor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1190B-Tokitsukaze-CSL-and-Stone-Game"><span class="nav-number">16.</span> <span class="nav-text">[CF1190B]Tokitsukaze, CSL and Stone Game</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1190C-Tokitsukaze-and-Duel"><span class="nav-number">17.</span> <span class="nav-text">[CF1190C]Tokitsukaze and Duel</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF1190D-Tokitsukaze-and-Strange-Rectangle"><span class="nav-number">18.</span> <span class="nav-text">[CF1190D]Tokitsukaze and Strange Rectangle</span></a></li></ol></div>
             
 
           </div>
@@ -780,12 +787,7 @@
   
 
 
-  
 
-
-
-  
-  
 
 
 
@@ -823,21 +825,6 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three.min.js"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/three/three-waves.min.js"></script>
   
 
 
