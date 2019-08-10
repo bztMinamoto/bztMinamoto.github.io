@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="一道需要分类讨论的平衡树好题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-10T14:28:38.564Z">
+<meta property="og:updated_time" content="2019-08-10T14:30:02.094Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【YNOI2014】在太阳西斜的这个世界里">
 <meta name="twitter:description" content="一道需要分类讨论的平衡树好题。">
@@ -421,6 +421,7 @@
 <p>任意点：需要知道子树内插入一个点需要旋转的次数的期望$ans$。</p>
 <p>然后通过这些信息在插入一个点的时候将其旋到根时进行计算，注意一个$trick$，就是你可以复制一棵原有的树直接插入一个点进行计算。这样代码写起来会简单很多。</p>
 <p>$update:$</p>
+<p>似乎没人看懂我写了什么，那我重写一遍。</p>
 <p>点$x$为红时，$ans[x]=ans[ls]+ans[rs]$</p>
 <p>点$x$为黑时，$ans[x]+=ans[ls]+ans[rs]$。如果$x$拥有黑红儿子的时候，可能红儿子会翻身做主人。左右谁为黑儿子的计算方式类似，这里只阐述其中的一种。</p>
 <p>假设当前$ls$为黑儿子。$ls$造反需要的是$rs$的帮助，即$rs$为红，$rs$的儿子中也有红色才行。由于$rs$已经是红色了，所以它的儿子不应该会有红，但有了红色出现了不满足红黑树的情况，是由$insert$的时候改变而来的，因此要记录一个黑点变红的期望，并且记录一个红点儿子变红的期望。这样我们再考虑此时$rs$的贡献，我们思考单旋和双旋的情况，可以得知的是$rs$的贡献显然是$rs$的左儿子变红的期望$\ast 2$+$rs$的右儿子变红的期望。</p>
