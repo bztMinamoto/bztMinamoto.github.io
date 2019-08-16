@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="一段时间文化课后回来，感觉自己精神不错啊，刷题神速，继续继续。">
+<meta name="description" content="一道奇形怪状的线段树分治+线段树的奇怪题。">
 <meta name="keywords" content="OI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="【THUSCH2017】题解">
-<meta property="og:url" content="http://foreverlasting1202.github.io/2019/01/24/THUSCH2017题解/index.html">
+<meta property="og:title" content="【APIO2019】路灯">
+<meta property="og:url" content="http://foreverlasting1202.github.io/2019/08/16/APIO2019路灯/index.html">
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
-<meta property="og:description" content="一段时间文化课后回来，感觉自己精神不错啊，刷题神速，继续继续。">
+<meta property="og:description" content="一道奇形怪状的线段树分治+线段树的奇怪题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-01-29T02:53:36.377Z">
+<meta property="og:updated_time" content="2019-08-16T15:40:14.356Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="【THUSCH2017】题解">
-<meta name="twitter:description" content="一段时间文化课后回来，感觉自己精神不错啊，刷题神速，继续继续。">
+<meta name="twitter:title" content="【APIO2019】路灯">
+<meta name="twitter:description" content="一道奇形怪状的线段树分治+线段树的奇怪题。">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://foreverlasting1202.github.io/2019/01/24/THUSCH2017题解/">
+  <link rel="canonical" href="http://foreverlasting1202.github.io/2019/08/16/APIO2019路灯/">
 
 
 
 
 
-  <title>【THUSCH2017】题解 | foreverlasting's blog</title>
+  <title>【APIO2019】路灯 | foreverlasting's blog</title>
   
 
 
@@ -294,7 +294,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://foreverlasting1202.github.io/2019/01/24/THUSCH2017题解/">
+    <link itemprop="mainEntityOfPage" href="http://foreverlasting1202.github.io/2019/08/16/APIO2019路灯/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="foreverlasting">
@@ -311,7 +311,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">【THUSCH2017】题解</h1>
+          <h1 class="post-title" itemprop="name headline">【APIO2019】路灯</h1>
         
 
         <div class="post-meta">
@@ -323,8 +323,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-24T16:08:00+08:00">
-                2019-01-24
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-16T15:33:00+08:00">
+                2019-08-16
               </time>
             
 
@@ -346,8 +346,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/做题记录/" itemprop="url" rel="index">
-                    <span itemprop="name">做题记录</span>
+                  <a href="/categories/线段树分治/" itemprop="url" rel="index">
+                    <span itemprop="name">线段树分治</span>
                   </a>
                 </span>
 
@@ -364,8 +364,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2019/01/24/THUSCH2017题解/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/01/24/THUSCH2017题解/" itemprop="commentCount"></span>
+                <a href="/2019/08/16/APIO2019路灯/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/16/APIO2019路灯/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -373,7 +373,7 @@
 
           
           
-             <span id="/2019/01/24/THUSCH2017题解/" class="leancloud_visitors" data-flag-title="【THUSCH2017】题解">
+             <span id="/2019/08/16/APIO2019路灯/" class="leancloud_visitors" data-flag-title="【APIO2019】路灯">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -409,8 +409,15 @@
       
 
       
-        <p>一段时间文化课后回来，感觉自己精神不错啊，刷题神速，继续继续。<br><a id="more"></a></p>
-<p>咕咕咕。</p>
+        <p>一道奇形怪状的线段树分治+线段树的奇怪题。<br><a id="more"></a></p>
+<p>我的思路好像有点奇怪。</p>
+<p>拿到题目，直观的想法应该是直接维护这个序列。于是，就有了一种大暴力，考虑用树状数组维护单点修改和区间查询，然后每次暴力从$1$的时刻查询到$now$时刻，判断$sum[l,r]==r-l+1$即可，这样的复杂度是$O(n^2logn)$。</p>
+<p>有没有其他办法呢？我想到了线段树分治。把单点修改扔到线段树上，然后询问看做是时间轴$[1,now]$的区间查询，也丢到线段树上，用线段树分治去维护。这样可不可行呢？</p>
+<p>在开始，我以为再用个树状数组维护一下，再在递归回来的时候撤销一下就好了。然而这样子样例都过不了。冷静一分析，你会发现时间轴的区间$[1,now]$可能是若干个连续的区间拼凑成的，而这若干个区间的贡献却是不一的，不能直接当$1$算，这下就麻烦了。</p>
+<p>正常人可能到了这里就会放弃线段树分治了，然后我却脑抽地继续坚持了下去。我们想想看一个点反转后，对于其他的贡献会是怎么样的。一些与这个点无关的区间若是满的（我们称一个区间为满的即这个区间全是$1$）则加上当前反转与上次反转的时间差。有了这个想法的那一刻，我突然想起了$ZJOI2019$的线段树，发现两道题其实有异曲同工之妙。于是这道题就有了这个奇怪的做法。</p>
+<p>在线段树分治加入修改操作的时候，你维护一棵线段树，每个结点维护该结点所表示的区间满的时候的区间，这个东西是可以类似懒标记的想法下传的，所以是$log$级别的。在修改的时候，除了修改的这一条链以外，其他地方你再下传个当前时间减去上次修改时间的加法标记，表示又多了这么多的贡献。每个结点你再维护个$sum[rt]$表示当前节点所代表区间的$1$的数量，$su[rt]$表示历史上总共的答案，这一系列的东西都是可以在$pushup$和$pushdown$的时候维护出来的。查询操作就是正常的区间查询，然后你再利用启发式合并的思想合并所表示的区间满的时候的区间这个信息，保证这个合并过程也在了两个$log$的复杂度。总时间复杂度$O(nlog^3n)$。</p>
+<p><del>实际上，如果想到将$(a,b)$看做二维坐标上的点对的话，不仅好写，而且复杂度更优。</del></p>
+<p><del>以上均为口胡，有错误请指出。</del></p>
 
       
     </div>
@@ -441,8 +448,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/24/THUWC2017题解/" rel="next" title="【THUWC2017】题解">
-                <i class="fa fa-chevron-left"></i> 【THUWC2017】题解
+              <a href="/2019/08/14/近期更新的博客/" rel="next" title="近期更新的博客">
+                <i class="fa fa-chevron-left"></i> 近期更新的博客
               </a>
             
           </div>
@@ -450,10 +457,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/24/THUSC2016题解/" rel="prev" title="【THUSC2016】题解">
-                【THUSC2016】题解 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -823,9 +826,9 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://foreverlasting1202.github.io/2019/01/24/THUSCH2017题解/';
-          this.page.identifier = '2019/01/24/THUSCH2017题解/';
-          this.page.title = '【THUSCH2017】题解';
+          this.page.url = 'http://foreverlasting1202.github.io/2019/08/16/APIO2019路灯/';
+          this.page.identifier = '2019/08/16/APIO2019路灯/';
+          this.page.title = '【APIO2019】路灯';
         };
         var d = document, s = d.createElement('script');
         s.src = 'https://foreverlasting.disqus.com/embed.js';
