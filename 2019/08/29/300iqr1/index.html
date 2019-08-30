@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和$bzt$姐姐一起$vp$了这场比赛。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-29T11:22:36.918Z">
+<meta property="og:updated_time" content="2019-08-30T01:47:48.704Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Gym-102268】300iq Contest 1">
 <meta name="twitter:description" content="和$bzt$姐姐一起$vp$了这场比赛。">
@@ -411,7 +411,9 @@
       
         <p>和$bzt$姐姐一起$vp$了这场比赛。<br><a id="more"></a></p>
 <h3 id="A-Angle-Beats"><a href="#A-Angle-Beats" class="headerlink" title="A Angle Beats"></a>A Angle Beats</h3><p>题意：有一个$n\ast m$的矩阵，每个位置有$\ast$或$.$或$+$。现要用占三个格子的骨牌（$L$型和$I$型）去覆盖矩阵，要满足$I$型的中间必须覆盖的是$+$，$L$型的拐角处覆盖的是$+$或$\ast$，其它都必须覆盖$.$。问你最多能使用多少张骨牌？$2\leq n,m\leq 100$。</p>
-<p>做法：考场上想了个网络流，然后就假了。待补。</p>
+<p>做法：考场上想了个网络流，然后就假了。</p>
+<p>居然是一般图匹配，得去学带花树了。。。</p>
+<p>待补。</p>
 <h3 id="B-Best-Subsequence"><a href="#B-Best-Subsequence" class="headerlink" title="B Best Subsequence"></a>B Best Subsequence</h3><p>题意：给你一个长度为$n$的序列$a_i$，要求找到一个长度为$L$的子序列满足$max(max(b_i+b_{i+1}),b_L+b_1)$最小，问最小值。$3\leq k\leq n\leq 2\ast 10^5,1\leq a_i\leq 10^9$。</p>
 <p>做法：二分答案，$check$的时候先把所有小于等于$\frac {mid}{2}$的数拿出来，那么它们两两之间都最多只能塞进一个数，就好了。注意一下开头与末尾的以及二分时的$l+r$可能会超$int$。复杂度$O(nloga_i)$。</p>
 <h3 id="C-Cool-Pairs"><a href="#C-Cool-Pairs" class="headerlink" title="C Cool Pairs"></a>C Cool Pairs</h3><p>题意：给你两个大小为$n$的排列$p_i,q_i$和$k$。要求构造两个长度为$n$的序列$a_i,b_i$，要满足$-n\leq a_i,b_i\leq n$，$a_{p_1}\leq a_{p_2}\leq …\leq a_{p_n},b_{q_1}\leq b_{q_2}\leq …\leq b_{q_n}$，$\sum_{1\leq i&lt;j\leq n,a_i+b_j&lt;0} 1=k$。$1\leq n\leq 3\ast 10^5$。</p>
