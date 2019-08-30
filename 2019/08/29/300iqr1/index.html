@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和$bzt$姐姐一起$vp$了这场比赛。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-30T06:49:57.739Z">
+<meta property="og:updated_time" content="2019-08-30T08:19:49.878Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Gym-102268】300iq Contest 1">
 <meta name="twitter:description" content="和$bzt$姐姐一起$vp$了这场比赛。">
@@ -439,8 +439,10 @@
 <p>做法：随便并查集判一下，签到。$O(n\alpha(n))$。</p>
 <h3 id="G-Graph-Counting"><a href="#G-Graph-Counting" class="headerlink" title="G Graph Counting"></a>G Graph Counting</h3><p>题意：问你$A000065$的第$n$项怎么求。$1\leq n\leq 5\ast 10^5$。</p>
 <p>做法：拿到题，看到一个输入一个输出，直接$OEIS$。然后它告诉我这个东西是$A026820(n,n-1)$，点开一看，是划分数。然而我记得划分数可以$O(n\sqrt n)$求的，百度一搜，发现是$hdu13$年多校原题，然后就过了。大概做法是要利用五边形数定理（？）的样子，然而我不是很懂哎。详细请参考$hdu4651$。</p>
-<h3 id="H-Hall’s-Theorem"><a href="#H-Hall’s-Theorem" class="headerlink" title="H Hall’s Theorem"></a>H Hall’s Theorem</h3><p>题意：我没看，$bzt$看的。</p>
-<p>做法：$bzt$大概会，不过没写完。待补。</p>
+<h3 id="H-Hall’s-Theorem"><a href="#H-Hall’s-Theorem" class="headerlink" title="H Hall’s Theorem"></a>H Hall’s Theorem</h3><p>题意：让你构造一张两边各有$n$个点的二分图，假设$A$为左边图的一个点的子集，$N(A)$为与$A$有连边的点的集合，若$|N(A)|\leq |A|$，则称$A$为好的集合，要求构造的二分图满足好的集合的数量为$k$。$1\leq n\leq 20,1\leq k&lt; 2^n$。</p>
+<p>做法：$bzt$大概会，不过没写完。</p>
+<p>$bzt$好强啊！</p>
+<p>你就令左边第$i$个点连向右边前$a_i$个点，那么这样的话，你总的答案就是$\sum_{i=1}^n \sum_{j=0}^{a_i-1}\binom{n-i}{j}$。那么你就可以贪心地降序构造$a_i$即可。</p>
 <h3 id="I-Interesting-Graph"><a href="#I-Interesting-Graph" class="headerlink" title="I Interesting Graph"></a>I Interesting Graph</h3><p>题意：$bzt$看的。</p>
 <p>做法：不会，待补。</p>
 <h3 id="J-Jealous-Split"><a href="#J-Jealous-Split" class="headerlink" title="J Jealous Split"></a>J Jealous Split</h3><p>题意：没人看。</p>
