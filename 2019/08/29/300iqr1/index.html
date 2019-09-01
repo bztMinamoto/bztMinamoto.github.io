@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和$bzt$姐姐一起$vp$了这场比赛。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-30T08:25:32.849Z">
+<meta property="og:updated_time" content="2019-09-01T07:37:00.903Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Gym-102268】300iq Contest 1">
 <meta name="twitter:description" content="和$bzt$姐姐一起$vp$了这场比赛。">
@@ -443,8 +443,10 @@
 <p>做法：$bzt$大概会，不过没写完。</p>
 <p>$bzt$好强啊！</p>
 <p>你就令左边第$i$个点连向右边前$a_i$个点，那么这样的话，你总的答案就是$\sum_{i=1}^n \sum_{j=0}^{a_i-1}\binom{n-i}{j}$。那么你就可以贪心地降序构造$a_i$即可。</p>
-<h3 id="I-Interesting-Graph"><a href="#I-Interesting-Graph" class="headerlink" title="I Interesting Graph"></a>I Interesting Graph</h3><p>题意：$bzt$看的。</p>
+<h3 id="I-Interesting-Graph"><a href="#I-Interesting-Graph" class="headerlink" title="I Interesting Graph"></a>I Interesting Graph</h3><p>题意：有一张特殊的$n$个点$m$条边的图，这张图满足任意大小等于$7$的点集，都存在$a,b\in<br>A$以及一个$c\notin A$，满足从$a$到$b$的所有路径都包含$c$。求这张图$k$染色的方案数。答案模$998244353$，$1\leq n,m\leq 10^5$。</p>
 <p>做法：不会，待补。</p>
+<p>已经补了。</p>
+<p>性质说明这张图拥有的连通块大小都不会超过$6$，于是每个连通块内暴力状压，连通块之间暴力合并一下。复杂度大概不会很大？</p>
 <h3 id="J-Jealous-Split"><a href="#J-Jealous-Split" class="headerlink" title="J Jealous Split"></a>J Jealous Split</h3><p>题意：没人看。</p>
 <p>做法：待补。</p>
 <h3 id="K-Knowledge"><a href="#K-Knowledge" class="headerlink" title="K Knowledge"></a>K Knowledge</h3><p>题意：给一个长度为$n$的初始字符串，有六种操作，分别是从任意位置加入或删除$aa$或$bbb$或$ababab$的串，问你长度为$x$的串有几种？$1\leq n\leq 3\ast 10^5,1\leq x\leq 10^9$。</p>
