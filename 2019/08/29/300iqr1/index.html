@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和$bzt$姐姐一起$vp$了这场比赛。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-01T07:37:00.903Z">
+<meta property="og:updated_time" content="2019-09-02T00:34:55.348Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Gym-102268】300iq Contest 1">
 <meta name="twitter:description" content="和$bzt$姐姐一起$vp$了这场比赛。">
@@ -447,8 +447,8 @@
 <p>做法：不会，待补。</p>
 <p>已经补了。</p>
 <p>性质说明这张图拥有的连通块大小都不会超过$6$，于是每个连通块内暴力状压，连通块之间暴力合并一下。复杂度大概不会很大？</p>
-<h3 id="J-Jealous-Split"><a href="#J-Jealous-Split" class="headerlink" title="J Jealous Split"></a>J Jealous Split</h3><p>题意：没人看。</p>
-<p>做法：待补。</p>
+<h3 id="J-Jealous-Split"><a href="#J-Jealous-Split" class="headerlink" title="J Jealous Split"></a>J Jealous Split</h3><p>题意：给你一个长度为$n$的序列，要求将其恰好划分成$k$段，记$s_i$为第$i$段的和，$m_i$为第$i$段的最大值，你需要保证这种划分方案对任意$1\leq i&lt;k$满足$|s_i-s_{i+1}|\leq max(m_i,m_{i+1})$。$3\leq k,n\leq 10^5,0\leq a_i\leq 5\ast 10^4$。</p>
+<p>做法：二分一个$val$，使得每段和都大于等于$val$，同时$val$越大越好。然后可以证明正着和倒着拼起来一定是可以的，虽然我不会证明。。。</p>
 <h3 id="K-Knowledge"><a href="#K-Knowledge" class="headerlink" title="K Knowledge"></a>K Knowledge</h3><p>题意：给一个长度为$n$的初始字符串，有六种操作，分别是从任意位置加入或删除$aa$或$bbb$或$ababab$的串，问你长度为$x$的串有几种？$1\leq n\leq 3\ast 10^5,1\leq x\leq 10^9$。</p>
 <p>做法：我写了好久啊。我先手玩了一下，你会发现真正的初始串大概不多，可以简单地证明下肯定会小于等于$6$。然后写个暴搜再去打个表，发现实际上只有$12$种，那么本质不同的前缀匹配也就不多了。再打个表，发现也没有几种。于是拿着表扔进去，暴力矩乘就完事了。复杂度大概是$O(12^3logx)$。</p>
 
