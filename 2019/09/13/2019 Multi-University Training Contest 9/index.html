@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="补补吉老师的题，倒序补题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-13T11:17:19.498Z">
+<meta property="og:updated_time" content="2019-09-13T12:49:10.065Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2019 Multi-University Training Contest 9】题解">
 <meta name="twitter:description" content="补补吉老师的题，倒序补题。">
@@ -418,11 +418,13 @@
 <p>令$g(1,n)=\sum_{i=1}^n f(i,n)\ast i$。</p>
 <p>考虑$g(1,n)$怎么算。</p>
 <p>方便地，设$mid=\lfloor \frac{l+r}{2}\rfloor$，$A(n)=\frac {n(n+1)}{2}$，$fl(n)=\lfloor \frac{n}{2} \rfloor$。</p>
-<p>假设当前在$[l,r]$区间里，$g(l,r)=g(l,mid)+g(mid+1,r)+mid\ast \sum_{i=mid+1}^r dep[i]+A(r-l+1)$。</p>
+<p>假设当前在$[l,r]$区间里，</p>
+<p>$g(l,r)=g(l,mid)+g(mid+1,r)+mid\ast \sum_{i=mid+1}^r dep[i]+A(r-l+1)$。</p>
 <p>边界是$g(l,l)=l$。</p>
 <p>发现这个东西实际与$l,r$无关，只跟长度有关。所以可以重新令$g(n)=\sum_{i=1}^n f(i,n)\ast i$，$f(n)=\sum_{i=1}^n dep[i]$。</p>
 <p>那么$g(n)=g(fl(n+1))+g(fl(n))+fl(n+1)\ast f(fl(n))+A(n)$。</p>
-<p>两边同时$\sum$，得$\sum_{i=1}^n g(i)=\sum_{i=1}^n g(fl(i))+\sum_{i=1}^n g(fl(i+1))+\sum_{i=1}^n fl(i+1)\ast f(fl(i))+\sum_{i=1}^n A(i)$。</p>
+<p>两边同时$\sum$，得</p>
+<p>$\sum_{i=1}^n g(i)=\sum_{i=1}^n g(fl(i))+\sum_{i=1}^n g(fl(i+1))+\sum_{i=1}^n fl(i+1)\ast f(fl(i))+\sum_{i=1}^n A(i)$。</p>
 <p>左边即为我们要求的，看看右边咋办。</p>
 <p>设$G(n)=\sum_{i=1}^n g(i)$，$B(n)=\sum_{i=1}^n i^2=\frac{n(n+1)(2n+1)}{6}$。</p>
 <p>讨论$n$为奇偶，先假设$n$为奇。</p>
