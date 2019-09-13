@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="反演。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-04-23T13:45:03.912Z">
+<meta property="og:updated_time" content="2019-09-13T13:02:08.482Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【SDWC2018 Day1】网格">
 <meta name="twitter:description" content="反演。">
@@ -346,8 +346,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/容斥/" itemprop="url" rel="index">
-                    <span itemprop="name">容斥</span>
+                  <a href="/categories/计数/" itemprop="url" rel="index">
+                    <span itemprop="name">计数</span>
                   </a>
                 </span>
 
@@ -357,8 +357,8 @@
                 
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/容斥/反演/" itemprop="url" rel="index">
-                    <span itemprop="name">反演</span>
+                  <a href="/categories/计数/容斥/" itemprop="url" rel="index">
+                    <span itemprop="name">容斥</span>
                   </a>
                 </span>
 
@@ -427,13 +427,13 @@
 <p>先考虑上界限制。</p>
 <p>考虑容斥。</p>
 <p>发现$x$与$y$是独立的，那就先考虑$x$。</p>
-<p>$f[i]$表示至少有$i$步超过上界限制的方案数。转移就很容易了，$f[i]=C(R,i)\ast C(Tx-i*(Mx+1)+R-1,R-1)$。其中就是考虑至少选出$i$步，然后这$i$步都至少为$Mx+1$，那么隔板一下就可以了。</p>
+<p>$f[i]$表示至少有$i$步超过上界限制的方案数。转移就很容易了，$f[i]=C(R,i)\ast C(Tx-i\ast (Mx+1)+R-1,R-1)$。其中就是考虑至少选出$i$步，然后这$i$步都至少为$Mx+1$，那么隔板一下就可以了。</p>
 <p>那么$x$的答案就出来了，就是$\sum_{i=0}^{R} (-1)^i \ast f[i]$。</p>
 <p>然而虽然$x$与$y$看似独立，但因为不能原地踏步，所以直接相乘是错的。</p>
 <p>所以再次考虑容斥。</p>
 <p>设$g[i]$表示至多有$i$步超过上界限制的方案数，$dp[i]$表示恰好有$i$步超过上界限制的方案数。</p>
 <p>那么$g[i]$有两种转移。</p>
-<p>一方面，$g[i]=ansx*ansy$，即$x$与$y$的乘积。</p>
+<p>一方面，$g[i]=ansx\ast ansy$，即$x$与$y$的乘积。</p>
 <p>另一方面，$g[i]=\sum_{i=0}^R C(R,i)\ast dp[i]$。</p>
 <p>而另一条式子显然可以二项式反演，于是$dp[i]=\sum_{i=0}^R (-1)^{R-i}\ast C(R,i)\ast g[i]$。</p>
 <p>于是上界限制就处理好了。</p>
@@ -576,7 +576,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">41</span>
+                  <span class="site-state-item-count">44</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
