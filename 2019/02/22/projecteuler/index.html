@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="最近可能会做几道PE的题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-13T14:16:24.242Z">
+<meta property="og:updated_time" content="2019-09-13T15:27:13.376Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【project euler】思维记录">
 <meta name="twitter:description" content="最近可能会做几道PE的题。">
@@ -410,9 +410,9 @@
 
       
         <p>最近可能会做几道PE的题。<br><a id="more"></a></p>
-<h3 id="364："><a href="#364：" class="headerlink" title="364："></a>364：</h3><p>枚举$0x0$格式的和$0xx0$格式的数量，顺带特判一下角落剩余的格子，然后组合数求一下就可以了。</p>
+<h3 id="364"><a href="#364" class="headerlink" title="364"></a>364</h3><p>枚举$0x0$格式的和$0xx0$格式的数量，顺带特判一下角落剩余的格子，然后组合数求一下就可以了。</p>
 <p>模数居然是$10^8+7$。</p>
-<h3 id="675"><a href="#675" class="headerlink" title="675"></a>675</h3><p>考虑狄利克雷卷积，可以得到$S(n)=\tau(n^2)$。然后考虑从$(n-1)!$推到$n!$，把$n$扔进桶里，然后每次递归利用最小质因数算答案，复杂度大概是$O(nlog^2n)$？</p>
+<h3 id="675"><a href="#675" class="headerlink" title="675"></a>675</h3><p>考虑狄利克雷卷积，可以得到$S(n)=\tau(n^2)$。然后考虑从$(n-1)!$推到$n!$，把$n$扔进桶里，然后每次递归利用最小质因数算答案，复杂度大概是$O(n\Omega(n))$？</p>
 <h3 id="601"><a href="#601" class="headerlink" title="601"></a>601</h3><p>写一下式子，就是要求$(k+1)|(n-1)$的最小$k$小于等于$31$。于是容斥一下就好了。</p>
 <h3 id="608"><a href="#608" class="headerlink" title="608"></a>608</h3><p>推式子出击。</p>
 <p>$\huge D(m,n)=\sum_{d|m}\sum_{k=1}^n \tau(kd)$</p>
@@ -678,7 +678,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#364："><span class="nav-number">1.</span> <span class="nav-text">364：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#675"><span class="nav-number">2.</span> <span class="nav-text">675</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#601"><span class="nav-number">3.</span> <span class="nav-text">601</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#608"><span class="nav-number">4.</span> <span class="nav-text">608</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#677"><span class="nav-number">5.</span> <span class="nav-text">677</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#364"><span class="nav-number">1.</span> <span class="nav-text">364</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#675"><span class="nav-number">2.</span> <span class="nav-text">675</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#601"><span class="nav-number">3.</span> <span class="nav-text">601</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#608"><span class="nav-number">4.</span> <span class="nav-text">608</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#677"><span class="nav-number">5.</span> <span class="nav-text">677</span></a></li></ol></div>
             
 
           </div>
