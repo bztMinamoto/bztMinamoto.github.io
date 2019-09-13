@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="补补吉老师的题，倒序补题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-13T12:49:10.065Z">
+<meta property="og:updated_time" content="2019-09-13T12:52:20.175Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2019 Multi-University Training Contest 9】题解">
 <meta name="twitter:description" content="补补吉老师的题，倒序补题。">
@@ -435,6 +435,7 @@
 <p>$G(n)=3G(fl(n))+G(fl(n+1))+2H(fl(n))+F(fl(n))+\frac{1}{2}(A(n)+B(n))$</p>
 <p>$H$和$F$同理推一下，偶数就利用$G(n)=G(n-1)+g(n)$推一下，还是差不多。</p>
 <p>于是就做好了。至于复杂度的话，你会发现每一层都比上一层多$1$，总共$log$层，所以总复杂度是$O(log^2N)$。当然，你用个$map$记忆化一下就是$O(log^3N)$了。</p>
+<p>$std$的做法似乎是推的式子比较优秀，每次只用递归一个，用个$map$也只用$O(log^2N)$。</p>
 
       
     </div>
