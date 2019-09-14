@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="最近可能会做几道PE的题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-13T15:27:13.376Z">
+<meta property="og:updated_time" content="2019-09-14T11:11:53.752Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【project euler】思维记录">
 <meta name="twitter:description" content="最近可能会做几道PE的题。">
@@ -431,6 +431,7 @@
 <p>$\tau\ast I$可以用$\tau\ast I=I\ast I\ast I$，这个东西考虑组合意义就是一个数分成三个有序的数的乘积的方案数，可以写出$\tau\ast I(n)=\prod \frac{(e_i+1)(e_i+2)}{2}$，其中$n=\prod_{p_i} p_i^{e_i}$，这个也可以在$dfs$时直接求出。</p>
 <p>于是最后就能算出$D(200!,10^{12})$了。</p>
 <h3 id="677"><a href="#677" class="headerlink" title="677"></a>677</h3><p><a href="https://foreverlasting1202.github.io/2019/09/10/BJUnitedRound3%E4%B8%89%E8%89%B2%E6%A0%91/">题解放博客了</a></p>
+<h3 id="657"><a href="#657" class="headerlink" title="657"></a>657</h3><p>如果不能全选的限制，答案显然就是$\sum_{i=0}^n \alpha^i=\frac{\alpha^{n+1}-1}{\alpha-1}$。有了这个限制，考虑容斥，即枚举每次至多选了几个，这样容斥一下答案就是$\sum_{i=0}^{\alpha-1} (-1)^{\alpha-i+1}\frac{i^{n+1}-1}{i-1}\binom{\alpha}{i}$，然后就做完了。</p>
 
       
     </div>
@@ -678,7 +679,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#364"><span class="nav-number">1.</span> <span class="nav-text">364</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#675"><span class="nav-number">2.</span> <span class="nav-text">675</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#601"><span class="nav-number">3.</span> <span class="nav-text">601</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#608"><span class="nav-number">4.</span> <span class="nav-text">608</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#677"><span class="nav-number">5.</span> <span class="nav-text">677</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#364"><span class="nav-number">1.</span> <span class="nav-text">364</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#675"><span class="nav-number">2.</span> <span class="nav-text">675</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#601"><span class="nav-number">3.</span> <span class="nav-text">601</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#608"><span class="nav-number">4.</span> <span class="nav-text">608</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#677"><span class="nav-number">5.</span> <span class="nav-text">677</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#657"><span class="nav-number">6.</span> <span class="nav-text">657</span></a></li></ol></div>
             
 
           </div>
