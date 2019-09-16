@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="补补吉老师的题，倒序补题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-16T08:58:25.882Z">
+<meta property="og:updated_time" content="2019-09-16T09:01:28.313Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2018~2019 Multi-University Training Contest 9】题解">
 <meta name="twitter:description" content="补补吉老师的题，倒序补题。">
@@ -443,7 +443,7 @@
 <h3 id="Rikka-with-Game"><a href="#Rikka-with-Game" class="headerlink" title="Rikka with Game"></a>Rikka with Game</h3><h3 id="Rikka-with-Geometric-Sequence"><a href="#Rikka-with-Geometric-Sequence" class="headerlink" title="Rikka with Geometric Sequence"></a>Rikka with Geometric Sequence</h3><h3 id="Rikka-with-Mista"><a href="#Rikka-with-Mista" class="headerlink" title="Rikka with Mista"></a>Rikka with Mista</h3><p>题意：一个数的权值定义为这个数出现的$4$的个数。现给你$n$个数，问你所有子集和的权值之和。</p>
 <p>数据范围：$1\leq T\leq 4,1\leq n\leq 40,1\leq w_i\leq 44444444$。</p>
 <p>做法：好毒啊，有点卡常的。</p>
-<p>首先看到$40$这个数据范围，可以由此想到$meet\ in\ the\ middle$。我们求出两组分别的子集和后，按位考虑（最多$10$位），于是有数这一位有$4$当且仅当$4\ast 10^i\leq x&lt; 5\ast 10^i$。于是直接利用单调性做是$O(2^{\frac{n}{2}}\ast \frac{n}{2}\ast 10)$，显然过不了。考虑优化排序的过程，显然可以看这一位是几然后分别放进对应的$vector$里，然后归并一下。于是复杂度就变成$O(2^{\frac{n}{2}}\ast 10\ast 10)$，最后再卡卡常就能过了。</p>
+<p>首先看到$40$这个数据范围，可以由此想到$meet\ in\ the\ middle$。我们求出两组分别的子集和后，按位考虑（最多$10$位），于是有数这一位有$4$当且仅当$4\ast 10^i\leq x&lt; 5\ast 10^i$。于是直接利用单调性做是$O(2^{\frac{n}{2}}\ast \frac{n}{2}\ast 10)$，显然过不了。考虑优化排序的过程，显然可以看这一位是几然后分别放进对应的$vector$里，然后归并一下。于是复杂度就变成$O(2^{\frac{n}{2}}\ast 10\ast 10)$，最后再卡卡常就能过了，这里卡常可以每次按位考虑的时候先预处理它们这一位的数，然后将取模运算变成三目加法运算之类的。</p>
 <h3 id="Rikka-with-Cake"><a href="#Rikka-with-Cake" class="headerlink" title="Rikka with Cake"></a>Rikka with Cake</h3><p>题意：给你$n$条射线，问你将平面分成了几个部分？</p>
 <p>数据范围：$1\leq T\leq 100，1\leq r,c\leq 10^9,1\leq k\leq 10^5$。</p>
 <p>做法：咋回事啊，我写得咋这么复杂啊。</p>
