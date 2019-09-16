@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="补补吉老师的题，倒序补题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-16T07:11:08.428Z">
+<meta property="og:updated_time" content="2019-09-16T08:58:25.882Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2018~2019 Multi-University Training Contest 9】题解">
 <meta name="twitter:description" content="补补吉老师的题，倒序补题。">
@@ -440,7 +440,11 @@
 <h3 id="Rikka-with-Traffic-Light"><a href="#Rikka-with-Traffic-Light" class="headerlink" title="Rikka with Traffic Light"></a>Rikka with Traffic Light</h3><h3 id="Rikka-with-Stable-Marriage"><a href="#Rikka-with-Stable-Marriage" class="headerlink" title="Rikka with Stable Marriage"></a>Rikka with Stable Marriage</h3><h3 id="Rikka-with-Travels"><a href="#Rikka-with-Travels" class="headerlink" title="Rikka with Travels"></a>Rikka with Travels</h3><h3 id="Rikka-with-Coin"><a href="#Rikka-with-Coin" class="headerlink" title="Rikka with Coin"></a>Rikka with Coin</h3><p>题意：$n$件商品，都有个价格。你手上有面值为$10,20,50,100$的硬币，问你最少需要多少枚硬币，才能表示出所有商品的价格。</p>
 <p>数据范围：$1\leq T\leq 500,1\leq n\leq 100,1\leq w_i\leq 10^9$。</p>
 <p>做法：你感觉一下，就知道大部分的钱还是要用$100$表示。然而到底要剩下多少用$10,20,50$表示你并不知道。于是随便猜个$300$，以$10,20,50$做一个$300$容量的背包。最后暴力枚举一下就不管了，猜一猜就是对的。复杂度是$O(300\ast n\ast p)$，这里的$p$是有几种$10,20,50$的选法。</p>
-<h3 id="Rikka-with-Game"><a href="#Rikka-with-Game" class="headerlink" title="Rikka with Game"></a>Rikka with Game</h3><h3 id="Rikka-with-Geometric-Sequence"><a href="#Rikka-with-Geometric-Sequence" class="headerlink" title="Rikka with Geometric Sequence"></a>Rikka with Geometric Sequence</h3><h3 id="Rikka-with-Mista"><a href="#Rikka-with-Mista" class="headerlink" title="Rikka with Mista"></a>Rikka with Mista</h3><h3 id="Rikka-with-Cake"><a href="#Rikka-with-Cake" class="headerlink" title="Rikka with Cake"></a>Rikka with Cake</h3><p>题意：给你$n$条射线，问你将平面分成了几个部分？</p>
+<h3 id="Rikka-with-Game"><a href="#Rikka-with-Game" class="headerlink" title="Rikka with Game"></a>Rikka with Game</h3><h3 id="Rikka-with-Geometric-Sequence"><a href="#Rikka-with-Geometric-Sequence" class="headerlink" title="Rikka with Geometric Sequence"></a>Rikka with Geometric Sequence</h3><h3 id="Rikka-with-Mista"><a href="#Rikka-with-Mista" class="headerlink" title="Rikka with Mista"></a>Rikka with Mista</h3><p>题意：一个数的权值定义为这个数出现的$4$的个数。现给你$n$个数，问你所有子集和的权值之和。</p>
+<p>数据范围：$1\leq T\leq 4,1\leq n\leq 40,1\leq w_i\leq 44444444$。</p>
+<p>做法：好毒啊，有点卡常的。</p>
+<p>首先看到$40$这个数据范围，可以由此想到$meet\ in\ the\ middle$。我们求出两组分别的子集和后，按位考虑（最多$10$位），于是有数这一位有$4$当且仅当$4\ast 10^i\leq x&lt; 5\ast 10^i$。于是直接利用单调性做是$O(2^{\frac{n}{2}}\ast \frac{n}{2}\ast 10)$，显然过不了。考虑优化排序的过程，显然可以看这一位是几然后分别放进对应的$vector$里，然后归并一下。于是复杂度就变成$O(2^{\frac{n}{2}}\ast 10\ast 10)$，最后再卡卡常就能过了。</p>
+<h3 id="Rikka-with-Cake"><a href="#Rikka-with-Cake" class="headerlink" title="Rikka with Cake"></a>Rikka with Cake</h3><p>题意：给你$n$条射线，问你将平面分成了几个部分？</p>
 <p>数据范围：$1\leq T\leq 100，1\leq r,c\leq 10^9,1\leq k\leq 10^5$。</p>
 <p>做法：咋回事啊，我写得咋这么复杂啊。</p>
 <p>很明显就是求交点数，简单地想到离散化维护$x$坐标扫描线。然后然后，我没想到把朝下的射线理解成$+1$的朝上射线和$-1$的朝上射线，于是我开始了分类讨论，如果朝上的和朝下的有交，就要减去交的贡献，于是代码就很长了。。。</p>
