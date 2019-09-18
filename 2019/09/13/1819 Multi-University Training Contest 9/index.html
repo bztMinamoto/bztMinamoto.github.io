@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="补补吉老师的题，倒序补题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-16T09:01:28.313Z">
+<meta property="og:updated_time" content="2019-09-18T04:46:15.227Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2018~2019 Multi-University Training Contest 9】题解">
 <meta name="twitter:description" content="补补吉老师的题，倒序补题。">
@@ -437,7 +437,12 @@
 <p>于是就做好了。至于复杂度的话，你会发现每一层都比上一层多$1$，总共$log$层，所以总复杂度是$O(log^2N)$。当然，你用个$map$记忆化一下就是$O(log^3N)$了。</p>
 <p>$std$的做法似乎是推的式子比较优秀，每次只用递归一个，用个$map$也只用$O(log^2N)$。</p>
 <h3 id="Rikka-with-Defensive-Line"><a href="#Rikka-with-Defensive-Line" class="headerlink" title="Rikka with Defensive Line"></a>Rikka with Defensive Line</h3><p>我九条可怜最喜欢做的一件事，就是出几何题，对自以为多开就能$AK$的人说“不”。</p>
-<h3 id="Rikka-with-Traffic-Light"><a href="#Rikka-with-Traffic-Light" class="headerlink" title="Rikka with Traffic Light"></a>Rikka with Traffic Light</h3><h3 id="Rikka-with-Stable-Marriage"><a href="#Rikka-with-Stable-Marriage" class="headerlink" title="Rikka with Stable Marriage"></a>Rikka with Stable Marriage</h3><h3 id="Rikka-with-Travels"><a href="#Rikka-with-Travels" class="headerlink" title="Rikka with Travels"></a>Rikka with Travels</h3><h3 id="Rikka-with-Coin"><a href="#Rikka-with-Coin" class="headerlink" title="Rikka with Coin"></a>Rikka with Coin</h3><p>题意：$n$件商品，都有个价格。你手上有面值为$10,20,50,100$的硬币，问你最少需要多少枚硬币，才能表示出所有商品的价格。</p>
+<h3 id="Rikka-with-Traffic-Light"><a href="#Rikka-with-Traffic-Light" class="headerlink" title="Rikka with Traffic Light"></a>Rikka with Traffic Light</h3><h3 id="Rikka-with-Stable-Marriage"><a href="#Rikka-with-Stable-Marriage" class="headerlink" title="Rikka with Stable Marriage"></a>Rikka with Stable Marriage</h3><h3 id="Rikka-with-Travels"><a href="#Rikka-with-Travels" class="headerlink" title="Rikka with Travels"></a>Rikka with Travels</h3><p>题意：给你一棵$n$个节点的树，要求你选出两条路径且这两条没有交。两组路径定义为相同当且仅当这两组的路径长度一样。问你一共有多少组不同的路径组？</p>
+<p>数据范围：$1\leq T\leq 300，1\leq n\leq 10^5$。</p>
+<p>做法：我的做法跟官方题解有点略微区别。</p>
+<p>首先有个显然的性质，如果$(x,y)$这个二元组存在，则对于$1\leq i\leq x,1\leq j\leq y$，$(i,j)$也都存在。</p>
+<p>于是我考虑直径那一套理论。你先将直径的一端作为树的根。显然地，直径和次长不相交的链肯定是非常好用的。然后你想着把次长不相交的链拉长，即不断截去直径的一段这样子，这样截取有两种选择，分别和直径的两端都来一次。然后你对于每种长度维护出$(x,y)$的$y$的最大值，看成二维平面上的面积并，扫描线$+$线段树即可。复杂度是$O(nlogn)$。</p>
+<h3 id="Rikka-with-Coin"><a href="#Rikka-with-Coin" class="headerlink" title="Rikka with Coin"></a>Rikka with Coin</h3><p>题意：$n$件商品，都有个价格。你手上有面值为$10,20,50,100$的硬币，问你最少需要多少枚硬币，才能表示出所有商品的价格。</p>
 <p>数据范围：$1\leq T\leq 500,1\leq n\leq 100,1\leq w_i\leq 10^9$。</p>
 <p>做法：你感觉一下，就知道大部分的钱还是要用$100$表示。然而到底要剩下多少用$10,20,50$表示你并不知道。于是随便猜个$300$，以$10,20,50$做一个$300$容量的背包。最后暴力枚举一下就不管了，猜一猜就是对的。复杂度是$O(300\ast n\ast p)$，这里的$p$是有几种$10,20,50$的选法。</p>
 <h3 id="Rikka-with-Game"><a href="#Rikka-with-Game" class="headerlink" title="Rikka with Game"></a>Rikka with Game</h3><h3 id="Rikka-with-Geometric-Sequence"><a href="#Rikka-with-Geometric-Sequence" class="headerlink" title="Rikka with Geometric Sequence"></a>Rikka with Geometric Sequence</h3><h3 id="Rikka-with-Mista"><a href="#Rikka-with-Mista" class="headerlink" title="Rikka with Mista"></a>Rikka with Mista</h3><p>题意：一个数的权值定义为这个数出现的$4$的个数。现给你$n$个数，问你所有子集和的权值之和。</p>
