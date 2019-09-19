@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="补补吉老师的题，倒序补题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-19T05:42:04.997Z">
+<meta property="og:updated_time" content="2019-09-19T10:15:06.601Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2018~2019 Multi-University Training Contest 9】题解">
 <meta name="twitter:description" content="补补吉老师的题，倒序补题。">
@@ -461,7 +461,22 @@
 <p>数据范围：$1\leq T\leq 100，1\leq r,c\leq 10^9,1\leq k\leq 10^5$。</p>
 <p>做法：咋回事啊，我写得咋这么复杂啊。</p>
 <p>很明显就是求交点数，简单地想到离散化维护$x$坐标扫描线。然后然后，我没想到把朝下的射线理解成$+1$的朝上射线和$-1$的朝上射线，于是我开始了分类讨论，如果朝上的和朝下的有交，就要减去交的贡献，于是代码就很长了。。。</p>
-<h3 id="Rikka-with-Quicksort"><a href="#Rikka-with-Quicksort" class="headerlink" title="Rikka with Quicksort"></a>Rikka with Quicksort</h3><h3 id="Rikka-with-Badminton"><a href="#Rikka-with-Badminton" class="headerlink" title="Rikka with Badminton"></a>Rikka with Badminton</h3><h3 id="Rikka-with-Time-Complexity"><a href="#Rikka-with-Time-Complexity" class="headerlink" title="Rikka with Time Complexity"></a>Rikka with Time Complexity</h3><h3 id="Rikka-with-Bubble-Sort"><a href="#Rikka-with-Bubble-Sort" class="headerlink" title="Rikka with Bubble Sort"></a>Rikka with Bubble Sort</h3><h3 id="Rikka-with-Line-Graph"><a href="#Rikka-with-Line-Graph" class="headerlink" title="Rikka with Line Graph"></a>Rikka with Line Graph</h3><h3 id="Rikka-with-Treasure"><a href="#Rikka-with-Treasure" class="headerlink" title="Rikka with Treasure"></a>Rikka with Treasure</h3><h3 id="Rikka-with-Spanning-Tree"><a href="#Rikka-with-Spanning-Tree" class="headerlink" title="Rikka with Spanning Tree"></a>Rikka with Spanning Tree</h3><h3 id="Rikka-with-Rain"><a href="#Rikka-with-Rain" class="headerlink" title="Rikka with Rain"></a>Rikka with Rain</h3><h3 id="Rikka-with-Stone-Paper-Scissors"><a href="#Rikka-with-Stone-Paper-Scissors" class="headerlink" title="Rikka with Stone-Paper-Scissors"></a>Rikka with Stone-Paper-Scissors</h3><h3 id="Rikka-with-APSP"><a href="#Rikka-with-APSP" class="headerlink" title="Rikka with APSP"></a>Rikka with APSP</h3><h3 id="Rikka-with-Seam"><a href="#Rikka-with-Seam" class="headerlink" title="Rikka with Seam"></a>Rikka with Seam</h3><h3 id="Rikka-with-Nash-Equilibrium"><a href="#Rikka-with-Nash-Equilibrium" class="headerlink" title="Rikka with Nash Equilibrium"></a>Rikka with Nash Equilibrium</h3>
+<h3 id="Rikka-with-Quicksort"><a href="#Rikka-with-Quicksort" class="headerlink" title="Rikka with Quicksort"></a>Rikka with Quicksort</h3><p>题意：$g_m(n)= \begin{cases} 0, &amp; \text {if n&lt;=m} \ n-1+\frac{1}{n}\sum_{i=1}^n (g_m(i-1)+g_m(n-i)), &amp; \text{if n&gt;m} \end{cases}$，求$g_m(n)$。</p>
+<p>数据范围：$1\leq T\leq 10，1\leq m\leq n\leq 10^9$。</p>
+<p>做法：完蛋了啊，这道题居然不会做。</p>
+<p>显然是要推式子。观察一下后，发现$g_m(n)= \begin{cases} 0, &amp; \text {if n&lt;=m} \ n-1+\frac{2}{n}\sum_{i=0}^{n-1} (g_m(i)), &amp; \text{if n&gt;m} \end{cases}$。</p>
+<p>然后我希望通过设$S[n]=\sum_{i=0}^{n-1} (g_m(i))$的办法搞出一些东西，发现并不能很好地弄出来，于是看了下题解，发现还是要差分推导的。。。</p>
+<p>以下推导均假设$n&gt;m$。</p>
+<p>整理式子，有$(g_m(n)-(n-1))\frac{n}{2}=\sum_{i=0}^{n-1} (g_m(i))$。</p>
+<p>同时也有$(g_m(n+1)-n)\frac{n+1}{2}=\sum_{i=0}^{n} (g_m(i))$。</p>
+<p>两式做差，得$g_m(n)=\frac{n+1}{2}g_m(n+1)-\frac{n}{2}g_m(n)-n$。</p>
+<p>稍微整理一下，即$(n+2)g_m(n)+2n=(n+1)g_m(n+1)$。</p>
+<p>下一步数学推导我就没想到了，可能数列白学了。</p>
+<p>$(n+1)(n+2)$除一下，有$\frac{g_m(n)}{n+1}+\frac{2n}{(n+1)(n+2)}=\frac{g_m(n+1)}{n+2}$。</p>
+<p>接下来就很显然了，转换成两个新数列，然后$\frac{2n}{(n+1)(n+2)}$这个东西随便裂项一下就完事了，最后会推出这样一个东西。</p>
+<p>$g_m(n)=\frac{m(n+1)}{m+2}+2(n+1)\sum_{i=m+2}^n\frac{1}{i}-(2n-2)+(n+1)\frac{2m}{m+2}$.</p>
+<p>仔细观察一下，发现只有个调和级数要算了。直接$ln_n+C$不知道能不能过，反正分段打表看起来就比较科学。</p>
+<h3 id="Rikka-with-Badminton"><a href="#Rikka-with-Badminton" class="headerlink" title="Rikka with Badminton"></a>Rikka with Badminton</h3><h3 id="Rikka-with-Time-Complexity"><a href="#Rikka-with-Time-Complexity" class="headerlink" title="Rikka with Time Complexity"></a>Rikka with Time Complexity</h3><h3 id="Rikka-with-Bubble-Sort"><a href="#Rikka-with-Bubble-Sort" class="headerlink" title="Rikka with Bubble Sort"></a>Rikka with Bubble Sort</h3><h3 id="Rikka-with-Line-Graph"><a href="#Rikka-with-Line-Graph" class="headerlink" title="Rikka with Line Graph"></a>Rikka with Line Graph</h3><h3 id="Rikka-with-Treasure"><a href="#Rikka-with-Treasure" class="headerlink" title="Rikka with Treasure"></a>Rikka with Treasure</h3><h3 id="Rikka-with-Spanning-Tree"><a href="#Rikka-with-Spanning-Tree" class="headerlink" title="Rikka with Spanning Tree"></a>Rikka with Spanning Tree</h3><h3 id="Rikka-with-Rain"><a href="#Rikka-with-Rain" class="headerlink" title="Rikka with Rain"></a>Rikka with Rain</h3><h3 id="Rikka-with-Stone-Paper-Scissors"><a href="#Rikka-with-Stone-Paper-Scissors" class="headerlink" title="Rikka with Stone-Paper-Scissors"></a>Rikka with Stone-Paper-Scissors</h3><h3 id="Rikka-with-APSP"><a href="#Rikka-with-APSP" class="headerlink" title="Rikka with APSP"></a>Rikka with APSP</h3><h3 id="Rikka-with-Seam"><a href="#Rikka-with-Seam" class="headerlink" title="Rikka with Seam"></a>Rikka with Seam</h3><h3 id="Rikka-with-Nash-Equilibrium"><a href="#Rikka-with-Nash-Equilibrium" class="headerlink" title="Rikka with Nash Equilibrium"></a>Rikka with Nash Equilibrium</h3>
       
     </div>
     
