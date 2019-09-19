@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="补补吉老师的题，倒序补题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-18T06:54:55.820Z">
+<meta property="og:updated_time" content="2019-09-19T05:42:04.997Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2018~2019 Multi-University Training Contest 9】题解">
 <meta name="twitter:description" content="补补吉老师的题，倒序补题。">
@@ -449,7 +449,11 @@
 <h3 id="Rikka-with-Coin"><a href="#Rikka-with-Coin" class="headerlink" title="Rikka with Coin"></a>Rikka with Coin</h3><p>题意：$n$件商品，都有个价格。你手上有面值为$10,20,50,100$的硬币，问你最少需要多少枚硬币，才能表示出所有商品的价格。</p>
 <p>数据范围：$1\leq T\leq 500,1\leq n\leq 100,1\leq w_i\leq 10^9$。</p>
 <p>做法：你感觉一下，就知道大部分的钱还是要用$100$表示。然而到底要剩下多少用$10,20,50$表示你并不知道。于是随便猜个$300$，以$10,20,50$做一个$300$容量的背包。最后暴力枚举一下就不管了，猜一猜就是对的。复杂度是$O(300\ast n\ast p)$，这里的$p$是有几种$10,20,50$的选法。</p>
-<h3 id="Rikka-with-Game"><a href="#Rikka-with-Game" class="headerlink" title="Rikka with Game"></a>Rikka with Game</h3><h3 id="Rikka-with-Geometric-Sequence"><a href="#Rikka-with-Geometric-Sequence" class="headerlink" title="Rikka with Geometric Sequence"></a>Rikka with Geometric Sequence</h3><h3 id="Rikka-with-Mista"><a href="#Rikka-with-Mista" class="headerlink" title="Rikka with Mista"></a>Rikka with Mista</h3><p>题意：一个数的权值定义为这个数出现的$4$的个数。现给你$n$个数，问你所有子集和的权值之和。</p>
+<h3 id="Rikka-with-Game"><a href="#Rikka-with-Game" class="headerlink" title="Rikka with Game"></a>Rikka with Game</h3><p>题意：给你一个长度为$n$的串，两人博弈，操作有两个，一是选择一个字符，将它$+1$，即$a$变$b$，$b$变$c$，…，$z$变$a$。二是结束博弈。先动手的那个人希望字符串最小，后动手的希望最大。问最终的串。</p>
+<p>数据范围：$1\leq T\leq 100，1\leq |s|\leq 100$。</p>
+<p>做法：签到题吧。</p>
+<p>你随便感觉一下，假如第一位是$z$，那肯定会把这位变成$a$，然后后手的再变成$b$，先手的就会结束游戏了。如果不是$y$，显然怎么动手都不优，所以先手的会直接结束。否则递归照样贪心即可。复杂度$O(n)$。</p>
+<h3 id="Rikka-with-Geometric-Sequence"><a href="#Rikka-with-Geometric-Sequence" class="headerlink" title="Rikka with Geometric Sequence"></a>Rikka with Geometric Sequence</h3><h3 id="Rikka-with-Mista"><a href="#Rikka-with-Mista" class="headerlink" title="Rikka with Mista"></a>Rikka with Mista</h3><p>题意：一个数的权值定义为这个数出现的$4$的个数。现给你$n$个数，问你所有子集和的权值之和。</p>
 <p>数据范围：$1\leq T\leq 4,1\leq n\leq 40,1\leq w_i\leq 44444444$。</p>
 <p>做法：好毒啊，有点卡常的。</p>
 <p>首先看到$40$这个数据范围，可以由此想到$meet\ in\ the\ middle$。我们求出两组分别的子集和后，按位考虑（最多$10$位），于是有数这一位有$4$当且仅当$4\ast 10^i\leq x&lt; 5\ast 10^i$。于是直接利用单调性做是$O(2^{\frac{n}{2}}\ast \frac{n}{2}\ast 10)$，显然过不了。考虑优化排序的过程，显然可以看这一位是几然后分别放进对应的$vector$里，然后归并一下。于是复杂度就变成$O(2^{\frac{n}{2}}\ast 10\ast 10)$，最后再卡卡常就能过了，这里卡常可以每次按位考虑的时候先预处理它们这一位的数，然后将取模运算变成三目加法运算之类的。</p>
