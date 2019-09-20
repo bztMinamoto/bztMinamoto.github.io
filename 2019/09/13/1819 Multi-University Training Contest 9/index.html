@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="补补吉老师的题，倒序补题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-19T10:15:06.601Z">
+<meta property="og:updated_time" content="2019-09-20T04:24:55.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2018~2019 Multi-University Training Contest 9】题解">
 <meta name="twitter:description" content="补补吉老师的题，倒序补题。">
@@ -461,10 +461,10 @@
 <p>数据范围：$1\leq T\leq 100，1\leq r,c\leq 10^9,1\leq k\leq 10^5$。</p>
 <p>做法：咋回事啊，我写得咋这么复杂啊。</p>
 <p>很明显就是求交点数，简单地想到离散化维护$x$坐标扫描线。然后然后，我没想到把朝下的射线理解成$+1$的朝上射线和$-1$的朝上射线，于是我开始了分类讨论，如果朝上的和朝下的有交，就要减去交的贡献，于是代码就很长了。。。</p>
-<h3 id="Rikka-with-Quicksort"><a href="#Rikka-with-Quicksort" class="headerlink" title="Rikka with Quicksort"></a>Rikka with Quicksort</h3><p>题意：$g_m(n)= \begin{cases} 0, &amp; \text {if n&lt;=m} \ n-1+\frac{1}{n}\sum_{i=1}^n (g_m(i-1)+g_m(n-i)), &amp; \text{if n&gt;m} \end{cases}$，求$g_m(n)$。</p>
+<h3 id="Rikka-with-Quicksort"><a href="#Rikka-with-Quicksort" class="headerlink" title="Rikka with Quicksort"></a>Rikka with Quicksort</h3><p>题意：<br>$$<br>        g_m(n) =<br>        \begin{cases}<br>        0,  &amp; \text{if $n\leq m$ } \<br>        n-1+\frac{1}{n}\sum_{i=1}^n (g_m(i-1)+g_m(n-i)), &amp; \text{if $n&gt;m$}<br>        \end{cases}<br>$$<br>求$g_m(n)$。</p>
 <p>数据范围：$1\leq T\leq 10，1\leq m\leq n\leq 10^9$。</p>
 <p>做法：完蛋了啊，这道题居然不会做。</p>
-<p>显然是要推式子。观察一下后，发现$g_m(n)= \begin{cases} 0, &amp; \text {if n&lt;=m} \ n-1+\frac{2}{n}\sum_{i=0}^{n-1} (g_m(i)), &amp; \text{if n&gt;m} \end{cases}$。</p>
+<p>显然是要推式子。观察一下后，发现<br>$$<br>        g_m(n) =<br>        \begin{cases}<br>        0,  &amp; \text{if $n\leq m$ } \<br>        n-1+\frac{2}{n}\sum_{i=0}^{n-1} g_m(i), &amp; \text{if $n&gt;m$}<br>        \end{cases}<br>$$。</p>
 <p>然后我希望通过设$S[n]=\sum_{i=0}^{n-1} (g_m(i))$的办法搞出一些东西，发现并不能很好地弄出来，于是看了下题解，发现还是要差分推导的。。。</p>
 <p>以下推导均假设$n&gt;m$。</p>
 <p>整理式子，有$(g_m(n)-(n-1))\frac{n}{2}=\sum_{i=0}^{n-1} (g_m(i))$。</p>
