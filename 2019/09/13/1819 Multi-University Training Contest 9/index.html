@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="补补吉老师的题，倒序补题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-20T04:24:55.358Z">
+<meta property="og:updated_time" content="2019-09-21T00:10:43.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【2018~2019 Multi-University Training Contest 9】题解">
 <meta name="twitter:description" content="补补吉老师的题，倒序补题。">
@@ -453,7 +453,12 @@
 <p>数据范围：$1\leq T\leq 100，1\leq |s|\leq 100$。</p>
 <p>做法：签到题吧。</p>
 <p>你随便感觉一下，假如第一位是$z$，那肯定会把这位变成$a$，然后后手的再变成$b$，先手的就会结束游戏了。如果不是$y$，显然怎么动手都不优，所以先手的会直接结束。否则递归照样贪心即可。复杂度$O(n)$。</p>
-<h3 id="Rikka-with-Geometric-Sequence"><a href="#Rikka-with-Geometric-Sequence" class="headerlink" title="Rikka with Geometric Sequence"></a>Rikka with Geometric Sequence</h3><h3 id="Rikka-with-Mista"><a href="#Rikka-with-Mista" class="headerlink" title="Rikka with Mista"></a>Rikka with Mista</h3><p>题意：一个数的权值定义为这个数出现的$4$的个数。现给你$n$个数，问你所有子集和的权值之和。</p>
+<h3 id="Rikka-with-Geometric-Sequence"><a href="#Rikka-with-Geometric-Sequence" class="headerlink" title="Rikka with Geometric Sequence"></a>Rikka with Geometric Sequence</h3><p>题意：给你一个$n$，问$1$~$n$的排列中有多少个子序列能组成等比数列。</p>
+<p>数据范围：$1\leq T\leq 1000，1\leq n\leq 5\ast 10^{17}$。</p>
+<p>做法：大暴力题。</p>
+<p>考虑枚举公比$a$，发现这时的贡献就是$\sum_k \phi(k)\lfloor\frac{n}{a^{k-1}}\rfloor$。所以总的式子就是$\sum_{a=2}^n \sum_k \phi(k)\lfloor\frac{n}{a^{k-1}}\rfloor=\sum_{k=1}^n \phi(k)\sum_{a=2}^{n^{\frac{1}{k-1}}} \lfloor\frac{n}{a^{k-1}}\rfloor$。</p>
+<p>$k=1$和$k=2$都可以直接$O(1)$算，$k=2$可以整除分块+杜教筛，其余的暴力算。这样的复杂度瓶颈就在杜教筛了，你大概分析一下是$O(n^{\frac{5}{18}})$？可能我分析有点问题，反正能过就是了。</p>
+<h3 id="Rikka-with-Mista"><a href="#Rikka-with-Mista" class="headerlink" title="Rikka with Mista"></a>Rikka with Mista</h3><p>题意：一个数的权值定义为这个数出现的$4$的个数。现给你$n$个数，问你所有子集和的权值之和。</p>
 <p>数据范围：$1\leq T\leq 4,1\leq n\leq 40,1\leq w_i\leq 44444444$。</p>
 <p>做法：好毒啊，有点卡常的。</p>
 <p>首先看到$40$这个数据范围，可以由此想到$meet\ in\ the\ middle$。我们求出两组分别的子集和后，按位考虑（最多$10$位），于是有数这一位有$4$当且仅当$4\ast 10^i\leq x&lt; 5\ast 10^i$。于是直接利用单调性做是$O(2^{\frac{n}{2}}\ast \frac{n}{2}\ast 10)$，显然过不了。考虑优化排序的过程，显然可以看这一位是几然后分别放进对应的$vector$里，然后归并一下。于是复杂度就变成$O(2^{\frac{n}{2}}\ast 10\ast 10)$，最后再卡卡常就能过了，这里卡常可以每次按位考虑的时候先预处理它们这一位的数，然后将取模运算变成三目加法运算之类的。</p>
@@ -461,10 +466,14 @@
 <p>数据范围：$1\leq T\leq 100，1\leq r,c\leq 10^9,1\leq k\leq 10^5$。</p>
 <p>做法：咋回事啊，我写得咋这么复杂啊。</p>
 <p>很明显就是求交点数，简单地想到离散化维护$x$坐标扫描线。然后然后，我没想到把朝下的射线理解成$+1$的朝上射线和$-1$的朝上射线，于是我开始了分类讨论，如果朝上的和朝下的有交，就要减去交的贡献，于是代码就很长了。。。</p>
-<h3 id="Rikka-with-Quicksort"><a href="#Rikka-with-Quicksort" class="headerlink" title="Rikka with Quicksort"></a>Rikka with Quicksort</h3><p>题意：<br>$$<br>        g_m(n) =<br>        \begin{cases}<br>        0,  &amp; \text{if $n\leq m$ } \<br>        n-1+\frac{1}{n}\sum_{i=1}^n (g_m(i-1)+g_m(n-i)), &amp; \text{if $n&gt;m$}<br>        \end{cases}<br>$$<br>求$g_m(n)$。</p>
+<h3 id="Rikka-with-Quicksort"><a href="#Rikka-with-Quicksort" class="headerlink" title="Rikka with Quicksort"></a>Rikka with Quicksort</h3><p>题意：<br>$$<br>        g_m(n) =<br>        \begin{cases}<br>        0,  &amp; \text{if $n\leq m$ } \<br>        n-1+\frac{1}{n}\sum_{i=1}^n (g_m(i-1)+g_m(n-i)), &amp; \text{if $n&gt;m$}<br>        \end{cases}<br>$$</p>
+<p>求$g_m(n)$。</p>
 <p>数据范围：$1\leq T\leq 10，1\leq m\leq n\leq 10^9$。</p>
 <p>做法：完蛋了啊，这道题居然不会做。</p>
-<p>显然是要推式子。观察一下后，发现<br>$$<br>        g_m(n) =<br>        \begin{cases}<br>        0,  &amp; \text{if $n\leq m$ } \<br>        n-1+\frac{2}{n}\sum_{i=0}^{n-1} g_m(i), &amp; \text{if $n&gt;m$}<br>        \end{cases}<br>$$。</p>
+<p>显然是要推式子。观察一下后，发现<br>$$<br>        g_m(n) =<br>        \begin{cases}<br>        0,  &amp; \text{if $n\leq m$ } \</p>
+<pre><code>n-1+\frac{2}{n}\sum_{i=0}^{n-1} g_m(i), &amp; \text{if $n&gt;m$}
+\end{cases}
+</code></pre><p>$$</p>
 <p>然后我希望通过设$S[n]=\sum_{i=0}^{n-1} (g_m(i))$的办法搞出一些东西，发现并不能很好地弄出来，于是看了下题解，发现还是要差分推导的。。。</p>
 <p>以下推导均假设$n&gt;m$。</p>
 <p>整理式子，有$(g_m(n)-(n-1))\frac{n}{2}=\sum_{i=0}^{n-1} (g_m(i))$。</p>
