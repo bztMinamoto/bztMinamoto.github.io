@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="好，开始补坑。 这场打得实在有点问题，中途我去体测，廷廷又要提前回家，实际打的时间都没多少。。。 A Apollonian NetworkB Bitwise Xor题意：有$n$个数，给出一个数$x$，询问满足任意两个数异或和大于等于$x$的子序列的数量。 数据范围：$1\leq n\leq 300000,0\leq x,a_i\leq 2^{60}-1$ 做法：一个子序列内添加进去一个新的数需要">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-09T09:56:26.465Z">
+<meta property="og:updated_time" content="2019-10-09T12:32:27.230Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Gym-102331】300iq Contest 2">
 <meta name="twitter:description" content="好，开始补坑。 这场打得实在有点问题，中途我去体测，廷廷又要提前回家，实际打的时间都没多少。。。 A Apollonian NetworkB Bitwise Xor题意：有$n$个数，给出一个数$x$，询问满足任意两个数异或和大于等于$x$的子序列的数量。 数据范围：$1\leq n\leq 300000,0\leq x,a_i\leq 2^{60}-1$ 做法：一个子序列内添加进去一个新的数需要">
@@ -418,9 +418,13 @@
 <p>数据范围：$1\leq n\leq 300000$。</p>
 <p>做法：如果没有重复的字符，则答案显然为$2^n-1$。于是对极长重复字符段组合数容斥一下即可，复杂度是$O(n)$。</p>
 <h3 id="H-Honorable-Mention"><a href="#H-Honorable-Mention" class="headerlink" title="H Honorable Mention"></a>H Honorable Mention</h3><h3 id="I-Interactive-Vertex"><a href="#I-Interactive-Vertex" class="headerlink" title="I Interactive Vertex"></a>I Interactive Vertex</h3><p>题意：给出一棵$n$个点的树，其中有一个关键点$A$。交互，每次你可以给出类似$?\ k\ x\ y_1\ y_2\ …\ y_k$的询问，返回$dis(A,x)\geq min(dis(A,y_i))$的$bool$值，要求交互次数不超过$4\lceil log_2n\rceil$。</p>
-<p>数据范围：$1\leq n\leq 200000$</p>
+<p>数据范围：$1\leq n\leq 200000$。</p>
 <p>做法：首先对于每个连通块，你可以暴力判断关键点在哪个连通块。这里的判断即是每次拿走一半大小的子树判一判，如果在这一半里，就递归进去继续做，如果不在，那么就继续做。如果都不在，说明当前枚举的连通块的根就是答案。然而这样做交互次数和时间复杂度都有点小炸，那你就点分优化一下这个过程，保证了交互次数和复杂度。</p>
-<h3 id="J-Jiry-Matchings"><a href="#J-Jiry-Matchings" class="headerlink" title="J Jiry Matchings"></a>J Jiry Matchings</h3><h3 id="K-K-pop-Strings"><a href="#K-K-pop-Strings" class="headerlink" title="K K-pop Strings"></a>K K-pop Strings</h3>
+<h3 id="J-Jiry-Matchings"><a href="#J-Jiry-Matchings" class="headerlink" title="J Jiry Matchings"></a>J Jiry Matchings</h3><h3 id="K-K-pop-Strings"><a href="#K-K-pop-Strings" class="headerlink" title="K K-pop Strings"></a>K K-pop Strings</h3><p>题意：定义一个串重复两次后的串为$tandem$。给出一个$k$，定义一个长度为$n$的串合法当且仅当其中最长$tandem$长度小于$n-k$，求长度为$n$的合法串的数量。</p>
+<p>数据范围：$1\leq n\leq 100,0\leq k\leq 16$。</p>
+<p>做法：神奇的暴力题。</p>
+<p>我们先预处理出所有合法的长度及其位置，是否合法利用并查集维护相同的串的连通性即可。然后呢，直接暴搜所有合法长度和位置，一旦搜出不合法串就退出，并查集带撤销即可。这样复杂度显然错的，然后你$rand\ shuffle$一样所有合法长度及其位置，就能过了。好玄学啊。</p>
+
       
     </div>
     
