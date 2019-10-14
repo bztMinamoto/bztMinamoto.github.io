@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="一道用$Trie$和$STL$瞎搞的题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-14T13:05:06.065Z">
+<meta property="og:updated_time" content="2019-10-14T13:05:57.462Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【洛谷5592】美德的讲坛">
 <meta name="twitter:description" content="一道用$Trie$和$STL$瞎搞的题。">
@@ -419,6 +419,7 @@
 <p>接下来就是修改。</p>
 <p>我并没有看懂官方题解说的 <em>类似记忆华的过程</em>。</p>
 <p>我的想法是利用$multiset$强行维护$\frac{a}{w^\omega}$的位置和值，然后每次大力讨论这次修改与原来值的关系，再用个$multiset$维护一下每个位置和它相邻位置的答案$ans[i]$，每次暴力删除再加入。至于$Trie$树，本来就是可以删除的。修改$ans[i]$每次再调用一遍相邻两个的$solve$，重新算一遍就好了。复杂度还是$O(nlog^2a_i)$（假设$n,q$同阶）。跑起来挺快的，写起来就有点长了，去掉调试还有$6.5KB$。</p>
+<p>还要注意一下特判$x=0$的情况，这有点坑。</p>
 
       
     </div>
