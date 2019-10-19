@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="一道用$Trie$和$STL$瞎搞的题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-14T13:16:37.276Z">
+<meta property="og:updated_time" content="2019-10-19T11:02:29.753Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【洛谷5592】美德的讲坛">
 <meta name="twitter:description" content="一道用$Trie$和$STL$瞎搞的题。">
@@ -418,8 +418,9 @@
 <p>有了这个性质，我们只要想办法算相邻的两组就好了。算的过程也不复杂，你用$01Trie$树维护一下子树大小，然后在两棵$Trie$上同时$dfs$，讨论当前这一位$x$的值，便可以得到答案。至于这个讨论怎么来的，你可以像官方题解说的考虑二分图匹配过程，也可以考虑一下贪心，这里的讨论大概是这样的：</p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">solve</span><span class="params">(res a,res b,res dep)</span></span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(!a||!b)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(dep==<span class="number">-1</span>)<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        res a0=son[a][<span class="number">0</span>],a1=son[a][<span class="number">1</span>],b0=son[b][<span class="number">0</span>],b1=son[b][<span class="number">1</span>];</span><br><span class="line">        <span class="keyword">if</span>((x&gt;&gt;dep)&amp;<span class="number">1</span>)<span class="keyword">return</span> solve(a0,b1,dep<span class="number">-1</span>)+solve(a1,b0,dep<span class="number">-1</span>);</span><br><span class="line">        <span class="keyword">if</span>((sum[a0]&lt;sum[b1])==(sum[a1]&lt;sum[b0]))<span class="keyword">return</span> min(sum[a],sum[b]);</span><br><span class="line">        <span class="keyword">if</span>(sum[a0]&lt;sum[b1])<span class="keyword">return</span> min(solve(a1,b1,dep<span class="number">-1</span>),min(sum[b1]-sum[a0],sum[a1]-sum[b0]))+sum[a0]+sum[b0];</span><br><span class="line">        <span class="keyword">return</span> min(solve(a0,b0,dep<span class="number">-1</span>),min(sum[a0]-sum[b1],sum[b0]-sum[a1]))+sum[a1]+sum[b1];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 <p>接下来就是修改。</p>
-<p>我并没有看懂官方题解说的 <em>类似记忆华的过程</em>。</p>
-<p>我的想法是利用$multiset$强行维护$\frac{a}{w^\omega}$的位置和值，然后每次大力讨论这次修改与原来值的关系，再用个$multiset$维护一下每个位置和它相邻位置的答案$ans[i]$，每次暴力删除再加入。至于$Trie$树，本来就是可以删除的。修改$ans[i]$每次再调用一遍相邻两个的$solve$，重新算一遍就好了。复杂度还是$O(nlog^2a_i)$（假设$n,q$同阶）。跑起来挺快的，写起来就有点长了，去掉调试还有$6.5KB$。</p>
+<p>我并没有看懂官方题解说的 <em>类似记忆化的过程</em>。</p>
+<p>我的想法是利用$multiset$强行维护$\frac{a}{w^\omega}$的位置和值，然后每次大力讨论这次修改与原来值的关系，再用个$multiset$维护一下每个位置和它相邻位置的答案$ans[i]$，每次暴力删除再加入。至于$Trie$树，本来就是可以删除的。修改$ans[i]$每次再调用一遍相邻两个的$solve$，重新算一遍就好了。复杂度还是$O(nlog^2a_i)$（假设$n,q$同阶）。</p>
+<p>跑起来挺快的，写起来就有点长了，去掉调试还有$6.5KB$。</p>
 <p>还要注意一下特判$x=0$的情况，这有点坑。</p>
 
       
