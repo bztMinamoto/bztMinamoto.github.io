@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-21T11:07:31.182Z">
+<meta property="og:updated_time" content="2019-10-21T11:34:54.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了">
@@ -410,7 +410,21 @@
 
       
         <p>和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了<br><a id="more"></a></p>
-<h2 id="2015-2016-Petrozavodsk-Winter-Training-Camp-Makoto-rng-58-Soejima-Сontest-4"><a href="#2015-2016-Petrozavodsk-Winter-Training-Camp-Makoto-rng-58-Soejima-Сontest-4" class="headerlink" title="2015-2016 Petrozavodsk Winter Training Camp, Makoto rng_58 Soejima Сontest 4"></a>2015-2016 Petrozavodsk Winter Training Camp, Makoto rng_58 Soejima Сontest 4</h2>
+<h2 id="2015-2016-Petrozavodsk-Winter-Training-Camp-Makoto-rng-58-Soejima-Сontest-4"><a href="#2015-2016-Petrozavodsk-Winter-Training-Camp-Makoto-rng-58-Soejima-Сontest-4" class="headerlink" title="2015-2016 Petrozavodsk Winter Training Camp, Makoto rng_58 Soejima Сontest 4"></a>2015-2016 Petrozavodsk Winter Training Camp, Makoto rng_58 Soejima Сontest 4</h2><h3 id="A-2016"><a href="#A-2016" class="headerlink" title="A 2016"></a>A 2016</h3><p>感觉一下这样的数不会很多，于是写个暴力开始跑，跑个两小时就出来了，只有$1123$种，复杂度$O(1)$。（大雾</p>
+<h3 id="B-Airports"><a href="#B-Airports" class="headerlink" title="B Airports"></a>B Airports</h3><p>曼哈顿距离最大生成树这东西，直接上$Boruvka$，用$set$维护下四个方向的最大值，就完事了。</p>
+<p>廷廷有个更好的做法，曼哈顿转为切比雪夫之后，每个点向最大最小连边，直接跑最大生成树。证明这个挺容易的，因为$i-&gt;n-&gt;1-&gt;j$肯定会在$i-&gt;j$之前出现。这样还少一个$log$呢。</p>
+<h3 id="C-Jump"><a href="#C-Jump" class="headerlink" title="C Jump"></a>C Jump</h3><p>可以发现答案只跟$s+t$与$s-t$有关，即$2a_{i_1}-2a_{i_2}+…=s\pm t$。然后用$bfs$预处理出$s+t$和$s-t$的所有答案，分奇偶讨论一下就好了。</p>
+<h3 id="D-Merge"><a href="#D-Merge" class="headerlink" title="D Merge"></a>D Merge</h3><p>发现出现重复序列只与公共子段有关。考虑$dp[i][j]$表示第一个串$[1,i]$，第二个串$[1,j]$的方案数。转移的话，一方面是$dp[i-1][j]+dp[i][j-1]$，另一方面去重则考虑它们的$lcs$，然后贡献次数可以发现是卡特兰数，于是就做好了。</p>
+<h3 id="E-Mirror-Rice-Cake"><a href="#E-Mirror-Rice-Cake" class="headerlink" title="E Mirror Rice Cake"></a>E Mirror Rice Cake</h3><p>显然先放越小的越优，然后就好了。</p>
+<h3 id="F-Number-Cards"><a href="#F-Number-Cards" class="headerlink" title="F Number Cards"></a>F Number Cards</h3><p>连续读错题意。搞出相同颜色的连续区间后，发现只要$\frac{l_i-1}{m}=\frac{r_i-1}{m}$即可。这个东西，类似整除分块那样分析一样即可。或者暴力算也是对的。</p>
+<h3 id="G-Paint"><a href="#G-Paint" class="headerlink" title="G Paint"></a>G Paint</h3><p>待补。</p>
+<h3 id="H-Random-Walk"><a href="#H-Random-Walk" class="headerlink" title="H Random Walk"></a>H Random Walk</h3><p>打的时候才发现这场有我做过的题。。。<a href="https://foreverlasting1202.github.io/2019/03/09/GYM100959H/">https://foreverlasting1202.github.io/2019/03/09/GYM100959H/</a></p>
+<h3 id="I-Robots"><a href="#I-Robots" class="headerlink" title="I Robots"></a>I Robots</h3><p>跑个拆点最短路就做完了。</p>
+<h3 id="J-Ropes"><a href="#J-Ropes" class="headerlink" title="J Ropes"></a>J Ropes</h3><p>显然的$prufer$序列，推下式子即可。</p>
+<h3 id="K-Stains"><a href="#K-Stains" class="headerlink" title="K Stains"></a>K Stains</h3><p>做过。<a href="https://foreverlasting1202.github.io/2019/03/09/GyM100959K/">https://foreverlasting1202.github.io/2019/03/09/GyM100959K/</a></p>
+<h3 id="L-String-Modification"><a href="#L-String-Modification" class="headerlink" title="L String Modification"></a>L String Modification</h3><p>枚举$s$的位置，然后暴力在$t$上往后扫就好了。细节还是挺多的。</p>
+<h3 id="M-Team-Competition"><a href="#M-Team-Competition" class="headerlink" title="M Team Competition"></a>M Team Competition</h3><p>待补。</p>
+
       
     </div>
     
@@ -657,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2015-2016-Petrozavodsk-Winter-Training-Camp-Makoto-rng-58-Soejima-Сontest-4"><span class="nav-number">1.</span> <span class="nav-text">2015-2016 Petrozavodsk Winter Training Camp, Makoto rng_58 Soejima Сontest 4</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#2015-2016-Petrozavodsk-Winter-Training-Camp-Makoto-rng-58-Soejima-Сontest-4"><span class="nav-number">1.</span> <span class="nav-text">2015-2016 Petrozavodsk Winter Training Camp, Makoto rng_58 Soejima Сontest 4</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#A-2016"><span class="nav-number">1.1.</span> <span class="nav-text">A 2016</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#B-Airports"><span class="nav-number">1.2.</span> <span class="nav-text">B Airports</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-Jump"><span class="nav-number">1.3.</span> <span class="nav-text">C Jump</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#D-Merge"><span class="nav-number">1.4.</span> <span class="nav-text">D Merge</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#E-Mirror-Rice-Cake"><span class="nav-number">1.5.</span> <span class="nav-text">E Mirror Rice Cake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#F-Number-Cards"><span class="nav-number">1.6.</span> <span class="nav-text">F Number Cards</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#G-Paint"><span class="nav-number">1.7.</span> <span class="nav-text">G Paint</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#H-Random-Walk"><span class="nav-number">1.8.</span> <span class="nav-text">H Random Walk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#I-Robots"><span class="nav-number">1.9.</span> <span class="nav-text">I Robots</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#J-Ropes"><span class="nav-number">1.10.</span> <span class="nav-text">J Ropes</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#K-Stains"><span class="nav-number">1.11.</span> <span class="nav-text">K Stains</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#L-String-Modification"><span class="nav-number">1.12.</span> <span class="nav-text">L String Modification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#M-Team-Competition"><span class="nav-number">1.13.</span> <span class="nav-text">M Team Competition</span></a></li></ol></li></ol></div>
             
 
           </div>
