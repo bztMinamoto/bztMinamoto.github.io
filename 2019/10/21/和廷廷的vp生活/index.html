@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-21T12:41:28.158Z">
+<meta property="og:updated_time" content="2019-10-21T12:44:47.237Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了">
@@ -417,7 +417,7 @@
 <h3 id="D-Merge"><a href="#D-Merge" class="headerlink" title="D Merge"></a>D Merge</h3><p>数列会多算，是因为公共子段的问题，为了方便描述，我们定义一个数列为好数列当且仅当它由两个公共子段合并而来且其任意一个前缀都不是这样的。</p>
 <p>设$dp[i][j]$表示到了第一个串的$[1,i]$和第二个串的$[1,j]$的方案数，最终答案为$dp[n][n]$。</p>
 <p>转移考虑枚举公共子段，在前缀这里即为公共后缀$lcs(i,j)$，所以转移就是</p>
-<p>$dp[i][j]=dp[i-1][j]+dp[i][j-1]-\sum_{k=1}^{lcs(i,j)} g_k\ast dp[i-k][j-k]$，其中$g_k$表示长度为$k$的公共子段合并出来的好数列的方案数。</p>
+<p>$dp[i][j]=dp[i-1][j]+dp[i][j-1]-\sum_{k=1}^{lcs(i,j)} g_k\ast dp[i-k][j-k]$，其中$g_k$表示长度为$k$的公共子段合并出来的好数列的方案数，转移的意思就是枚举最终数列末尾为$2k$的好数列，只有这部分会被算重。</p>
 <p>现在的瓶颈在于$g_k$的计算，考虑把第一个串看成左括号，第二个串看成右括号，则有</p>
 <p>$g_k=C_k-\sum_{i=1}^{k-1}g_iC_{k-i}=\sum_{i=1}^{k}C_{i-1}C_{k-i}-\sum_{i=1}^{k-1}g_iC_{k-i}=C_{k-1}+\sum_{i=1}^{k-1}C_{k-i}(g_i-C_{i-1})$，即$(g_k-C_{k-1})=\sum_{i=1}^{k-1}C_{k-i}(g_i-C_{i-1})$，数列递推或归纳都可得$g_k=C_{k-1}$，其中$C_k$表示卡特兰数的第$k$项。</p>
 <h3 id="E-Mirror-Rice-Cake"><a href="#E-Mirror-Rice-Cake" class="headerlink" title="E Mirror Rice Cake"></a>E Mirror Rice Cake</h3><p>显然先放越小的越优，然后就好了。</p>
