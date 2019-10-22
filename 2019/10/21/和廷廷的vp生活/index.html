@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-22T11:06:12.262Z">
+<meta property="og:updated_time" content="2019-10-22T12:31:20.920Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了">
@@ -422,7 +422,8 @@
 <p>$g_k=C_k-\sum_{i=1}^{k-1}g_iC_{k-i}=\sum_{i=1}^{k}C_{i-1}C_{k-i}-\sum_{i=1}^{k-1}g_iC_{k-i}=C_{k-1}+\sum_{i=1}^{k-1}C_{k-i}(g_i-C_{i-1})$，即$(g_k-C_{k-1})=\sum_{i=1}^{k-1}C_{k-i}(g_i-C_{i-1})$，数列递推或归纳都可得$g_k=C_{k-1}$，其中$C_k$表示卡特兰数的第$k$项。</p>
 <h3 id="E-Mirror-Rice-Cake"><a href="#E-Mirror-Rice-Cake" class="headerlink" title="E Mirror Rice Cake"></a>E Mirror Rice Cake</h3><p>显然先放越小的越优，然后就好了。</p>
 <h3 id="F-Number-Cards"><a href="#F-Number-Cards" class="headerlink" title="F Number Cards"></a>F Number Cards</h3><p>连续读错题意。搞出相同颜色的连续区间后，发现只要$\frac{l_i-1}{m}=\frac{r_i-1}{m}$即可。这个东西，类似整除分块那样分析一样即可。或者暴力算也是对的。</p>
-<h3 id="G-Paint"><a href="#G-Paint" class="headerlink" title="G Paint"></a>G Paint</h3><p>待补。</p>
+<h3 id="G-Paint"><a href="#G-Paint" class="headerlink" title="G Paint"></a>G Paint</h3><p>首先$dfs$出所有断点处，假装这样的断点可能不会很多（实际的确不多，大概只是$O(n!)$这个级别，假装是$O(A)$个）于是就会得到$\sum_{i=1}^k (x_i+y_i)+x_{k+1}=n$的方程，$x_i$表示第$i$段连续白色段的长度，$y_i$表示第$i$段连续黑色段的长度，其中$y_i\in [low_i,up_i],x_2,…,x_k\geq 1$，其中$low_i,up_i$为你枚举断点时所控的上下界。为了解出这个方程，由于$k$很小，直接暴力容斥算，即枚举几个$y_i$超过上界这样子，这里的复杂度看起来只是$O(2^k\ast A)$，但由于方程之间的解不一定不相同，即两个不同方程可能存在相同的解，所以还要再拿这个东西容斥一下，每次枚举几个方程扔进去。。。这样大概是$O(2^A\ast 2^k\ast A)$的样子，还有一堆常数，反正能跑过去就是了。</p>
+<p>写起来好难啊。</p>
 <h3 id="H-Random-Walk"><a href="#H-Random-Walk" class="headerlink" title="H Random Walk"></a>H Random Walk</h3><p>打的时候才发现这场有我做过的题。。。<a href="https://foreverlasting1202.github.io/2019/03/09/GYM100959H/">https://foreverlasting1202.github.io/2019/03/09/GYM100959H/</a></p>
 <h3 id="I-Robots"><a href="#I-Robots" class="headerlink" title="I Robots"></a>I Robots</h3><p>跑个拆点最短路就做完了。</p>
 <h3 id="J-Ropes"><a href="#J-Ropes" class="headerlink" title="J Ropes"></a>J Ropes</h3><p>显然的$prufer$序列，推下式子即可。</p>
