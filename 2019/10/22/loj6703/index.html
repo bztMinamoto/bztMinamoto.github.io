@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="一道多项式多点求值的模板数数题。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-22T13:30:06.074Z">
+<meta property="og:updated_time" content="2019-10-23T04:38:31.011Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="【Loj6703】小Q的序列">
 <meta name="twitter:description" content="一道多项式多点求值的模板数数题。">
@@ -411,7 +411,8 @@
       
         <p>一道多项式多点求值的模板数数题。<br><a id="more"></a></p>
 <p>显然有个暴力的$O(n^2)DP$，$dp[i][j]$表示当前选到了第$i$个数，选了长度为$j$的序列，转移就是$dp[i][j]=dp[i-1][j-1]\ast (a[i]+j)+dp[i-1][j]$，答案就是$\sum_{i=1}^n dp[n][i]$。</p>
-<p>考虑拆掉这个$DP$或者直接考虑答案的容斥下的组合意义，发现答案实际是$\sum_{i=0}^n \frac{(-1)^i}{i!}\sum_{j=0}^{n-i} \frac{1}{j!}\prod_{k=1}^n (a[k]+k-i)$。</p>
+<p>考虑拆掉这个$DP$或者直接考虑答案的容斥下的组合意义，发现答案实际是</p>
+<p>$\sum_{i=0}^n \frac{(-1)^i}{i!}\sum_{j=0}^{n-i} \frac{1}{j!}\prod_{k=1}^n (a[k]+k-i)$。</p>
 <p>然后最后就是枚举一个$i$，$\sum_{j=0}^{n-i} \frac{1}{j!}$可以预处理，$\prod_{k=1}^n (a[k]+k-i)$的话把$i$看成未知数，就是一个多项式多点求值了。</p>
 <p>而且由于最终多项式已经被因式分解了，所以这里的多点求值显然可以直接分治，取模啥的都不需要了，极其好写。</p>
 
