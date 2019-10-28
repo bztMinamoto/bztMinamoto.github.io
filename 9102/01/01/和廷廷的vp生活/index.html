@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-27T23:40:05.349Z">
+<meta property="og:updated_time" content="2019-10-28T00:07:23.355Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -452,7 +452,7 @@
 <p>记$sum[i][j]$为$i$在$j$出现的次数，于是$\frac{sum[i][j]}{sum[j][i]}$就可以非常近似地表现出$\frac{w[i]}{w[j]}$了。具体实现上，你要每次拿出$w[i]$最大的，然后通过已经有的$w[i]$计算平均值从而算出当前的$w[i]$。注意几个细节，比如$\frac{sum[i][j]}{sum[j][i]}&lt;eps$时很可能就无法表现其间的$\frac{w[i]}{w[j]}$，应舍去这组样本。同时当平均值算出来小于$1e-300$时，为了更具表现性，我们要拿出之前算出来的最小的$w[i]$乘上$eps$从而保证这个平均值更具表现性。总的来说，这题好神仙啊。</p>
 <h3 id="C-Diverse-Singing"><a href="#C-Diverse-Singing" class="headerlink" title="C Diverse Singing"></a>C Diverse Singing</h3><p>用上下界网络流限制条件，每个点至少被选一次则连出$[1,inf]$的边，每个点的颜色边最多一个则对于每个点的每种颜色连一条$[0,1]$即可。</p>
 <h3 id="D-Pick-Your-Own-Nim"><a href="#D-Pick-Your-Own-Nim" class="headerlink" title="D Pick Your Own Nim"></a>D Pick Your Own Nim</h3><p>拟阵交，第一个拟阵维护异或和不为$0$，用线性基构造，第二个拟阵是每个堆最多选一个。</p>
-<h3 id="E-Permutasino"><a href="#E-Permutasino" class="headerlink" title="E Permutasino"></a>E Permutasino</h3><p>待补。</p>
+<h3 id="E-Permutasino"><a href="#E-Permutasino" class="headerlink" title="E Permutasino"></a>E Permutasino</h3><p>看了半天，觉得究极眼熟。再定睛一看，原来朱老大搬过，甚至我还写过，雾。<a href="https://foreverlasting1202.github.io/2019/04/23/%E4%BD%99%E5%A7%9A%E9%9B%86%E8%AE%ADzzt%E6%8E%92%E5%88%97/">https://foreverlasting1202.github.io/2019/04/23/%E4%BD%99%E5%A7%9A%E9%9B%86%E8%AE%ADzzt%E6%8E%92%E5%88%97/</a></p>
 <h3 id="F-color-silver-Planar-Max-Cut"><a href="#F-color-silver-Planar-Max-Cut" class="headerlink" title="F $\color{silver}{*Planar\ Max\ Cut}$"></a>F $\color{silver}{*Planar\ Max\ Cut}$</h3><p>听说是道平面图大码题，究极难写，溜了溜了。</p>
 <h3 id="G-Battle-Royale"><a href="#G-Battle-Royale" class="headerlink" title="G Battle Royale"></a>G Battle Royale</h3><p>待补。</p>
 <h3 id="H-Jeopardy"><a href="#H-Jeopardy" class="headerlink" title="H Jeopardy"></a>H Jeopardy</h3><p>每行选出最小的就做完了。</p>
