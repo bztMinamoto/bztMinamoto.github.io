@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-28T12:22:42.426Z">
+<meta property="og:updated_time" content="2019-10-28T12:30:03.552Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -463,7 +463,7 @@
 <h3 id="A-Three-Arrays"><a href="#A-Three-Arrays" class="headerlink" title="A Three Arrays"></a>A Three Arrays</h3><p>对于每个位置二分合法区间，乘法原理即可。</p>
 <h3 id="B-Expected-Shopping"><a href="#B-Expected-Shopping" class="headerlink" title="B Expected Shopping"></a>B Expected Shopping</h3><p>待补。</p>
 <h3 id="C-Cover-the-Paths"><a href="#C-Cover-the-Paths" class="headerlink" title="C Cover the Paths"></a>C Cover the Paths</h3><p>假装每次拿$lca$最深的是对的，然后剩下来的就是树剖维护点权，判边是否经过有点权的点。</p>
-<h3 id="D-Elevator"><a href="#D-Elevator" class="headerlink" title="D Elevator"></a>D Elevator</h3><p>先去掉$a_i\leq a_j\ and\ t_i\leq t_j$的，然后$f_i$表示把$i$及之前的人送完回来的最小时间，然后转移到$j$，如果$t_j&gt;f_i$，那么$cmin(f_j,f_i+2*max(a[i+1],…,a[j]))$，与$t_i$无关，否则的话就只能转移到最后一个$t_j&lt;=i$的位置。转移的时候二分查找即可。</p>
+<h3 id="D-Elevator"><a href="#D-Elevator" class="headerlink" title="D Elevator"></a>D Elevator</h3><p>先去掉$a_i\leq a_j$而且$t_i\leq t_j$的$i$，然后$f_i$表示把$i$及之前的人送完回来的最小时间，然后转移到$j$，如果$t_j&gt;f_i$，那么$cmin(f_j,f_i+2*max(a[i+1],…,a[j]))$，与$t_i$无关，否则的话就只能转移到最后一个$t_j&lt;=i$的位置。转移的时候二分查找即可。</p>
 <h3 id="E-Code-Cola-Plants"><a href="#E-Code-Cola-Plants" class="headerlink" title="E Code-Cola Plants"></a>E Code-Cola Plants</h3><p>待补。</p>
 <h3 id="F-GCD"><a href="#F-GCD" class="headerlink" title="F GCD"></a>F GCD</h3><p><a href="https://www.cnblogs.com/bztMinamoto/p/10217834.html" target="_blank" rel="noopener">https://www.cnblogs.com/bztMinamoto/p/10217834.html</a></p>
 <p>廷廷做过类似的，随机一个位置，钦定这个位置不动。然后扫过去求$gcd$，然后从大到小枚举$gcd$，并把比它大的那些且是它倍数的$gcd$的出现次数加起来，如果某一次某个$gcd$出现次数大于一半，那么该答案可行即可。随机个$15$次差不多就过了。</p>
