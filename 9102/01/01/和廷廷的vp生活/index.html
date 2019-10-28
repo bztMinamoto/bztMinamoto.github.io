@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-28T11:06:08.035Z">
+<meta property="og:updated_time" content="2019-10-28T12:22:42.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -458,8 +458,24 @@
 <h3 id="H-Jeopardy"><a href="#H-Jeopardy" class="headerlink" title="H Jeopardy"></a>H Jeopardy</h3><p>每行选出最小的就做完了。</p>
 <h3 id="I-Slippers"><a href="#I-Slippers" class="headerlink" title="I Slippers"></a>I Slippers</h3><p>旋转相邻的可以转换成旋转任意的。先对所有相邻的左右鞋子连边，跑个最大匹配。如果有不在最大匹配上的点，与这个点旋转就好了，答案就是最大匹配。如果没有，算出总的旋转次数。由于旋转次数为$4$的倍数时肯定有解，否则让一个点不在最大匹配上，即答案为最大匹配减一。</p>
 <h3 id="J-The-Good-the-Bad-and-the-Ugly"><a href="#J-The-Good-the-Bad-and-the-Ugly" class="headerlink" title="J The Good, the Bad and the Ugly"></a>J The Good, the Bad and the Ugly</h3><p>每次跳$3$的幂次，直到跳到$0$。到$0$之后随便判下即可。</p>
-<h2 id="2017-2018-Petrozavodsk-Winter-Training-Camp-Saratov-SU-Contest"><a href="#2017-2018-Petrozavodsk-Winter-Training-Camp-Saratov-SU-Contest" class="headerlink" title="2017-2018 Petrozavodsk Winter Training Camp, Saratov SU Contest"></a>2017-2018 Petrozavodsk Winter Training Camp, Saratov SU Contest</h2><p>本来好好的，最后交一发$I$，评测到五十多个点的时候廷廷说稳了，然后$WA$在$72$，廷廷的奶好毒啊。</p>
-<h3 id="A-Three-Arrays"><a href="#A-Three-Arrays" class="headerlink" title="A Three Arrays"></a>A Three Arrays</h3><h3 id="B-Expected-Shopping"><a href="#B-Expected-Shopping" class="headerlink" title="B Expected Shopping"></a>B Expected Shopping</h3><h3 id="C-Cover-the-Paths"><a href="#C-Cover-the-Paths" class="headerlink" title="C Cover the Paths"></a>C Cover the Paths</h3><h3 id="D-Elevator"><a href="#D-Elevator" class="headerlink" title="D Elevator"></a>D Elevator</h3><h3 id="E-Code-Cola-Plants"><a href="#E-Code-Cola-Plants" class="headerlink" title="E Code-Cola Plants"></a>E Code-Cola Plants</h3><h3 id="F-GCD"><a href="#F-GCD" class="headerlink" title="F GCD"></a>F GCD</h3><h3 id="G-Berland-Post"><a href="#G-Berland-Post" class="headerlink" title="G Berland Post"></a>G Berland Post</h3><h3 id="H-Compressed-Spanning-Subtrees"><a href="#H-Compressed-Spanning-Subtrees" class="headerlink" title="H Compressed Spanning Subtrees"></a>H Compressed Spanning Subtrees</h3><h3 id="I-Prefix-free-Queries"><a href="#I-Prefix-free-Queries" class="headerlink" title="I Prefix-free Queries"></a>I Prefix-free Queries</h3><h3 id="J-Subsequence-Sum-Queries"><a href="#J-Subsequence-Sum-Queries" class="headerlink" title="J Subsequence Sum Queries"></a>J Subsequence Sum Queries</h3><h3 id="K-Consistent-Occurrences"><a href="#K-Consistent-Occurrences" class="headerlink" title="K Consistent Occurrences"></a>K Consistent Occurrences</h3><h3 id="L-Increasing-Costs"><a href="#L-Increasing-Costs" class="headerlink" title="L Increasing Costs"></a>L Increasing Costs</h3>
+<h2 id="2017-2018-Petrozavodsk-Winter-Training-Camp-Saratov-SU-Contest"><a href="#2017-2018-Petrozavodsk-Winter-Training-Camp-Saratov-SU-Contest" class="headerlink" title="2017-2018 Petrozavodsk Winter Training Camp, Saratov SU Contest"></a>2017-2018 Petrozavodsk Winter Training Camp, Saratov SU Contest</h2><p>本来就只有罚时爆炸而已，结果题量又被打爆了。最后交一发$I$，评测到五十多个点的时候廷廷说稳了，然后$WA$在$72$，廷廷的奶好毒啊。</p>
+<p>终于发现了，$I$没过，就是我$SA$板子有问题。</p>
+<h3 id="A-Three-Arrays"><a href="#A-Three-Arrays" class="headerlink" title="A Three Arrays"></a>A Three Arrays</h3><p>对于每个位置二分合法区间，乘法原理即可。</p>
+<h3 id="B-Expected-Shopping"><a href="#B-Expected-Shopping" class="headerlink" title="B Expected Shopping"></a>B Expected Shopping</h3><p>待补。</p>
+<h3 id="C-Cover-the-Paths"><a href="#C-Cover-the-Paths" class="headerlink" title="C Cover the Paths"></a>C Cover the Paths</h3><p>假装每次拿$lca$最深的是对的，然后剩下来的就是树剖维护点权，判边是否经过有点权的点。</p>
+<h3 id="D-Elevator"><a href="#D-Elevator" class="headerlink" title="D Elevator"></a>D Elevator</h3><p>先去掉$a_i\leq a_j\ and\ t_i\leq t_j$的，然后$f_i$表示把$i$及之前的人送完回来的最小时间，然后转移到$j$，如果$t_j&gt;f_i$，那么$cmin(f_j,f_i+2*max(a[i+1],…,a[j]))$，与$t_i$无关，否则的话就只能转移到最后一个$t_j&lt;=i$的位置。转移的时候二分查找即可。</p>
+<h3 id="E-Code-Cola-Plants"><a href="#E-Code-Cola-Plants" class="headerlink" title="E Code-Cola Plants"></a>E Code-Cola Plants</h3><p>待补。</p>
+<h3 id="F-GCD"><a href="#F-GCD" class="headerlink" title="F GCD"></a>F GCD</h3><p><a href="https://www.cnblogs.com/bztMinamoto/p/10217834.html" target="_blank" rel="noopener">https://www.cnblogs.com/bztMinamoto/p/10217834.html</a></p>
+<p>廷廷做过类似的，随机一个位置，钦定这个位置不动。然后扫过去求$gcd$，然后从大到小枚举$gcd$，并把比它大的那些且是它倍数的$gcd$的出现次数加起来，如果某一次某个$gcd$出现次数大于一半，那么该答案可行即可。随机个$15$次差不多就过了。</p>
+<h3 id="G-Berland-Post"><a href="#G-Berland-Post" class="headerlink" title="G Berland Post"></a>G Berland Post</h3><p>二分$+$差分约束裸题，注意一下精度即可。</p>
+<h3 id="H-Compressed-Spanning-Subtrees"><a href="#H-Compressed-Spanning-Subtrees" class="headerlink" title="H Compressed Spanning Subtrees"></a>H Compressed Spanning Subtrees</h3><p>待补。</p>
+<h3 id="I-Prefix-free-Queries"><a href="#I-Prefix-free-Queries" class="headerlink" title="I Prefix-free Queries"></a>I Prefix-free Queries</h3><p>把读入的按字典序大小排序，然后每个串以它的最长后缀为父亲，没有父亲的就让$0$为它们的父亲。于是$dp[i]$表示$i$的子树的方案数，转移就是$dp[i]=\prod_{tox} (dp[tox]+1)$，注意一下相同的串，将相同的串合并一下。</p>
+<p>排序和判相同都用$SA$，但要注意$SA$找$LCP$的时候要特判位置相同，若相同则为$n-l+1$，不判直接用$rnk$在$ST$表里找是错的。我的板子一直有这个问题然后我没发现，于是就$WA$在$72$了。。。</p>
+<h3 id="J-Subsequence-Sum-Queries"><a href="#J-Subsequence-Sum-Queries" class="headerlink" title="J Subsequence Sum Queries"></a>J Subsequence Sum Queries</h3><p>分治退背包，算跨过$[mid,mid+1]$的背包，用$CDQ$分治优化合并过程即可。</p>
+<p>其中这题算我坑了廷廷，我上来胡了个回滚莫队，然后$T$了。然后又让廷廷相信了$O(nlognm^2)$的线段树能过，结果又$T$了，这锅我背了。</p>
+<h3 id="K-Consistent-Occurrences"><a href="#K-Consistent-Occurrences" class="headerlink" title="K Consistent Occurrences"></a>K Consistent Occurrences</h3><p>写个假复杂度就过了？建个$AC$自动机，然后每个结点记下深度和上一次的结束位置，然后把串扔上去匹配。我懒得用树剖$+$平衡树优化找$i&gt;=dep[x]+las[x]$和覆盖的过程了，直接暴力跳，结果也过了。</p>
+<h3 id="L-Increasing-Costs"><a href="#L-Increasing-Costs" class="headerlink" title="L Increasing Costs"></a>L Increasing Costs</h3><p>跑出最短路然后建棵支配树就能确定必经边了。</p>
+
       
     </div>
     
