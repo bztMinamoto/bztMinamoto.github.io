@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-30T12:39:15.042Z">
+<meta property="og:updated_time" content="2019-10-30T12:50:57.193Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -504,7 +504,7 @@
 <h3 id="D-Short-Enough-Task"><a href="#D-Short-Enough-Task" class="headerlink" title="D Short Enough Task"></a>D Short Enough Task</h3><p>推下式子，考虑最终回文串对前面的贡献，发现只要求个公比为$k$的等比数列。记得特判公比为$1$。</p>
 <h3 id="E-Another-Short-Problem"><a href="#E-Another-Short-Problem" class="headerlink" title="E Another Short Problem"></a>E Another Short Problem</h3><p><del>廷廷调了三小时发现自己假了。</del></p>
 <p>其实没假，这道题就体现出了我们两个交流并不频繁。我想到了欧拉公式，廷廷会求期望面数，然后都没有说，就凉了。</p>
-<p>由于没有四点共面，所以只要知道期望面数就知道期望边数了，通过欧拉公式就知道期望点数了。期望面数可以通过枚举三个点的面，假设这个面在最终凸包上，那么它左侧的面都不能加进去，于是算一下就好了，所以这题其实定位是签到啊。。。</p>
+<p>由于没有四点共面，所以只要知道期望面数就知道期望边数了，通过欧拉公式就知道期望点数了。期望面数可以通过枚举三个点的面，假设这个面在最终凸包上，那么它左侧的面都不能加进去，于是算一下就好了，所以这题其实定位是签到啊。。。具体实现上注意一下$|V|=0$和$|V|=1$的情况。</p>
 <h3 id="F-Just-Another-Sequence-Problem"><a href="#F-Just-Another-Sequence-Problem" class="headerlink" title="F Just Another Sequence Problem"></a>F Just Another Sequence Problem</h3><p>$dp[i][j]$表示当前到了$i$且以$i$为结尾$j$为开头的最大值。转移就是$dp[i][j]=dp[j-1][k]+(s[i]-s[j-1])\ast (s[j-1]-s[k-1])$，显然的斜率优化。由于$s$并不是递增的，所以每次还需要排序，总复杂度就是$O(n^2logn)$，写得挺复杂的。</p>
 <h3 id="G-Total-LCS"><a href="#G-Total-LCS" class="headerlink" title="G Total LCS"></a>G Total LCS</h3><p>待补。</p>
 <h3 id="H-Cyclic-String"><a href="#H-Cyclic-String" class="headerlink" title="H Cyclic String"></a>H Cyclic String</h3><p>待补。</p>
