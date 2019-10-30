@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-30T00:48:12.099Z">
+<meta property="og:updated_time" content="2019-10-30T02:32:14.449Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -481,7 +481,7 @@
 <h2 id="2015-2016-Petrozavodsk-Winter-Training-Camp-Moscow-SU-Trinity-Contest"><a href="#2015-2016-Petrozavodsk-Winter-Training-Camp-Moscow-SU-Trinity-Contest" class="headerlink" title="2015-2016 Petrozavodsk Winter Training Camp, Moscow SU Trinity Contest"></a>2015-2016 Petrozavodsk Winter Training Camp, Moscow SU Trinity Contest</h2><p>最崩的一把，难度倒序开题，佛了。我开了一道字符串，然后写了两个小时。廷廷一人签到，疯狂罚时，结果还没过。最后两题捏在手上，打不出去。。。下次要注意一下，别因为会写就上去写了，应该感觉一下码量的。</p>
 <p>昨天我背全锅，今天我和廷廷分锅。</p>
 <h3 id="A-ABBA"><a href="#A-ABBA" class="headerlink" title="A ABBA"></a>A ABBA</h3><p>高斯消元出矩阵的秩就好了，注意一下精度不要太优秀，要和出题人炸得一样。。。</p>
-<h3 id="B-Black-Sabbath"><a href="#B-Black-Sabbath" class="headerlink" title="B Black Sabbath"></a>B Black Sabbath</h3><p>待补。</p>
+<h3 id="B-Black-Sabbath"><a href="#B-Black-Sabbath" class="headerlink" title="B Black Sabbath"></a>B Black Sabbath</h3><p>求出两圆之间的根轴，根据$Monge$定理，拿根轴做半平面交就对了。注意一下矩阵四个边也是半平面交。</p>
 <h3 id="C-Mr-Credo"><a href="#C-Mr-Credo" class="headerlink" title="C Mr. Credo"></a>C Mr. Credo</h3><p>找出角度之间的最大夹缝，然后让这个夹缝扩大$1e9$倍就稳了，读对题是重点。然而廷廷写挂了。（</p>
 <h3 id="D-Deep-Purple"><a href="#D-Deep-Purple" class="headerlink" title="D Deep Purple"></a>D Deep Purple</h3><p>建出$parents$树之后，询问操作就看成了$mxlen(lca(i,r))&gt;i−l$。有一种经典的做法是将$parents$树轻重链剖分之后，将询问拆在重链上，然后发现重链上的计算是要求$i−mxlen(x)&lt;l$且$i&lt;r$最大的$i$，$i$是其轻子树里面的一个点。这个东西，发现可以维护以$i$为下标的线段树，在线段树二分即可。然后轻重链切换的地方，发现重链上的都被统计过，所以只用考虑子树内的情况，这个只需对每个点开一棵线段树然后线段树合并即可。这时候复杂度虽然是$O(nlog^2n)$，但空间却是$O(nlogn)$，而且空间常数有点大，跑不过去（然而我开始写了这个，结果浪费一个小时）。</p>
 <p>那有没有空间常数更小的做法呢？有。我们可以先将询问按$r$递减排序，然后扫过去，每次处理之前加进去的询问，看当前位置是否能被作为$i$，然后把已经处理完毕的询问给删掉，再加入当前询问。现在的问题还是在处理询问，发现其实可以对于每一条链打一个$l$的标记在最深的地方，处理询问就查一下$i$到根的最大$mxlen(x)+l$，然后删掉询问。加入询问就是沿着重链往上跳，放标记。具体实现上，查询最大值是线段树可以做的事情，然后你需要对于每个结点开个$set$记录这个结点还有哪些标记，查询的时候讨论一下标记的位置即可。</p>
