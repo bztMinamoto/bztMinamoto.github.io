@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-29T23:45:56.776Z">
+<meta property="og:updated_time" content="2019-10-30T00:48:12.099Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -490,7 +490,8 @@
 <h3 id="F-Frank-Sinatra"><a href="#F-Frank-Sinatra" class="headerlink" title="F Frank Sinatra"></a>F Frank Sinatra</h3><p>树上莫队裸题，套个$bitset$即可。注意一下这题$lca$处不用讨论，因为是点。。。（然后我抄错板子了</p>
 <h3 id="G-Green-Day"><a href="#G-Green-Day" class="headerlink" title="G Green Day"></a>G Green Day</h3><p>首先显然是张完全图，所以$n=2k$。构造一下，对于$i=1,…,k$种颜色，连出$(i,i+1),…,(i,i+k)$，然后$(i+k,i+k+1),…,(i+k,i+k+k-1)$（把这$n$个点循环一下）就好了。</p>
 <h3 id="H-Hans-Zimmer"><a href="#H-Hans-Zimmer" class="headerlink" title="H Hans Zimmer"></a>H Hans Zimmer</h3><p>推下式子。首先根据连续变量在$[0,1]$的期望分布，可以得出最小差值的期望分布，实际就是$\frac{1}{(i+1)^2}$。然后枚举横切多少次，就有最终式子$\sum_{i=0}^n \frac{\binom{n}{i}}{2^i2^{n-i}(i+1)^2(n-i+1)^2}$，这个东西直接算精度就没了。于是取个对数再$exp$一下。输出注意下，不知道为什么$printf$会出现问题，$cout$一下子就过了。（白白罚了$12$次</p>
-<h3 id="I-Ivan-Dorn"><a href="#I-Ivan-Dorn" class="headerlink" title="I Ivan Dorn"></a>I Ivan Dorn</h3><p>待补。</p>
+<h3 id="I-Ivan-Dorn"><a href="#I-Ivan-Dorn" class="headerlink" title="I Ivan Dorn"></a>I Ivan Dorn</h3><p>明明是个$easy$，居然没开。</p>
+<p>首先可以利用单调队列求出所有极长合法区间，然后借此可以算出每个点向左和向右能延伸的最长合法区间。每个询问区间，肯定会被最大值分裂成两个或三个区间，一部分的答案是最大值之间的长度，左边那一部分只用查询左边能向右延伸的最长，右边同理。由于它们都不能跨过最大值，所以这样显然是对的。发现这些操作都是线段树，就好了。</p>
 <h3 id="J-Jimi-Hendrix"><a href="#J-Jimi-Hendrix" class="headerlink" title="J Jimi Hendrix"></a>J Jimi Hendrix</h3><p>别看到路径就上来点分（指某廷廷），冷静一下发现就是个幼儿园级别的$dfs$裸题。结果这题因为点分罚了$7$遍。（雾</p>
 <h3 id="K-Korn"><a href="#K-Korn" class="headerlink" title="K Korn"></a>K Korn</h3><p>完全开错顺序，这题早知道先开了，水的一批。</p>
 <p>首先有奇点肯定就没了，没有度数大于$2$的即形成了一个大环的显然都可以，只有一个度数大于$2$则只有这个点有机会，把它判掉就好了。两个点就把这两个点判了。大于等于三个点的，发现只有度数最大的点有机会，而且它必须是独一无二的，然后判掉也就好了。</p>
