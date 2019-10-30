@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-30T11:43:26.552Z">
+<meta property="og:updated_time" content="2019-10-30T12:31:08.961Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -496,10 +496,11 @@
 <h3 id="K-Korn"><a href="#K-Korn" class="headerlink" title="K Korn"></a>K Korn</h3><p>完全开错顺序，这题早知道先开了，水的一批。</p>
 <p>首先有奇点肯定就没了，没有度数大于$2$的即形成了一个大环的显然都可以，只有一个度数大于$2$则只有这个点有机会，把它判掉就好了。两个点就把这两个点判了。大于等于三个点的，发现只有度数最大的点有机会，而且它必须是独一无二的，然后判掉也就好了。</p>
 <h2 id="2013-2014-Petrozavodsk-Winter-Training-Camp-Moscow-SU-Trinity-Contest"><a href="#2013-2014-Petrozavodsk-Winter-Training-Camp-Moscow-SU-Trinity-Contest" class="headerlink" title="2013-2014 Petrozavodsk Winter Training Camp, Moscow SU Trinity Contest"></a>2013-2014 Petrozavodsk Winter Training Camp, Moscow SU Trinity Contest</h2><p>好难的一把，幸亏和廷廷一起在最后一分钟调出$C$完成反杀，中间其实有点崩了，廷廷调$E$三小时后说算法假了，差点凉了。</p>
+<p>甚至怀疑这是几何专场。</p>
 <h3 id="A-MEX-Query"><a href="#A-MEX-Query" class="headerlink" title="A MEX-Query"></a>A MEX-Query</h3><p>上来写个莫队就$T$了，然后廷廷说线段树就行了。</p>
 <p>离线后，按$r$升序查询，可以发现每次的答案要么是当前没出现过的最小值$-1$，要么是$[1,l-1]$的最小值$-1$（如果现在已经没了），发现这些用线段树和堆维护就好了。比莫队不知道高明到哪里去了。</p>
 <h3 id="B-Beer-Quadrilaterals"><a href="#B-Beer-Quadrilaterals" class="headerlink" title="B Beer Quadrilaterals"></a>B Beer Quadrilaterals</h3><p>如果暴力枚举所有角度就凉了，我们发现$B$和$D$可以对称地枚举，于是只要枚举$\angle BAC,\angle BCA,\angle ABD$即可，其他的关于$B$的角度就知道了（三角形内角和），同样的$D$也有这些角度组，发现只要$\angle ABD+\angle BAC$和$\angle DCA+\angle ADB$相等以及$BD$与$AC$的交点$M$满足以上条件就是合法的（即共线），于是存下这些角度组，交点利用长度维护，即$\frac{AM}{CM}$，这应该在$B$的角度组中和$D$的角度组中恰为倒数。但有几个精度问题，比如存长度和角度这里建议使用$sin$，同时因为有倒数操作，精度会炸，所以建议取对数，然后就过了。</p>
-<h3 id="C-The-Palindrome-Extraction"><a href="#C-The-Palindrome-Extraction" class="headerlink" title="C The Palindrome Extraction"></a>C The Palindrome Extraction</h3><p>假装$|B|&lt;|D|$，那么$D=rev(B)+T$，$T$为回文串。考虑枚举$T$的回文中心，可证以该为回文中心的回文串越长越好，于是就是要找到最大的$i$满足$rev(s[r+1,i])$是$s[1,l-1]$的子串。记$t=rev(s)$，则$t[i,n-r]$是$s[1,l-1]$的子串。我们把询问给离线，每一次把i在$parent$树上所有祖先全都标记，表示$i$的所有后缀都合法了，那么从$1$到$i$相当于把$s[1,i]$的所有子串都给标记了。前面那个，我们把$[n-r]$这个询问丢到$[l-1]$这个位置，标记完之后，相当于查询$t[n-r]$的父亲中第一个合法的值，查到之后就可以更新答案了。发现上述操作利用在$parent$树上树剖$+$线段树即可，细节依旧很多。。。</p>
+<h3 id="C-The-Palindrome-Extraction"><a href="#C-The-Palindrome-Extraction" class="headerlink" title="C The Palindrome Extraction"></a>C The Palindrome Extraction</h3><p>假装$|B|&lt;|D|$，那么$D=rev(B)+T$，$T$为回文串。考虑枚举$T$的回文中心，可证以该为回文中心的回文串越长越好，于是就是要找到最大的$i$满足$rev(s[r+1,i])$是$s[1,l-1]$的子串。记$t=rev(s)$，则$t[i,n-r]$是$s[1,l-1]$的子串。我们把询问给离线，每一次把$i$在$parent$树上所有祖先全都标记，表示$i$的所有后缀都合法了，那么从$1$到$i$相当于把$s[1,i]$的所有子串都给标记了。前面那个，我们把$[n-r]$这个询问丢到$[l-1]$这个位置，标记完之后，相当于查询$t[n-r]$的父亲中第一个合法的值，查到之后就可以更新答案了。发现上述操作利用在$parent$树上树剖$+$线段树即可，细节依旧很多。。。</p>
 <h3 id="D-Short-Enough-Task"><a href="#D-Short-Enough-Task" class="headerlink" title="D Short Enough Task"></a>D Short Enough Task</h3><p>推下式子，考虑最终回文串对前面的贡献，发现只要求个公比为$k$的等比数列。记得特判公比为$1$。</p>
 <h3 id="E-Another-Short-Problem"><a href="#E-Another-Short-Problem" class="headerlink" title="E Another Short Problem"></a>E Another Short Problem</h3><p>廷廷调了三小时发现自己假了，待补。</p>
 <h3 id="F-Just-Another-Sequence-Problem"><a href="#F-Just-Another-Sequence-Problem" class="headerlink" title="F Just Another Sequence Problem"></a>F Just Another Sequence Problem</h3><p>$dp[i][j]$表示当前到了$i$且以$i$为结尾$j$为开头的最大值。转移就是$dp[i][j]=dp[j-1][k]+(s[i]-s[j-1])\ast (s[j-1]-s[k-1])$，显然的斜率优化。由于$s$并不是递增的，所以每次还需要排序，总复杂度就是$O(n^2logn)$，写得挺复杂的。</p>
