@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-01T03:13:25.630Z">
+<meta property="og:updated_time" content="2019-11-01T09:45:13.662Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -537,7 +537,22 @@
 <h3 id="C-Heretical-…-Mobius"><a href="#C-Heretical-…-Mobius" class="headerlink" title="C Heretical … Möbius"></a>C Heretical … Möbius</h3><p><del>考场上写个假东西没过。</del></p>
 <p>其实写的差不多对了，只是我觉得会$T$，然后乱搞了一下。每$4,9,25,49$个肯定会有$0$，我们借此暴力枚举第一个位置的数是几，然后判一下是否合法，相信自己，虎他一波，就不会$T$了。（</p>
 <h3 id="D-Deja-vu-of-…-Go-Players"><a href="#D-Deja-vu-of-…-Go-Players" class="headerlink" title="D Deja vu of … Go Players"></a>D Deja vu of … Go Players</h3><p>输出$n&gt;m$就好了。</p>
-<h3 id="E-Immortal-…-Universe"><a href="#E-Immortal-…-Universe" class="headerlink" title="E Immortal … Universe"></a>E Immortal … Universe</h3><p>待补。</p>
+<h3 id="E-Immortal-…-Universe"><a href="#E-Immortal-…-Universe" class="headerlink" title="E Immortal … Universe"></a>E Immortal … Universe</h3><p>好强的一题。</p>
+<p>首先考虑会输的充要条件：存在一组两个序列的前缀满足和为$0$，还没取完且没法继续取。（即下一个都是$-1$或已经结尾了）</p>
+<p>必要性是显然的，因为根据题目输的条件就是形如这样的。</p>
+<p>充分性考虑构造方案，每次无论如何都尽量取$+1$且不超过两个前缀的位置。如果无法取已经输了直接成立，否则取到相应的位置也就成立了。</p>
+<p>考虑上面得到的条件的等价条件：存在一组两个序列的前缀和不大于$0$，还没取完且无法继续取。</p>
+<p>左推右显然。</p>
+<p>右推左考虑把右边的条件改为和小于$0$。注意到前缀和函数是连续的，且从$0$变化到负数一定会存在$-1$，所以一定可以得到左边的情况。</p>
+<p>计数考虑对$S$和$T$分别计数：下一个是$-1$和当前前缀和最小值$x$的数量。</p>
+<p>考虑这么两个过程：</p>
+<p>$(1)$从前往后扫描序列，记录当前的前缀和$sum$和当前的前缀和最小值$min$，每次$sum+=A[i]$，需要的时候$ckmin(min,sum)$。</p>
+<p>$(2)$从后往前扫描序列，只需要记录当前的前缀和最小值$min$，每次$min+=A[i]$，需要的时候$ckmin(min,A[i])$。</p>
+<p>可以发现$(1)$过程需要记录$2$个量，而$(2)$过程只要记录$1$个量，所以可以考虑$dp(2)$过程进行计数。</p>
+<p>统计答案的时候，初始$ans=$两个序列的$x$之和不大于$0$的方案数。</p>
+<p>需要注意这样会多统计一些取完了的情况，具体而言是两个位置只能是已经结尾的位置的情况。</p>
+<p>这时候显然两个序列的$x$之和为$0$，因为若小于$0$可以把任意一个小于$0$的位置往前移到一个合法的位置。</p>
+<p>所以对$S$和$T$再做一次$dp$，记录$x$唯一出现在已经结尾的位置的方案数。这时候统计两个序列的$x$之和$=0$的方案数，扣掉即可。</p>
 <h3 id="F-Interstellar-…-Fantasy"><a href="#F-Interstellar-…-Fantasy" class="headerlink" title="F Interstellar … Fantasy"></a>F Interstellar … Fantasy</h3><p>若线段不交则就是线段长，否则做切线。判交的话，若交球心到线段的距离小于$r$且两个角都是锐角，这些东西都是可以用叉积和点积搞出来的，没了。</p>
 <h3 id="G-Omnipotent-…-Garland"><a href="#G-Omnipotent-…-Garland" class="headerlink" title="G Omnipotent … Garland"></a>G Omnipotent … Garland</h3><p>待补。</p>
 <h3 id="H-Saintly-…-Coins"><a href="#H-Saintly-…-Coins" class="headerlink" title="H Saintly … Coins"></a>H Saintly … Coins</h3><p>待补。</p>
