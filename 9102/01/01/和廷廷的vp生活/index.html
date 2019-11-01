@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-01T01:39:32.496Z">
+<meta property="og:updated_time" content="2019-11-01T02:42:53.979Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -531,7 +531,8 @@
 <h3 id="K-Tree-Problem"><a href="#K-Tree-Problem" class="headerlink" title="K Tree Problem"></a>K Tree Problem</h3><p>孔爷曾经出过类似的，甚至毒瘤的孔爷加了换根子树操作。</p>
 <p>树剖之后，发现询问和修改可以看成对指向父亲的边修改查询和指向儿子的边修改查询，指向父亲的是正常线段树树剖可以搞的，线段树上一个结点代表树上一个连续的$dfs$序区间的点指向父亲的边，每个结点记录区间内$0,1$出现次数和标记。查询和修改就是对$log$条重链和$log$条轻边修改。指向儿子的，考虑对每个点维护一个信息$to_{son}$表示这个点指向儿子的轻边被修改成什么颜色。修改的时候，所有被修改的重边被分成了$log$条重链，直接在上面那个线段树修改。而所有被修改的轻边不直接改，而是修改它们父亲的$to_{son}$，这里还需要一棵线段树。询问的时候，重边还是在上面那个线段树直接查，轻边则需要比较两棵线段树谁后修改，所以再在线段树上维护一个时间标记即可。</p>
 <h2 id="2018-2019-ACM-ICPC-Asia-East-Continent-Finals"><a href="#2018-2019-ACM-ICPC-Asia-East-Continent-Finals" class="headerlink" title="2018-2019 ACM-ICPC, Asia East Continent Finals"></a>2018-2019 ACM-ICPC, Asia East Continent Finals</h2><p>六题垫底，$C$期待我的假算法能过，可还是过不了。</p>
-<h3 id="A-Exotic-…-Ancient-City"><a href="#A-Exotic-…-Ancient-City" class="headerlink" title="A Exotic … Ancient City"></a>A Exotic … Ancient City</h3><p>待补。</p>
+<h3 id="A-Exotic-…-Ancient-City"><a href="#A-Exotic-…-Ancient-City" class="headerlink" title="A Exotic … Ancient City"></a>A Exotic … Ancient City</h3><p>好神的一题啊。</p>
+<p>你考虑克鲁斯卡尔的过程，每次将边权从小到大一圈一圈往里加，然后再一列一列往里加。边权往里加的时候，你把相邻边权的答案差分一下，那么这一块就没问题了。一列一列往里加的时候，第一列和第二列是随便用并查集维护一下就好了，第$i$列与第$i+1$列可以由$i-1$列和$i$列的情况递推过来，这里就是个分类讨论，这样就可以算出每一列与上一列所加入的边数的差，这对于当前边数而言是个二阶差分，反过来做个二阶前缀和就好了。</p>
 <h3 id="B-Mysterious-…-Host"><a href="#B-Mysterious-…-Host" class="headerlink" title="B Mysterious … Host"></a>B Mysterious … Host</h3><p>这题就是要求选出最多的排列，使两两不等价。由析合树的定义，我们可以知道两个排列等价当且仅当它们的析合树同构。那这题就变成要求多少个叶节点个数为$n$的析合树了。$f[i]$表示叶子数为$i$的析合树，转移就是讨论根节点是合点还是析点，于是我们再定义$dp[i][j]$表示$i$个节点分成$j$个析合树的方案数，若根节点是合点，则它的子树个数必然$\geq 2$，于是这一部分的答案就是$\sum_{j\geq 2} dp[i][j]$，若根节点是析点，子树个数必然$\geq 4$，这一部分的答案就是$\sum_{j\geq 4} dp[i][j]$，于是得到转移，$f[i]=\sum_{j\geq 2} dp[i][j]+\sum_{j\geq 4} dp[i][j]=dp[i][2]+dp[i][3]+2\sum_{j\geq 4} dp[i][j]$，发现这些转移都能处理前缀和做。</p>
 <h3 id="C-Heretical-…-Mobius"><a href="#C-Heretical-…-Mobius" class="headerlink" title="C Heretical … Möbius"></a>C Heretical … Möbius</h3><p>考场上写个假东西没过，待补。</p>
 <h3 id="D-Deja-vu-of-…-Go-Players"><a href="#D-Deja-vu-of-…-Go-Players" class="headerlink" title="D Deja vu of … Go Players"></a>D Deja vu of … Go Players</h3><p>输出$n&gt;m$就好了。</p>
