@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-01T01:17:50.188Z">
+<meta property="og:updated_time" content="2019-11-01T01:39:32.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -531,7 +531,19 @@
 <h3 id="K-Tree-Problem"><a href="#K-Tree-Problem" class="headerlink" title="K Tree Problem"></a>K Tree Problem</h3><p>孔爷曾经出过类似的，甚至毒瘤的孔爷加了换根子树操作。</p>
 <p>树剖之后，发现询问和修改可以看成对指向父亲的边修改查询和指向儿子的边修改查询，指向父亲的是正常线段树树剖可以搞的，线段树上一个结点代表树上一个连续的$dfs$序区间的点指向父亲的边，每个结点记录区间内$0,1$出现次数和标记。查询和修改就是对$log$条重链和$log$条轻边修改。指向儿子的，考虑对每个点维护一个信息$to_{son}$表示这个点指向儿子的轻边被修改成什么颜色。修改的时候，所有被修改的重边被分成了$log$条重链，直接在上面那个线段树修改。而所有被修改的轻边不直接改，而是修改它们父亲的$to_{son}$，这里还需要一棵线段树。询问的时候，重边还是在上面那个线段树直接查，轻边则需要比较两棵线段树谁后修改，所以再在线段树上维护一个时间标记即可。</p>
 <h2 id="2018-2019-ACM-ICPC-Asia-East-Continent-Finals"><a href="#2018-2019-ACM-ICPC-Asia-East-Continent-Finals" class="headerlink" title="2018-2019 ACM-ICPC, Asia East Continent Finals"></a>2018-2019 ACM-ICPC, Asia East Continent Finals</h2><p>六题垫底，$C$期待我的假算法能过，可还是过不了。</p>
-<h3 id="A-Exotic-…-Ancient-City"><a href="#A-Exotic-…-Ancient-City" class="headerlink" title="A Exotic … Ancient City"></a>A Exotic … Ancient City</h3><h3 id="B-Mysterious-…-Host"><a href="#B-Mysterious-…-Host" class="headerlink" title="B Mysterious … Host"></a>B Mysterious … Host</h3><h3 id="C-Heretical-…-Mobius"><a href="#C-Heretical-…-Mobius" class="headerlink" title="C Heretical … Möbius"></a>C Heretical … Möbius</h3><h3 id="D-Deja-vu-of-…-Go-Players"><a href="#D-Deja-vu-of-…-Go-Players" class="headerlink" title="D Deja vu of … Go Players"></a>D Deja vu of … Go Players</h3><h3 id="E-Immortal-…-Universe"><a href="#E-Immortal-…-Universe" class="headerlink" title="E Immortal … Universe"></a>E Immortal … Universe</h3><h3 id="F-Interstellar-…-Fantasy"><a href="#F-Interstellar-…-Fantasy" class="headerlink" title="F Interstellar … Fantasy"></a>F Interstellar … Fantasy</h3><h3 id="G-Omnipotent-…-Garland"><a href="#G-Omnipotent-…-Garland" class="headerlink" title="G Omnipotent … Garland"></a>G Omnipotent … Garland</h3><h3 id="H-Saintly-…-Coins"><a href="#H-Saintly-…-Coins" class="headerlink" title="H Saintly … Coins"></a>H Saintly … Coins</h3><h3 id="I-Misunderstood-…-Missing"><a href="#I-Misunderstood-…-Missing" class="headerlink" title="I Misunderstood … Missing"></a>I Misunderstood … Missing</h3><h3 id="J-Philosophical-…-Balance"><a href="#J-Philosophical-…-Balance" class="headerlink" title="J Philosophical … Balance"></a>J Philosophical … Balance</h3><h3 id="K-Desperate-…-Fire-Survive"><a href="#K-Desperate-…-Fire-Survive" class="headerlink" title="K Desperate … Fire Survive"></a>K Desperate … Fire Survive</h3><h3 id="L-Desperate-…-Fire-Survive"><a href="#L-Desperate-…-Fire-Survive" class="headerlink" title="L Desperate … Fire Survive"></a>L Desperate … Fire Survive</h3>
+<h3 id="A-Exotic-…-Ancient-City"><a href="#A-Exotic-…-Ancient-City" class="headerlink" title="A Exotic … Ancient City"></a>A Exotic … Ancient City</h3><p>待补。</p>
+<h3 id="B-Mysterious-…-Host"><a href="#B-Mysterious-…-Host" class="headerlink" title="B Mysterious … Host"></a>B Mysterious … Host</h3><p>这题就是要求选出最多的排列，使两两不等价。由析合树的定义，我们可以知道两个排列等价当且仅当它们的析合树同构。那这题就变成要求多少个叶节点个数为$n$的析合树了。$f[i]$表示叶子数为$i$的析合树，转移就是讨论根节点是合点还是析点，于是我们再定义$dp[i][j]$表示$i$个节点分成$j$个析合树的方案数，若根节点是合点，则它的子树个数必然$\geq 2$，于是这一部分的答案就是$\sum_{j\geq 2} dp[i][j]$，若根节点是析点，子树个数必然$\geq 4$，这一部分的答案就是$\sum_{j\geq 4} dp[i][j]$，于是得到转移，$f[i]=\sum_{j\geq 2} dp[i][j]+\sum_{j\geq 4} dp[i][j]=dp[i][2]+dp[i][3]+2\sum_{j\geq 4} dp[i][j]$，发现这些转移都能处理前缀和做。</p>
+<h3 id="C-Heretical-…-Mobius"><a href="#C-Heretical-…-Mobius" class="headerlink" title="C Heretical … Möbius"></a>C Heretical … Möbius</h3><p>考场上写个假东西没过，待补。</p>
+<h3 id="D-Deja-vu-of-…-Go-Players"><a href="#D-Deja-vu-of-…-Go-Players" class="headerlink" title="D Deja vu of … Go Players"></a>D Deja vu of … Go Players</h3><p>输出$n&gt;m$就好了。</p>
+<h3 id="E-Immortal-…-Universe"><a href="#E-Immortal-…-Universe" class="headerlink" title="E Immortal … Universe"></a>E Immortal … Universe</h3><p>待补。</p>
+<h3 id="F-Interstellar-…-Fantasy"><a href="#F-Interstellar-…-Fantasy" class="headerlink" title="F Interstellar … Fantasy"></a>F Interstellar … Fantasy</h3><p>若线段不交则就是线段长，否则做切线。判交的话，若交球心到线段的距离小于$r$且两个角都是锐角，这些东西都是可以用叉积和点积搞出来的，没了。</p>
+<h3 id="G-Omnipotent-…-Garland"><a href="#G-Omnipotent-…-Garland" class="headerlink" title="G Omnipotent … Garland"></a>G Omnipotent … Garland</h3><p>待补。</p>
+<h3 id="H-Saintly-…-Coins"><a href="#H-Saintly-…-Coins" class="headerlink" title="H Saintly … Coins"></a>H Saintly … Coins</h3><p>待补。</p>
+<h3 id="I-Misunderstood-…-Missing"><a href="#I-Misunderstood-…-Missing" class="headerlink" title="I Misunderstood … Missing"></a>I Misunderstood … Missing</h3><p>无法直接记录$A$和$D$，考虑直接将贡献算到最终答案去。发现给$A$升次级等价于升的级乘上剩余攻击次数，给$D$升次级等价于升的级乘上以后攻击的时间总和（比如你以后$i$次才攻击，对这一次的攻击的贡献就是升的级乘上$i$），于是$dp[i][j][k]$表示当前到了第$i$个，以后还要攻击$j$次，以后的攻击时间为$k$。状态数大概要除以$8$，所以跑不满$O(n^4)$，随便就过了。</p>
+<h3 id="J-Philosophical-…-Balance"><a href="#J-Philosophical-…-Balance" class="headerlink" title="J Philosophical … Balance"></a>J Philosophical … Balance</h3><p>不知道廷廷写了啥，反正过了，待补。</p>
+<h3 id="K-Desperate-…-Fire-Survive"><a href="#K-Desperate-…-Fire-Survive" class="headerlink" title="K Desperate … Fire Survive"></a>K Desperate … Fire Survive</h3><p>待补。</p>
+<h3 id="L-Desperate-…-Fire-Survive"><a href="#L-Desperate-…-Fire-Survive" class="headerlink" title="L Desperate … Fire Survive"></a>L Desperate … Fire Survive</h3><p>最短路只会是$1,2,3$，讨论下就好了。</p>
+
       
     </div>
     
