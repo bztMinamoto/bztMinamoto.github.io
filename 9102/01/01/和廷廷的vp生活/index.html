@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-03T12:54:30.630Z">
+<meta property="og:updated_time" content="2019-11-03T23:40:09.210Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -570,7 +570,7 @@
 <h3 id="A-Artful-Paintings"><a href="#A-Artful-Paintings" class="headerlink" title="A Artful Paintings"></a>A Artful Paintings</h3><p>二分答案后，记$sum_i$表示前$i$个格子的染色数，用这个去做差分约束即可。有点卡常，而且我还手残地写了个$n+1$。</p>
 <h3 id="B-Binary-Numbers"><a href="#B-Binary-Numbers" class="headerlink" title="B Binary Numbers"></a>B Binary Numbers</h3><p>$F_{m-1}(a,b)$函数理解一下就是$m-(a$^$b)$的第一个$1$的位置。同时你又能发现一个合法的$A_i$一定是一个区间，且这个区间是单调的。所以拿这个单调性转移一下就好了。</p>
 <h3 id="C-Competition-in-Swiss-system"><a href="#C-Competition-in-Swiss-system" class="headerlink" title="C Competition in Swiss-system"></a>C Competition in Swiss-system</h3><p>实现个分数类，模拟即可。</p>
-<h3 id="D-Driverless-Car"><a href="#D-Driverless-Car" class="headerlink" title="D Driverless Car"></a>D Driverless Car</h3><p>待补。</p>
+<h3 id="D-Driverless-Car"><a href="#D-Driverless-Car" class="headerlink" title="D Driverless Car"></a>D Driverless Car</h3><p>首先点到线段的距离有三类：到左端点的距离，到直线的距离，到右端点的距离。而你由线段两个端点做垂线后，就可以把平面上所有点划分出这三类。于是整个平面就被两条线段的垂线划分成好多块区域。每一块区域的性质都是一样的。接下来再讨论每一种怎么求。第一种是点到两个端点的，那就是两个端点连线的中垂线。第二种是点到两条直线的，那就是直线交点处的角平分线。第三种是一个端点一个直线的，那就是抛物线。三个分别求一下长度即可，注意一下一堆细节。</p>
 <h3 id="E-Exchanging-Gifts"><a href="#E-Exchanging-Gifts" class="headerlink" title="E Exchanging Gifts"></a>E Exchanging Gifts</h3><p>这个匹配是随便匹配的，所以只需要维护出现次数最大的出现次数和数的个数了，数的个数开个桶随便维护，出现次数最大的数用摩尔投票法即可。不过廷廷上去写了个$map$被卡常，然后卡卡常就过了。</p>
 <h3 id="F-Fixing-Banners"><a href="#F-Fixing-Banners" class="headerlink" title="F Fixing Banners"></a>F Fixing Banners</h3><p>暴搜出所有状态，判一下就好了。</p>
 <h3 id="G-Game-Store"><a href="#G-Game-Store" class="headerlink" title="G Game Store"></a>G Game Store</h3><p>先考虑$2-nim$的结论，即二进制下每一位之和都是$3$的倍数先手必败。因为每种石子堆都有两个，第二个人就可以使一种石子堆留下$0,1,2$，这对应模$3$的系数。所以第二个人的操作就等于删去若干个向量，如果第一个人想赢，必须满足这些向量在模$3$意义下线性无关。于是维护个权值和最大的线性无关向量组即可，自己$yy$一个奇怪的线性基即可。</p>
