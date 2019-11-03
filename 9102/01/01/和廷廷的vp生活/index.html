@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-03T03:01:50.976Z">
+<meta property="og:updated_time" content="2019-11-03T10:06:57.488Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -563,7 +563,8 @@
 <p>我们发现对于两个前缀，如果$u$在$parent$树上是$v$的父亲，那么$v$显然是没有用的（因为$u$的价值一定比$v$小），这样删去没用的节点，所有前缀的节点就都是叶子了。</p>
 <p>然后问题可以转化成一棵树，每个节点儿子的权值之和等于它的权值，根节点权值为$1$，叶子节点的代价为它到根节点的路径上所有节点权值之和，最大化最小的叶子代价。</p>
 <p>先考虑一种特殊情况，一个菊花图，根节点权值为$1$，每个儿子对应长度为$a_i$，分过去的对应权值为$p_i$，那么要令$min(a_ip_i)$最大，根据数学知识肯定是所有取到相等的时候最大，那么令$k=a_ip_i$，有$\sum \frac{k}{a_i}=1$，解出$k$就可以得到$p_i$了，然后如果根节点传过来的值不是$1$而是$v$，下面每个节点的收益是$\frac{k}{a_i}×a_i×v$，这样我们就可以把整个菊花缩成一条长为$k$的链，继续往上$dp$就行了。</p>
-<h3 id="K-Desperate-…-Fire-Survive"><a href="#K-Desperate-…-Fire-Survive" class="headerlink" title="K Desperate … Fire Survive"></a>K Desperate … Fire Survive</h3><p>待补。</p>
+<h3 id="K-Desperate-…-Fire-Survive"><a href="#K-Desperate-…-Fire-Survive" class="headerlink" title="K Desperate … Fire Survive"></a>K Desperate … Fire Survive</h3><p>大胆上，不假思索，就能过。</p>
+<p>$dp[i][j]$表示左端点为$i$，要合成出$j$的最小右端点。转移来自两部分，一部分是本来就有了$j$，即$nxt_{i,j}$表示当前在$i$下一个$j$的位置，另一部分是$dp[dp[i][j-1]+1][j-1]$，即用两个$j-1$合成$j$。可以发现的是，后面的转移是类倍增的东西，前面是连续段即区间覆盖的东西，这些都可以证明在$O(nlogn)$的数量级。所以把询问离线一下，$k$升序往里算，可以证明这复杂度会是$O(nlogn)$。</p>
 <h3 id="L-Desperate-…-Fire-Survive"><a href="#L-Desperate-…-Fire-Survive" class="headerlink" title="L Desperate … Fire Survive"></a>L Desperate … Fire Survive</h3><p>最短路只会是$1,2,3$，讨论下就好了。</p>
 <h2 id="The-2019-China-Collegiate-Programming-Contest-Harbin-Site"><a href="#The-2019-China-Collegiate-Programming-Contest-Harbin-Site" class="headerlink" title="The 2019 China Collegiate Programming Contest Harbin Site"></a>The 2019 China Collegiate Programming Contest Harbin Site</h2><p>这场中期就在乱打，$AL$两个人调了一年，幸亏最后绝杀$B$。</p>
 <h3 id="A-Artful-Paintings"><a href="#A-Artful-Paintings" class="headerlink" title="A Artful Paintings"></a>A Artful Paintings</h3><p>二分答案后，记$sum_i$表示前$i$个格子的染色数，用这个去做差分约束即可。有点卡常，而且我还手残地写了个$n+1$。</p>
