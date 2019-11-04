@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="跟着做一下，不是自己独立思考出来的会打个$\Xi$。（然后全是$\Xi$">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-04T11:48:20.060Z">
+<meta property="og:updated_time" content="2019-11-04T12:17:11.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IOI2020集训队作业">
 <meta name="twitter:description" content="跟着做一下，不是自己独立思考出来的会打个$\Xi$。（然后全是$\Xi$">
@@ -413,6 +413,7 @@
 <h3 id="AGC023E"><a href="#AGC023E" class="headerlink" title="AGC023E"></a>AGC023E</h3><p>不会，再说。</p>
 <h3 id="AGC023F"><a href="#AGC023F" class="headerlink" title="AGC023F"></a>AGC023F</h3><p>感觉怎么写个假贪心就过了啊。</p>
 <p>感性理解一下，肯定$0$越靠前越好，但可能出现一个子树有$0$又有$1$，那怎么办呢？考虑从单个节点开始，合并出一个又一个连通块，最终合并成一棵树。记录这个连通块里的$0$的个数与$1$的个数，那么我们可以在每次合并的时候算出这次合并所产生的逆序对数。那合并的顺序是什么呢？大胆猜想是$0$的个数比上$1$的个数，然后你就过了。具体证明的话，你考虑同一个父亲的连通块们的顺序，这里若交换顺序所产生的贡献是可以直接算的，于是就发现是$0$的个数比上$1$的个数。那不同父亲呢，因为互相暂时不会影响，所以无所谓。因此照着$0$的个数比上$1$的个数降序即可。合并用并查集，找最大值用堆，没了。</p>
+<h3 id="AGC023D"><a href="#AGC023D" class="headerlink" title="AGC023D"></a>AGC023D</h3><p>不会，再说。</p>
 
       
     </div>
@@ -660,7 +661,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023E"><span class="nav-number">1.</span> <span class="nav-text">AGC023E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023F"><span class="nav-number">2.</span> <span class="nav-text">AGC023F</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023E"><span class="nav-number">1.</span> <span class="nav-text">AGC023E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023F"><span class="nav-number">2.</span> <span class="nav-text">AGC023F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023D"><span class="nav-number">3.</span> <span class="nav-text">AGC023D</span></a></li></ol></div>
             
 
           </div>
