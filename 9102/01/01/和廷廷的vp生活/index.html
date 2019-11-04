@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-03T23:40:09.210Z">
+<meta property="og:updated_time" content="2019-11-04T02:00:51.019Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -574,7 +574,8 @@
 <h3 id="E-Exchanging-Gifts"><a href="#E-Exchanging-Gifts" class="headerlink" title="E Exchanging Gifts"></a>E Exchanging Gifts</h3><p>这个匹配是随便匹配的，所以只需要维护出现次数最大的出现次数和数的个数了，数的个数开个桶随便维护，出现次数最大的数用摩尔投票法即可。不过廷廷上去写了个$map$被卡常，然后卡卡常就过了。</p>
 <h3 id="F-Fixing-Banners"><a href="#F-Fixing-Banners" class="headerlink" title="F Fixing Banners"></a>F Fixing Banners</h3><p>暴搜出所有状态，判一下就好了。</p>
 <h3 id="G-Game-Store"><a href="#G-Game-Store" class="headerlink" title="G Game Store"></a>G Game Store</h3><p>先考虑$2-nim$的结论，即二进制下每一位之和都是$3$的倍数先手必败。因为每种石子堆都有两个，第二个人就可以使一种石子堆留下$0,1,2$，这对应模$3$的系数。所以第二个人的操作就等于删去若干个向量，如果第一个人想赢，必须满足这些向量在模$3$意义下线性无关。于是维护个权值和最大的线性无关向量组即可，自己$yy$一个奇怪的线性基即可。</p>
-<h3 id="H-Highway-Buses"><a href="#H-Highway-Buses" class="headerlink" title="H Highway Buses"></a>H Highway Buses</h3><p>待补。</p>
+<h3 id="H-Highway-Buses"><a href="#H-Highway-Buses" class="headerlink" title="H Highway Buses"></a>H Highway Buses</h3><p>考虑到边数很少，于是搞出一棵树，树边和非树边分类讨论下。</p>
+<p>求解方式类似$NOID2T1$，不过这里不用$KD-Tree$，利用堆就行了。现在的问题在于判断两个点之间的距离，树上可以利用树分治，分成$O(logn)$段后暴力求解，非树边只有$50$条，$100$个端点，暴力做个$floyed$即可，但是好难写啊，吐了。</p>
 <h3 id="I-Interesting-Permutation"><a href="#I-Interesting-Permutation" class="headerlink" title="I Interesting Permutation"></a>I Interesting Permutation</h3><p>先判掉无解，记当前$ans$为答案，$x$为当前可选数的个数，如果$x&lt;0$也无解。$h$不变的话，就是在$x$个数选出了一个，即$ans=ans\ast x,x–$。$h$变大的话，就是一上一下，所以$ans=ans+ans,x=x+\Delta h-1$，就做完了。</p>
 <h3 id="J-Justifying-the-Conjecture"><a href="#J-Justifying-the-Conjecture" class="headerlink" title="J Justifying the Conjecture"></a>J Justifying the Conjecture</h3><p>奇数用$3,n-3$，偶数用$2,n-2$，判下无解即可。</p>
 <h3 id="K-Keeping-Rabbits"><a href="#K-Keeping-Rabbits" class="headerlink" title="K Keeping Rabbits"></a>K Keeping Rabbits</h3><p>因为每次的总和是不变的，所以直接算就完事了。</p>
