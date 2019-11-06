@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-06T02:17:47.347Z">
+<meta property="og:updated_time" content="2019-11-06T02:28:15.111Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -606,12 +606,12 @@
 <h3 id="B-Associativity-Degree"><a href="#B-Associativity-Degree" class="headerlink" title="B Associativity Degree"></a>B Associativity Degree</h3><p>待补。</p>
 <h3 id="C-Medium-Hadron-Collider"><a href="#C-Medium-Hadron-Collider" class="headerlink" title="C Medium Hadron Collider"></a>C Medium Hadron Collider</h3><p>待补。</p>
 <h3 id="D-Basis-Change"><a href="#D-Basis-Change" class="headerlink" title="D Basis Change"></a>D Basis Change</h3><p>用矩阵推一推就来了。</p>
-<p>$A=\begin{bmatrix} 0 &amp; 1 &amp; 0 &amp; 0 &amp; … &amp; 0 \ 0 &amp; 0 &amp; 1 &amp; 0 &amp; … &amp; 0 \ … &amp; … &amp; … &amp; … &amp; … &amp; … \ 0 &amp; 0 &amp; 0 &amp; 0 &amp; … &amp; 1 \ a_0 &amp; a_1 &amp; a_2 &amp; a_3 &amp; … &amp; a_{k-1} \end{bmatrix}$。</p>
-<p>$F_{n-k}=\begin{bmatrix} F_{n-k} \ … \ F_{n-2} \ F_{n-1} \end{bmatrix}$。</p>
+<p>$$A=\begin{bmatrix} 0 &amp; 1 &amp; 0 &amp; 0 &amp; … &amp; 0 \ 0 &amp; 0 &amp; 1 &amp; 0 &amp; … &amp; 0 \ … &amp; … &amp; … &amp; … &amp; … &amp; … \ 0 &amp; 0 &amp; 0 &amp; 0 &amp; … &amp; 1 \ a_0 &amp; a_1 &amp; a_2 &amp; a_3 &amp; … &amp; a_{k-1} \end{bmatrix}$$。</p>
+<p>$$F_{n-k}=\begin{bmatrix} F_{n-k} \ … \ F_{n-2} \ F_{n-1} \end{bmatrix}$$。</p>
 <p>那么推导一下，就有$A^nF_0=(\sum_{i=1}^k c_iA^{n-b_i})F_0$。</p>
 <p>有$A^n=(\sum_{i=1}^k c_iA^{b_k-b_i})$。</p>
 <p>再搞一下，$C(x)=x^k-\sum_{i=0}^{k-1} a_ix^i$。</p>
-<p>于是$A^n=\begin{bmatrix} x^n\ mod\ C(x) \ x^{n+1}\ mod\ C(x) \ … \ x^{n+k-1}\ mod\ C(x) \end{bmatrix}$。</p>
+<p>于是$$A^n=\begin{bmatrix} x^n\ mod\ C(x) \ x^{n+1}\ mod\ C(x) \ … \ x^{n+k-1}\ mod\ C(x) \end{bmatrix}$$。</p>
 <p>所以就有了$x^{b_k}=\sum_{i=1}^k c_i x^{b_k-b_i}\ mod\ C(x)$。</p>
 <p>$O(k^3log)$递推一下系数，再$O(k^3)$消个元好了，有点卡常，稍微卡一下即可。</p>
 <h3 id="E-Scored-Nim"><a href="#E-Scored-Nim" class="headerlink" title="E Scored Nim"></a>E Scored Nim</h3><p>总数除以$2$上取整，廷廷没写上取整$WA$了一发。</p>
