@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-06T02:28:15.111Z">
+<meta property="og:updated_time" content="2019-11-06T05:22:33.362Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="与廷廷一起的vp生活">
 <meta name="twitter:description" content="和廷廷一起快乐$vp$啦！（然后我$CSP$就退役了 若是$\color{silver}{*}$，表示不补了。">
@@ -611,7 +611,7 @@
 <p>那么推导一下，就有$A^nF_0=(\sum_{i=1}^k c_iA^{n-b_i})F_0$。</p>
 <p>有$A^n=(\sum_{i=1}^k c_iA^{b_k-b_i})$。</p>
 <p>再搞一下，$C(x)=x^k-\sum_{i=0}^{k-1} a_ix^i$。</p>
-<p>于是$$A^n=\begin{bmatrix} x^n\ mod\ C(x) \ x^{n+1}\ mod\ C(x) \ … \ x^{n+k-1}\ mod\ C(x) \end{bmatrix}$$。</p>
+<p>于是$A^n=\begin{bmatrix} x^n\ mod\ C(x) \ x^{n+1}\ mod\ C(x) \ … \ x^{n+k-1}\ mod\ C(x) \end{bmatrix}$。</p>
 <p>所以就有了$x^{b_k}=\sum_{i=1}^k c_i x^{b_k-b_i}\ mod\ C(x)$。</p>
 <p>$O(k^3log)$递推一下系数，再$O(k^3)$消个元好了，有点卡常，稍微卡一下即可。</p>
 <h3 id="E-Scored-Nim"><a href="#E-Scored-Nim" class="headerlink" title="E Scored Nim"></a>E Scored Nim</h3><p>总数除以$2$上取整，廷廷没写上取整$WA$了一发。</p>
@@ -620,7 +620,8 @@
 <h3 id="H-Game-Of-Chance"><a href="#H-Game-Of-Chance" class="headerlink" title="H Game Of Chance"></a>H Game Of Chance</h3><p>假设答案为$p$，那么有$p=\frac{1}{m}\sum_{i=1}^m max(i-p,p-i)$，证明较为简单。然后二分整数部分，算实数部分，或直接在$SBT$上二分也行。</p>
 <h3 id="I-Incomparable-Pairs"><a href="#I-Incomparable-Pairs" class="headerlink" title="I Incomparable Pairs"></a>I Incomparable Pairs</h3><p>先转成求子串的子串的对数。建出$SAM$后，对于每个结点上的串而言，它们的子串就在$[[p_l,p_r],i]$中，即$\sum_{j=p_l}^{p_r} cnt[j][i]$（$cnt$表示区间本质不同子串），所以需要求个区间本质不同子串，这个是经典问题，我博客里有讲过。<a href="https://foreverlasting1202.github.io/2018/12/01/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%80%BB%E7%BB%93/">https://foreverlasting1202.github.io/2018/12/01/%E5%90%8E%E7%BC%80%E8%87%AA%E5%8A%A8%E6%9C%BA%E6%80%BB%E7%BB%93/</a></p>
 <p>然后这题搞事，答案不是$ll$级别，要加$ull$，而且中途会减到负数，要自己实现个带负数的$ull$，同时算本质不同子串的平方时要注意，要爆$ull$，但本质不同子串的平方除以$2$就不会了，所以判下奇偶即可。</p>
-<h3 id="J-The-Zong-of-the-Zee"><a href="#J-The-Zong-of-the-Zee" class="headerlink" title="J The Zong of the Zee"></a>J The Zong of the Zee</h3><p>待补。</p>
+<h3 id="J-The-Zong-of-the-Zee"><a href="#J-The-Zong-of-the-Zee" class="headerlink" title="J The Zong of the Zee"></a>J The Zong of the Zee</h3><p>注意到每一行只有一个问号，所以如果一个问号确定了，那所有问号就确定了。</p>
+<p>先把可以确定的问号确定了，这里对每行实现个桶即可以，同时可以判掉无解。剩下来的，我们可以枚举一个问号，然后每一列考虑，发现只要前$n-1$行和后$n-1$行匹配，用$hash$维护下即可。</p>
 <h3 id="K-Expected-Value"><a href="#K-Expected-Value" class="headerlink" title="K Expected Value"></a>K Expected Value</h3><p>推下式子，答案就是$a_1-a_2$了。</p>
 
       
