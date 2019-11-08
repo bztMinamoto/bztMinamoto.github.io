@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="跟着做一下，不是自己独立思考出来的会打个$\Xi$。（然后全是$\Xi$">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-11-08T02:00:45.371Z">
+<meta property="og:updated_time" content="2019-11-08T02:20:54.713Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="IOI2020集训队作业">
 <meta name="twitter:description" content="跟着做一下，不是自己独立思考出来的会打个$\Xi$。（然后全是$\Xi$">
@@ -417,11 +417,13 @@
 <h3 id="CF516D"><a href="#CF516D" class="headerlink" title="CF516D"></a>CF516D</h3><p>随便写个暴力就能过。</p>
 <p>首先一个点离树上最远点的距离是可以直接算的，就是直径两端点都算一下即可。然后观察询问次数这么小，所以乱写个$O(n)$之类的都能过吧。然后你发现把离树上最远点的距离最小的作为根之后，剩下来的单调不递减了，所以暴力扫一下就好了，用个并查集维护扫描的过程也就过了。</p>
 <h3 id="ARC098F"><a href="#ARC098F" class="headerlink" title="ARC098F"></a>ARC098F</h3><p>不会，再说。</p>
-<h3 id="AGC032F"><a href="#AGC032F" class="headerlink" title="AGC032F"></a>AGC032F</h3><p>不会，再说。</p>
+<h3 id="AGC032E"><a href="#AGC032E" class="headerlink" title="AGC032E"></a>AGC032E</h3><p>一道只猜不证的题。</p>
+<p>排序后，猜测存在一个分界点，满足左边之和都$&lt;m$，右边之和都$\geq m$，证明可以用调整法。所以二分就好了。</p>
 <h3 id="CF679E"><a href="#CF679E" class="headerlink" title="CF679E"></a>CF679E</h3><p>曾经写过。</p>
 <p><a href="https://foreverlasting1202.github.io/2019/07/03/CF679E/">https://foreverlasting1202.github.io/2019/07/03/CF679E/</a></p>
 <h3 id="CF506C"><a href="#CF506C" class="headerlink" title="CF506C"></a>CF506C</h3><p>挺有想法的贪心。</p>
 <p>二分一个答案后，考虑时间回溯，即设每个位置的初始位$mid$，然后上升看成下降，下降变成上升，显然一个限制就是过程中必须都大于等于$0$。每次肯定是把最小的拔高，用堆维护即可。</p>
+<h3 id="AGC032F"><a href="#AGC032F" class="headerlink" title="AGC032F"></a>AGC032F</h3><p>不会，再说。</p>
 
       
     </div>
@@ -669,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023E"><span class="nav-number">1.</span> <span class="nav-text">AGC023E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023F"><span class="nav-number">2.</span> <span class="nav-text">AGC023F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023D"><span class="nav-number">3.</span> <span class="nav-text">AGC023D</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF516D"><span class="nav-number">4.</span> <span class="nav-text">CF516D</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC098F"><span class="nav-number">5.</span> <span class="nav-text">ARC098F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC032F"><span class="nav-number">6.</span> <span class="nav-text">AGC032F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF679E"><span class="nav-number">7.</span> <span class="nav-text">CF679E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF506C"><span class="nav-number">8.</span> <span class="nav-text">CF506C</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023E"><span class="nav-number">1.</span> <span class="nav-text">AGC023E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023F"><span class="nav-number">2.</span> <span class="nav-text">AGC023F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC023D"><span class="nav-number">3.</span> <span class="nav-text">AGC023D</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF516D"><span class="nav-number">4.</span> <span class="nav-text">CF516D</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ARC098F"><span class="nav-number">5.</span> <span class="nav-text">ARC098F</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC032E"><span class="nav-number">6.</span> <span class="nav-text">AGC032E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF679E"><span class="nav-number">7.</span> <span class="nav-text">CF679E</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CF506C"><span class="nav-number">8.</span> <span class="nav-text">CF506C</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AGC032F"><span class="nav-number">9.</span> <span class="nav-text">AGC032F</span></a></li></ol></div>
             
 
           </div>
