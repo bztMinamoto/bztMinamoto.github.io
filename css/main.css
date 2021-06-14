@@ -1823,7 +1823,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff20ff;
+  background: #1874af;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3055,4 +3055,14 @@ header.post-header {
 }
 .popup {
   opacity: 0.9;
+}
+.hider_title {
+  font-family: "Microsoft Yahei";
+  cursor: pointer;
+}
+.close:after {
+  content: "▼";
+}
+.open:after {
+  content: "▲";
 }
