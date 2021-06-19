@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="foreverlasting&#39;s blog">
 <meta property="og:description" content="开个新坑。（其实原来的坑还没补完。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-21T11:03:16.205Z">
+<meta property="og:updated_time" content="2021-06-19T02:59:40.887Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NOIP2019前的做题记录">
 <meta name="twitter:description" content="开个新坑。（其实原来的坑还没补完。">
@@ -475,7 +475,7 @@
 <h3 id="CF963E-Circles-of-Waiting"><a href="#CF963E-Circles-of-Waiting" class="headerlink" title="[CF963E]Circles of Waiting"></a>[CF963E]Circles of Waiting</h3><p>高斯消元。</p>
 <p>有个暴力的做法，令$f_{i,j}$为走到$(i,j)$的期望步数。</p>
 <p>转移就是</p>
-<p>$$<br>    f_{i,j}=<br>    \begin{cases}<br>    p_1f_{i-1,j}+p_2f_{i,j-1}+p_3f_{i+1,j}+p_4f_{i,j+1},  &amp; \text{if $i^2+j^2\leq R^2$ } \[2ex]<br>    0, &amp; \text{else}<br>    \end{cases}<br>$$<br>这样暴力高消是$O(R^6)$的。</p>
+<p>$$<br>    f_{i,j}=<br>    \begin{cases}<br>    p_1f_{i-1,j}+p_2f_{i,j-1}+p_3f_{i+1,j}+p_4f_{i,j+1},  &amp; \text{if $i^2+j^2\leq R^2$ } \\<br>    0, &amp; \text{else}<br>    \end{cases}<br>$$<br>这样暴力高消是$O(R^6)$的。</p>
 <p>然后我们以每行第一个到源点距离小于等于$R$的点的$f$为主元，预处理出其他点到它的系数，直接高消。这样就是$O(R^3)$的了。</p>
 
       
