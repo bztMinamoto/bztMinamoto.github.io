@@ -83,8 +83,8 @@
 <meta name="keywords" content="OI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="NOIP2019前的做题记录">
-<meta property="og:url" content="http://foreverlasting1202.github.io/2019/07/02/NOIP2019前的做题记录/index.html">
-<meta property="og:site_name" content="foreverlasting&#39;s blog">
+<meta property="og:url" content="http://bztMinamoto.github.io/2019/07/02/NOIP2019前的做题记录/index.html">
+<meta property="og:site_name" content="bztMinamoto&#39;s blog">
 <meta property="og:description" content="开个新坑。（其实原来的坑还没补完。">
 <meta property="og:locale" content="default">
 <meta property="og:updated_time" content="2021-06-19T02:59:40.887Z">
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://foreverlasting1202.github.io/2019/07/02/NOIP2019前的做题记录/">
+  <link rel="canonical" href="http://bztMinamoto.github.io/2019/07/02/NOIP2019前的做题记录/">
 
 
 
 
 
-  <title>NOIP2019前的做题记录 | foreverlasting's blog</title>
+  <title>NOIP2019前的做题记录 | bztMinamoto's blog</title>
   
 
 
@@ -156,7 +156,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">foreverlasting's blog</span>
+        <span class="site-title">bztMinamoto's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -294,16 +294,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://foreverlasting1202.github.io/2019/07/02/NOIP2019前的做题记录/">
+    <link itemprop="mainEntityOfPage" href="http://bztMinamoto.github.io/2019/07/02/NOIP2019前的做题记录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="foreverlasting">
+      <meta itemprop="name" content="bztMinamoto">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/aqua.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="foreverlasting's blog">
+      <meta itemprop="name" content="bztMinamoto's blog">
     </span>
 
     
@@ -409,13 +409,13 @@
 <p>首先容易发现答案是一条链（因为取$and$一定不会变大），所以考虑$DP$最终状态，预处理能够转移的就可以做了。复杂度是$O(max{a_i}^{log_23})$。</p>
 <h3 id="IOI2014-Rail"><a href="#IOI2014-Rail" class="headerlink" title="[IOI2014]Rail"></a>[IOI2014]Rail</h3><p>乱搞。</p>
 <p>考虑先找到在$0$号右边且与$0$号最近的车站，然后分三段，分别是$0$号左边，$0$号和与$0$号最近的车站之间，以及与$0$号最近的车站的右边。用个$set$维护一下大小关系讨论一下就可以做了。</p>
-<h3 id="ACM-ICPC2018-Rikka-with-Sorting-Networks"><a href="#ACM-ICPC2018-Rikka-with-Sorting-Networks" class="headerlink" title="[ACM-ICPC2018]Rikka with Sorting Networks"></a>[ACM-ICPC2018]Rikka with Sorting Networks</h3><p>题解在<a href="https://foreverlasting1202.github.io/2019/07/02/2018-2019%20ACM-ICPC,%20Asia%20Xuzhou%20Regional%20Contest/">博客</a>里了。</p>
-<h3 id="CF786E-ALT"><a href="#CF786E-ALT" class="headerlink" title="[CF786E]ALT"></a>[CF786E]ALT</h3><p>题解在<a href="https://foreverlasting1202.github.io/2019/07/02/CF786E/">博客</a>里了。</p>
+<h3 id="ACM-ICPC2018-Rikka-with-Sorting-Networks"><a href="#ACM-ICPC2018-Rikka-with-Sorting-Networks" class="headerlink" title="[ACM-ICPC2018]Rikka with Sorting Networks"></a>[ACM-ICPC2018]Rikka with Sorting Networks</h3><p>题解在<a href="https://foreverlasting1202.github.io/2019/07/02/2018-2019%20ACM-ICPC,%20Asia%20Xuzhou%20Regional%20Contest/" target="_blank" rel="noopener">博客</a>里了。</p>
+<h3 id="CF786E-ALT"><a href="#CF786E-ALT" class="headerlink" title="[CF786E]ALT"></a>[CF786E]ALT</h3><p>题解在<a href="https://foreverlasting1202.github.io/2019/07/02/CF786E/" target="_blank" rel="noopener">博客</a>里了。</p>
 <h3 id="HNOI-AHOI2018-寻宝游戏"><a href="#HNOI-AHOI2018-寻宝游戏" class="headerlink" title="[HNOI/AHOI2018]寻宝游戏"></a>[HNOI/AHOI2018]寻宝游戏</h3><p>瞎搞法。</p>
 <p>考虑无关变量的数量，发现只有$and0$和$or1$有用。把符号序列搞出来，可以轻松证明若第$i$位为$1$，则要满足符号序列小于数字序列。然后就随便排个序，求个值就可以了。</p>
 <h3 id="CF407E-k-d-sequence"><a href="#CF407E-k-d-sequence" class="headerlink" title="[CF407E]k-d-sequence"></a>[CF407E]k-d-sequence</h3><p>线段树+单调栈。</p>
 <p>首先特判掉$d=0$的情况，接着将其他情况都规约到$d=0$和$d=1$的情况，这个可以通过除以$d$的方法再证明一下充要条件做到。为了维护这两种情况，发现$\frac {\max_{i=l}^{r} a_i -\min_{i=l}^{r} a_i} {d}+L&lt;=R+k$即可。然后这东西显然枚举个左端点，然后线段树上二分出右端点，单调栈维护一下左端点就可以了。复杂度是$O(nlogn)$。</p>
-<h3 id="CF679E-Bear-and-Bad-Powers-of-42"><a href="#CF679E-Bear-and-Bad-Powers-of-42" class="headerlink" title="[CF679E]Bear and Bad Powers of 42"></a>[CF679E]Bear and Bad Powers of 42</h3><p>题解在<a href="https://foreverlasting1202.github.io/2019/07/03/CF679E/">博客</a>里了。</p>
+<h3 id="CF679E-Bear-and-Bad-Powers-of-42"><a href="#CF679E-Bear-and-Bad-Powers-of-42" class="headerlink" title="[CF679E]Bear and Bad Powers of 42"></a>[CF679E]Bear and Bad Powers of 42</h3><p>题解在<a href="https://foreverlasting1202.github.io/2019/07/03/CF679E/" target="_blank" rel="noopener">博客</a>里了。</p>
 <h3 id="ZJOI2018-历史"><a href="#ZJOI2018-历史" class="headerlink" title="[ZJOI2018]历史"></a>[ZJOI2018]历史</h3><p>LCT。</p>
 <p>考虑每次如何算答案。思考一下贡献，推一波式子，发现当$2\ast \max_{i=0}^m a_i&gt;=(\sum_{i=0}^m a_i) +1$时，答案是$2\ast (\sum_{i=0}^m a_i-\max_{i=0}^m a_i)$否则是$(\sum_{i=0}^m a_i)-1$。证明可以考虑归纳。然后发现换根的操作其实就是判断上述两种情况分类讨论一下，在$access$的时候，前者就切换，后者不切换，贡献重新算一下就好了。时间复杂度$O(mlogn)$。</p>
 <h3 id="ZJOI2018-保镖"><a href="#ZJOI2018-保镖" class="headerlink" title="[ZJOI2018]保镖"></a>[ZJOI2018]保镖</h3><p>计算几何。</p>
@@ -594,9 +594,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/aqua.jpg" alt="foreverlasting">
+              <img class="site-author-image" itemprop="image" src="/images/aqua.jpg" alt="bztMinamoto">
             
-              <p class="site-author-name" itemprop="name">foreverlasting</p>
+              <p class="site-author-name" itemprop="name">bztMinamoto</p>
               <p class="site-description motion-element" itemprop="description">自分が選んだ道を、ひざまずいても歩き終わる</p>
           </div>
 
@@ -903,7 +903,7 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://foreverlasting1202.github.io/2019/07/02/NOIP2019前的做题记录/';
+          this.page.url = 'http://bztMinamoto.github.io/2019/07/02/NOIP2019前的做题记录/';
           this.page.identifier = '2019/07/02/NOIP2019前的做题记录/';
           this.page.title = 'NOIP2019前的做题记录';
         };

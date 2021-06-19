@@ -83,8 +83,8 @@
 <meta name="keywords" content="OI">
 <meta property="og:type" content="article">
 <meta property="og:title" content="【project euler】思维记录">
-<meta property="og:url" content="http://foreverlasting1202.github.io/2021/01/27/projecteuler/index.html">
-<meta property="og:site_name" content="foreverlasting&#39;s blog">
+<meta property="og:url" content="http://bztMinamoto.github.io/2021/01/27/projecteuler/index.html">
+<meta property="og:site_name" content="bztMinamoto&#39;s blog">
 <meta property="og:description" content="没事时做点$pe$的题，可能会发题解，可能会懒，嗯。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://projecteuler.net/profile/foreverlasting.png">
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://foreverlasting1202.github.io/2021/01/27/projecteuler/">
+  <link rel="canonical" href="http://bztMinamoto.github.io/2021/01/27/projecteuler/">
 
 
 
 
 
-  <title>【project euler】思维记录 | foreverlasting's blog</title>
+  <title>【project euler】思维记录 | bztMinamoto's blog</title>
   
 
 
@@ -166,7 +166,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">foreverlasting's blog</span>
+        <span class="site-title">bztMinamoto's blog</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -304,16 +304,16 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://foreverlasting1202.github.io/2021/01/27/projecteuler/">
+    <link itemprop="mainEntityOfPage" href="http://bztMinamoto.github.io/2021/01/27/projecteuler/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="foreverlasting">
+      <meta itemprop="name" content="bztMinamoto">
       <meta itemprop="description" content>
       <meta itemprop="image" content="/images/aqua.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="foreverlasting's blog">
+      <meta itemprop="name" content="bztMinamoto's blog">
     </span>
 
     
@@ -444,7 +444,7 @@
 <p>$f(\lfloor \frac{n}{i}\rfloor)$这个东西可以利用$h\ast id=g,g(n)=n\tau(n),h(n)=\lfloor\frac{m}{n}\rfloor$，然后杜教筛求出。</p>
 <p>$\tau\ast I$可以用$\tau\ast I=I\ast I\ast I$，这个东西考虑组合意义就是一个数分成三个有序的数的乘积的方案数，可以写出$\tau\ast I(n)=\prod \frac{(e_i+1)(e_i+2)}{2}$，其中$n=\prod_{p_i} p_i^{e_i}$，这个也可以在$dfs$时直接求出。</p>
 <p>于是最后就能算出$D(200!,10^{12})$了。</p>
-<h3 id="677"><a href="#677" class="headerlink" title="677"></a>677</h3><p><a href="https://foreverlasting1202.github.io/2019/09/10/BJUnitedRound3%E4%B8%89%E8%89%B2%E6%A0%91/">题解放博客了</a></p>
+<h3 id="677"><a href="#677" class="headerlink" title="677"></a>677</h3><p><a href="https://foreverlasting1202.github.io/2019/09/10/BJUnitedRound3%E4%B8%89%E8%89%B2%E6%A0%91/" target="_blank" rel="noopener">题解放博客了</a></p>
 <h3 id="657"><a href="#657" class="headerlink" title="657"></a>657</h3><p>如果不能全选的限制，答案显然就是$\sum_{i=0}^n \alpha^i=\frac{\alpha^{n+1}-1}{\alpha-1}$。有了这个限制，考虑容斥，即枚举每次至多选了几个，这样容斥一下答案就是$\sum_{i=0}^{\alpha-1} (-1)^{\alpha-i+1}\frac{i^{n+1}-1}{i-1}\binom{\alpha}{i}$，然后就做完了。</p>
 <h3 id="658"><a href="#658" class="headerlink" title="658"></a>658</h3><p>要求的式子是$\sum_{\alpha=1}^k \sum_{i=0}^{\alpha-1} (-1)^{\alpha-i+1}\frac{i^{n+1}-1}{i-1}\binom{\alpha}{i}$</p>
 <p>$=\sum_{i=0}^{k-1} (-1)^{i+1}\frac{i^{n+1}-1}{i-1}\sum_{\alpha=i+1}^k (-1)^{\alpha}\binom{\alpha}{i}$。</p>
@@ -581,9 +581,9 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/aqua.jpg" alt="foreverlasting">
+              <img class="site-author-image" itemprop="image" src="/images/aqua.jpg" alt="bztMinamoto">
             
-              <p class="site-author-name" itemprop="name">foreverlasting</p>
+              <p class="site-author-name" itemprop="name">bztMinamoto</p>
               <p class="site-description motion-element" itemprop="description">自分が選んだ道を、ひざまずいても歩き終わる</p>
           </div>
 
@@ -890,7 +890,7 @@
     
       <script type="text/javascript">
         var disqus_config = function () {
-          this.page.url = 'http://foreverlasting1202.github.io/2021/01/27/projecteuler/';
+          this.page.url = 'http://bztMinamoto.github.io/2021/01/27/projecteuler/';
           this.page.identifier = '2021/01/27/projecteuler/';
           this.page.title = '【project euler】思维记录';
         };
